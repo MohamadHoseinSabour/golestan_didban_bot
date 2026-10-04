@@ -11,7 +11,7 @@ from typing import Any
 
 from divar_bot.models import AdCategory, AdDetail, AdImage
 from divar_bot.utils.persian import normalize_arabic
-from divar_bot.utils.time import now_tehran
+from divar_bot.utils.time import now_tehran, parse_relative_time_to_datetime
 
 # Persian digit to ASCII mapping for number parsing
 _FA_TO_EN = str.maketrans("۰۱۲۳۴۵۶۷۸۹", "0123456789")
@@ -139,8 +139,10 @@ class DivarParser:
                     elif w_type == "EXPANDABLE_SECTION":
                         # title like "۱ ساعت پیش در اهواز، گلستان، خ اصفهان"
                         exp_title = w_data.get("title", "")
-                        if "پیش در" in exp_title:
-                            created_at_relative = exp_title.split("در")[0].strip()
+                        if " در " in exp_title:
+                            created_at_relative = exp_title.split(" در ")[0].strip()
+                        elif any(k in exp_title for k in ("پیش", "دیروز", "لحظات", "ساعت", "روز", "هفته", "ماه", "سال")):
+                            created_at_relative = exp_title.strip()
                         if "گلستان" in exp_title and not district:
                             district = "گلستان"
 
@@ -224,6 +226,13 @@ class DivarParser:
         if total_price and area_m2 and area_m2 > 0 and price_per_m2 is None:
             price_per_m2 = int(total_price / area_m2)
 
+        # Parse accurate creation datetime from relative Persian string
+        created_at_dt = None
+        if created_at_relative:
+            created_at_dt = parse_relative_time_to_datetime(created_at_relative)
+        if created_at_dt is None:
+            created_at_dt = now_tehran()
+
         return AdDetail(
             token=token,
             title=title,
@@ -231,7 +240,7 @@ class DivarParser:
             city=city,
             district=district or "گلستان",
             neighborhood=district or "گلستان",
-            created_at=now_tehran(),
+            created_at=created_at_dt,
             created_at_relative=created_at_relative,
             category_slug=cat_slug,
             ad_category=ad_category,

@@ -76,5 +76,4 @@ def setup_logging(
 
 
 def get_logger(name: str) -> structlog.stdlib.BoundLogger:
-    from typing import cast
     return cast(structlog.stdlib.BoundLogger, structlog.get_logger(name))

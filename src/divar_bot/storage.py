@@ -150,6 +150,23 @@ class Storage:
             )
             await self._conn.commit()
 
+    async def mark_skipped_old(self, token: str, reason: str = "Ad too old") -> None:
+        now = _now_iso()
+        async with self._lock:
+            assert self._conn
+            await self._conn.execute(
+                """
+                INSERT INTO ads (token, status, reason, first_seen, last_seen)
+                VALUES (?, ?, ?, ?, ?)
+                ON CONFLICT(token) DO UPDATE SET
+                    status=excluded.status,
+                    reason=excluded.reason,
+                    last_seen=excluded.last_seen
+                """,
+                (token, AdStatus.SKIPPED_OLD.value, reason, now, now),
+            )
+            await self._conn.commit()
+
     async def mark_failed(self, token: str, reason: str) -> None:
         now = _now_iso()
         async with self._lock:

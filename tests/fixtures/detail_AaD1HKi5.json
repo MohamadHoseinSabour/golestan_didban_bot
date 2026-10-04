@@ -1,0 +1,916 @@
+{
+  "sections": [
+    {
+      "section_name": "BREADCRUMB",
+      "widgets": [
+        {
+          "widget_type": "BREADCRUMB",
+          "data": {
+            "@type": "type.googleapis.com/widgets.BreadcrumbData",
+            "parent_items": [
+              {
+                "title": "املاک",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "real-estate"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              },
+              {
+                "title": "اجارهٔ کوتاه‌مدت",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "temporary-rent"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              },
+              {
+                "title": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "suite-apartment"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              }
+            ],
+            "current_page_title": "هتل اپارتمان",
+            "padded": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "TITLE",
+      "widgets": [
+        {
+          "widget_type": "LEGEND_TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.LegendTitleRowData",
+            "title": "هتل اپارتمان",
+            "high_level_heading": true,
+            "padding": "NO_PADDING"
+          }
+        },
+        {
+          "widget_type": "EXPANDABLE_SECTION",
+          "data": {
+            "@type": "type.googleapis.com/widgets.ExpandableSectionData",
+            "widget_list": [
+              {
+                "widget_type": "DESCRIPTION_ROW",
+                "data": {
+                  "@type": "type.googleapis.com/widgets.DescriptionRowData",
+                  "text": "انتشار آگهی: ۱۷ خرداد ۱۴۰۴، ۰۳:۱۴\nآخرین نردبان: ۱۲ مهر ۱۴۰۵، ۰۰:۴۳\nآخرین به‌روز‌رسانی: ۱۲ مهر ۱۴۰۵، ۱۷:۴۸",
+                  "is_primary": true,
+                  "small": true,
+                  "text_alignment": "RIGHT"
+                }
+              }
+            ],
+            "title": "سال پیش در اهواز، گلستان",
+            "icon": {}
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "زنگ خطرهای قبل از معامله",
+            "action": {
+              "type": "OPEN_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenPagePayload",
+                "request_http_method": "POST",
+                "request_data": {
+                  "@type": "type.googleapis.com/post_api_v2.GetFraudAlertPageRequest.Data",
+                  "category": "suite-apartment"
+                },
+                "specification": {
+                  "@type": "type.googleapis.com/widgets.OpenPagePayload.SimplePageSpecification",
+                  "navigation_button": "BACK"
+                },
+                "is_modal": true,
+                "rest_request_path": "/v8/postview/fraud-alert",
+                "grpc_request_path": "/post_api_v2.PostApi/GetFraudAlertPage"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/warning.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/warning.png",
+              "icon_name": "WARNING",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.PostWarningInfo",
+                "post_token": "AaD1HKi5"
+              },
+              "item_type": {
+                "type": "POST_WARNING"
+              }
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "DESCRIPTION",
+      "widgets": [
+        {
+          "widget_type": "TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.TitleRowData",
+            "text": "توضیحات",
+            "text_color": "TEXT_PRIMARY",
+            "text_type": "SECONDARY"
+          }
+        },
+        {
+          "widget_type": "DESCRIPTION_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.DescriptionRowData",
+            "text": "هتل آپارتمان با سوییت های مبله با تمامی امکانات و واحدهای VIP آماده پذیرایی از مسافران عزیز\n⚜️فول امکانات \n⚜️دسترسی عالی به مراکز تفریحی و خرید در محله ای امن و آرام\n⚜️دکوراسیون شیک و مدرن\n⚜️نظافت و امکانات درجه یک\n⚜️واحد های لوکس دو خواب \n⚜️قیمت نازلتر از همه جا\n⚜️ پرسنل حرفه ای و رزوشن و پشتیبانی 24 ساعته",
+            "is_primary": true,
+            "text_alignment": "RIGHT"
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "IMAGE",
+      "widgets": [
+        {
+          "widget_type": "IMAGE_CAROUSEL",
+          "data": {
+            "@type": "type.googleapis.com/widgets.ImageCarouselData",
+            "items": [
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/nsiq0yQnQKcJ7vwzT6zSyQ/d9b32e93-2790-4404-96d6-e7a21c265816.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/fV56tPbNgbrc0FpDXt_vDQ/d9b32e93-2790-4404-96d6-e7a21c265816.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/S7O5S_iYDjVW1YlUAPLwcQ/e4dd399a-9c7d-414b-8373-fc5c08e1073e.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/QxkAdawFYyvzeTm7Qi3-rQ/e4dd399a-9c7d-414b-8373-fc5c08e1073e.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/NDDqMwxTsGJAWuLhkJt9nA/f173b950-454d-4140-9b2a-e489012c4a4f.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/IsjJ9Q6Kqh5pemSGrE3QcA/f173b950-454d-4140-9b2a-e489012c4a4f.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/x90VKp4CbL-WtbA5XyeXRQ/0375d0c8-8a3c-4547-a3d6-e69c98e8ba56.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/egGreIJCxJHgjvXHR3uNaw/0375d0c8-8a3c-4547-a3d6-e69c98e8ba56.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/TXd4czAmyTKa4BeXcuTtKg/dc7b25de-09c7-4955-9e82-62988e61efea.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/qS294ligs2c_7rOquV4c6Q/dc7b25de-09c7-4955-9e82-62988e61efea.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/UZ04Ty7X5f0DQrtOJhOM-g/45973b84-f37f-44ab-9709-c34d4db289cf.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/MUK-pIXJiR3l_n4OMt7MeA/45973b84-f37f-44ab-9709-c34d4db289cf.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/po0eiin4L-QzgOGYKfHOFQ/09f9eb4f-9a74-4b02-b081-744c9fe8f217.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/BV4cJ-UN4ixaKMbVHufIeA/09f9eb4f-9a74-4b02-b081-744c9fe8f217.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/wH-Hw3URLy7qQoJWg1aM6g/1d43e8d0-9fad-4f52-98d1-ea3e4cf00735.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/c5WESDQrbGXyEowRQfrqlA/1d43e8d0-9fad-4f52-98d1-ea3e4cf00735.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/_iCD-7FNfmRNRLPFIg7Mkw/60f7c439-0b37-49bb-b2a3-48b654233dad.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/j9pxroKVr-Q-2XaEodtrww/60f7c439-0b37-49bb-b2a3-48b654233dad.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/TwMaHTxgiqWqbbgSfKBeUg/3ab77578-4252-4e3e-a65b-08a9d76c2a01.webp",
+                  "alt": "هتل اپارتمان|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Y1-05gQV9KqskJSewDdD9Q/3ab77578-4252-4e3e-a65b-08a9d76c2a01.webp"
+                }
+              }
+            ],
+            "image_aspect_ratio": {
+              "dynamic_aspect_ratio": {
+                "height": 3,
+                "width": 4
+              }
+            },
+            "has_preview": true,
+            "has_thumbnails": true,
+            "show_tooltip": true,
+            "tooltip_data": {
+              "icon": {
+                "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/fullscreen.png",
+                "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/fullscreen.png",
+                "icon_name": "FULLSCREEN",
+                "icon_color": "WHITE_PRIMARY"
+              },
+              "text": "۱۰"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "LIST_DATA",
+      "widgets": [
+        {
+          "widget_type": "GROUP_INFO_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.GroupInfoRow",
+            "items": [
+              {
+                "title": "متراژ",
+                "value": "۱۰۰"
+              },
+              {
+                "title": "اتاق",
+                "value": "۲"
+              }
+            ],
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "نوع اقامتگاه",
+            "value": "آپارتمان",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "تصویر‌ها برای همین ملک است؟",
+            "value": "بله",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "ظرفیت استاندارد",
+            "value": "۲ نفر",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "ظرفیت اضافه",
+            "value": "۴ نفر",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "SECTION_TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SectionTitleRowData",
+            "title": "اجاره",
+            "title_color": "TEXT_PRIMARY",
+            "padding": "ALT"
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "روزهای عادی (شنبه تا سه‌شنبه)",
+            "value": "۱,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "آخر هفته",
+            "value": "۱,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "تعطیلات و مناسبت‌ها",
+            "value": "۱,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "هزینهٔ هر نفر اضافه",
+            "value": "۱,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "سایر ویژگی‌ها و امکانات",
+            "action": {
+              "type": "LOAD_MODAL_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.LoadModalPagePayload",
+                "modal_page": {
+                  "title": "ویژگی‌ها و امکانات",
+                  "widget_list": [
+                    {
+                      "widget_type": "DESCRIPTION_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.DescriptionRowData",
+                        "text": "سیستم گرمایش/سرمایش",
+                        "is_primary": true,
+                        "expandable": true,
+                        "padded": true,
+                        "preview_max_line": 4,
+                        "text_alignment": "RIGHT"
+                      }
+                    },
+                    {
+                      "widget_type": "WRAPPER_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.WrapperRowData",
+                        "chip_list": {
+                          "chips": [
+                            {
+                              "text": "کولر گازی",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "اسپلیت",
+                              "type": "ACTION",
+                              "small": true
+                            }
+                          ]
+                        },
+                        "padded": true
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "مبله کامل",
+                        "value": "هست",
+                        "has_divider": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "has_divider": true,
+            "icon": {},
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z",
+            "fullwidth": true
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.ViewPostFeaturesInfo",
+                "post_token": "AaD1HKi5"
+              },
+              "item_type": {
+                "type": "VIEW_POST_FEATURES"
+              }
+            },
+            "enabled": true
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "بررسی و کارشناسی",
+            "action": {
+              "type": "OPEN_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenPagePayload",
+                "request_http_method": "POST",
+                "request_data": {
+                  "@type": "type.googleapis.com/service_providers.GetServiceProvidersPageRequest.RequestData",
+                  "source_v2": "DEMAND_POST",
+                  "filter": {
+                    "service_types": [
+                      "REPORT_INSPECTION"
+                    ],
+                    "city_id": 7,
+                    "category": "suite-apartment",
+                    "post_token": "AaD1HKi5",
+                    "touchpoint": "DEMAND_POST"
+                  },
+                  "action_data_builder": {
+                    "conversation_id": "AaD1HKi5",
+                    "post_token": "AaD1HKi5",
+                    "touchpoint": "DEMAND_POST",
+                    "source": "DEMAND_POST",
+                    "lead_source": "DEMAND"
+                  },
+                  "display_data": {
+                    "page_title": "بررسی و کارشناسی"
+                  },
+                  "trace_id": "99217d8e-12f6-422f-a43f-fc18c5e1abb0",
+                  "source": "DEMAND_POST",
+                  "lead_source": "DEMAND"
+                },
+                "specification": {
+                  "@type": "type.googleapis.com/widgets.OpenPagePayload.SimplePageSpecification"
+                },
+                "is_modal": true,
+                "rest_request_path": "/v8/open-platform/service-providers",
+                "grpc_request_path": "/service_providers.ServiceProviders/GetServiceProvidersPage"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/article-magnifier.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/article-magnifier.png",
+              "icon_name": "ARTICLE_MAGNIFIER",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "TAGS",
+      "widgets": [
+        {
+          "widget_type": "WRAPPER_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.WrapperRowData",
+            "chip_list": {
+              "chips": [
+                {
+                  "text": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+                  "type": "ACTION",
+                  "action": {
+                    "type": "OPEN_POSTLIST_PAGE_GRPC",
+                    "payload": {
+                      "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                      "search_data": {
+                        "form_data": {
+                          "data": {
+                            "category": {
+                              "str": {
+                                "value": "suite-apartment"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "source_view": "CATEGORY_BREAD_CRUMB",
+                      "source_view_str": "CATEGORY_BREAD_CRUMB"
+                    }
+                  }
+                },
+                {
+                  "text": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت در گلستان",
+                  "type": "ACTION",
+                  "action": {
+                    "type": "OPEN_POSTLIST_PAGE_GRPC",
+                    "payload": {
+                      "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                      "search_data": {
+                        "form_data": {
+                          "data": {
+                            "category": {
+                              "str": {
+                                "value": "suite-apartment"
+                              }
+                            },
+                            "districts": {
+                              "repeated_string": {
+                                "value": [
+                                  "323"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "source_view": "CATEGORY_BREAD_CRUMB",
+                      "source_view_str": "CATEGORY_BREAD_CRUMB"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "MAP",
+      "widgets": [
+        {
+          "widget_type": "MAP_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.MapRowData",
+            "location": {
+              "exact_data": {
+                "point": {
+                  "latitude": 31.291524887085,
+                  "longitude": 48.643566131592
+                }
+              }
+            },
+            "image_url": "https://mapimage.divarcdn.com/v8/mapimage?encrypted_data=MTIzNDU2Nzg5MTIzXEpvEvH_XdLuQiW3KEFOiftL7pNsZuFzRzcveJlCrDTqAw=="
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.MapInfo",
+                "post_token": "AaD1HKi5"
+              },
+              "item_type": {
+                "type": "MAP"
+              }
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "NOTE",
+      "widgets": [
+        {
+          "widget_type": "NOTE",
+          "data": {
+            "@type": "type.googleapis.com/widgets.NoteData",
+            "title": "یادداشت من",
+            "button_title": "ویرایش یادداشت",
+            "post_token": "AaD1HKi5",
+            "icon_button": {
+              "icon": {
+                "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/more_vert.png",
+                "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/more_vert.png",
+                "icon_name": "MORE_VERT",
+                "icon_color": "ICON_SECONDARY"
+              },
+              "action": {
+                "type": "LOAD_MENU",
+                "payload": {
+                  "@type": "type.googleapis.com/widgets.LoadMenuPayload",
+                  "menu": {
+                    "items": [
+                      {
+                        "text": "ویرایش یادداشت",
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/edit.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/edit.png",
+                          "icon_name": "EDIT",
+                          "icon_color": "ICON_SECONDARY"
+                        },
+                        "action": {
+                          "type": "NOTE",
+                          "payload": {
+                            "@type": "type.googleapis.com/widgets.NotePayload",
+                            "post_token": "AaD1HKi5",
+                            "max_character_count": 256
+                          }
+                        },
+                        "alignment": "RIGHT"
+                      },
+                      {
+                        "text": "حذف یادداشت",
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_primary/v1/trash_o.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_primary/v1/trash_o.png",
+                          "icon_name": "TRASH_O",
+                          "icon_color": "ICON_PRIMARY"
+                        },
+                        "action": {
+                          "type": "MAKE_NETWORK_CALL",
+                          "payload": {
+                            "@type": "type.googleapis.com/widgets.MakeNetworkCallPayload",
+                            "grpc_request_path": "/yaad_v2.YaadV2/DeleteNoteV2",
+                            "rest_request_path": "/yaad/delete-note-v2",
+                            "request_data": {
+                              "@type": "type.googleapis.com/yaad_v2.DeleteNoteV2Request.RequestData",
+                              "token": "AaD1HKi5"
+                            },
+                            "needs_auth": true
+                          }
+                        },
+                        "alignment": "RIGHT",
+                        "state": "STATE_NEGATIVE"
+                      }
+                    ],
+                    "banner": {}
+                  },
+                  "display_type": "LOAD_MENU_DISPLAY_TYPE_BOTTOM_SHEET"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "STATIC",
+      "widgets": [
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "گزارش آگهی",
+            "action": {
+              "type": "OPEN_FORM_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenFormPagePayload",
+                "grpc_servicer": "/post_quality.PostQualityFeedback/GetFeedbackForm",
+                "request_data": {
+                  "@type": "type.googleapis.com/post_quality.GetFeedbackFormRequest.RequestData",
+                  "post_token": "AaD1HKi5"
+                },
+                "rest_request_path": "/v8/post-quality/feedback-form"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/report.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/report.png",
+              "icon_name": "REPORT",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "title": "هتل اپارتمان",
+    "web_url": "https://divar.ir/v/AaD1HKi5"
+  },
+  "seo": {
+    "title": "هتل اپارتمان در اهواز",
+    "description": "آگهی هتل اپارتمان در دیوار اهواز",
+    "android_package_name": "ir.divar",
+    "android_app_url": "android-app://ir.divar/http/v/هتل اپارتمان/AaD1HKi5/",
+    "web_info": {
+      "title": "هتل اپارتمان",
+      "district_persian": "گلستان",
+      "city_persian": "اهواز",
+      "category_slug_persian": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت"
+    },
+    "unavailable_after": "2026-10-31T03:14:00.641072",
+    "bread_crumb": [
+      {
+        "name": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "suite-apartment"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "اجارهٔ کوتاه‌مدت",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "temporary-rent"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "املاک",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "real-estate"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "گلستان",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "7",
+        "search_data": {
+          "form_data": {}
+        }
+      },
+      {
+        "name": "دیوار"
+      }
+    ],
+    "post_seo_schema": {
+      "@context": "https://schema.org",
+      "@type": "CampingPitch",
+      "numberOfRooms": "دو",
+      "accommodationCategory": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": "100",
+        "unitCode": "MTK"
+      },
+      "geo": {
+        "longitude": "48.643566131592",
+        "@type": "GeoCoordinates",
+        "address": "اهواز, گلستان",
+        "latitude": "31.291524887085"
+      },
+      "url": "https://divar.ir/v/هتل-اپارتمان/AaD1HKi5",
+      "web_info": {
+        "category_slug_persian": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+        "title": "هتل اپارتمان",
+        "city_persian": "اهواز",
+        "district_persian": "گلستان"
+      },
+      "name": "هتل اپارتمان",
+      "description": "هتل آپارتمان با سوییت های مبله با تمامی امکانات و واحدهای VIP آماده پذیرایی از مسافران عزیز\n⚜️فول امکانات \n⚜️دسترسی عالی به مراکز تفریحی و خرید در محله ای امن و آرام\n⚜️دکوراسیون شیک و مدرن\n⚜️نظافت و امکانات درجه یک\n⚜️واحد های لوکس دو خواب \n⚜️قیمت نازلتر از همه جا\n⚜️ پرسنل حرفه ای و رزوشن و پشتیبانی 24 ساعته",
+      "image": "https://s100.divarcdn.com/static/photo/neda/webp_post/nsiq0yQnQKcJ7vwzT6zSyQ/d9b32e93-2790-4404-96d6-e7a21c265816.webp"
+    },
+    "image_url": "https://s100.divarcdn.com/static/photo/neda/post/mzPCxBIkMw_G-35tvJOnlw/d9b32e93-2790-4404-96d6-e7a21c265816.jpg"
+  },
+  "contact": {
+    "action_log": {
+      "server_side_info": {
+        "info": {
+          "@type": "type.googleapis.com/action_log.ContactInfoInfo",
+          "post_token": "AaD1HKi5",
+          "method_name": "GetContactWeb",
+          "contact_uuid": "007c51e2-f8c3-4636-8ce9-375e70aca84d"
+        },
+        "item_type": {
+          "type": "CONTACT_INFO"
+        }
+      },
+      "enabled": true
+    },
+    "contact_uuid": "007c51e2-f8c3-4636-8ce9-375e70aca84d"
+  },
+  "webengage": {
+    "business_type": "personal",
+    "gender": "",
+    "category": "suite-apartment",
+    "status": "",
+    "district": "golestan-ahvaz",
+    "rent": 0,
+    "cat_2": "temporary-rent",
+    "source_view": "",
+    "cat_1": "real-estate",
+    "price": 0,
+    "business_ref": "",
+    "credit": 0,
+    "token": "AaD1HKi5",
+    "city": "ahvaz",
+    "brand_model": "",
+    "image_count": 10,
+    "cat_3": "suite-apartment",
+    "originality": ""
+  },
+  "analytics": {
+    "cat1": "real-estate",
+    "cat2": "temporary-rent",
+    "cat3": "suite-apartment",
+    "city": "ahvaz"
+  },
+  "city": {
+    "city_id": "7",
+    "name": "اهواز",
+    "parent_id": "902",
+    "second_slug": "ahvaz"
+  }
+}

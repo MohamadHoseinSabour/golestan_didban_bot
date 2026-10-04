@@ -1,7 +1,8 @@
 """
 Unit tests for Storage layer.
 """
-from datetime import datetime, timezone
+from datetime import UTC, datetime
+
 import pytest
 
 from divar_bot.models import Ad, AdStatus, CycleStats
@@ -48,7 +49,7 @@ async def test_storage_cycle_stats(storage):
 
     stats = CycleStats(
         cycle_id=c_id,
-        started_at=datetime.now(tz=timezone.utc),
+        started_at=datetime.now(tz=UTC),
         ads_seen=10,
         ads_new=2,
         ads_personal=1,

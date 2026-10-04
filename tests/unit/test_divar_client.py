@@ -8,7 +8,6 @@ import respx
 from divar_bot.divar.client import (
     DivarBlockedError,
     DivarClient,
-    DivarNetworkError,
     DivarRateLimitError,
     DivarSchemaError,
 )

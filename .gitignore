@@ -38,8 +38,10 @@ venv.bak/
 
 # Database
 *.db
+*.db-*
 *.sqlite
 *.sqlite3
+data/
 
 # Logs
 logs/

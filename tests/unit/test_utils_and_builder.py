@@ -1,11 +1,18 @@
 """
 Unit tests for URL builder and utilities (Persian and time).
 """
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from divar_bot.divar.url_builder import parse_divar_url
 from divar_bot.utils.persian import format_area, format_price, normalize_arabic, to_persian_digits
-from divar_bot.utils.time import format_time_tehran, is_too_old, parse_unix_timestamp, relative_time
+from divar_bot.utils.time import (
+    format_time_tehran,
+    is_too_old,
+    parse_relative_age_minutes,
+    parse_relative_time_to_datetime,
+    parse_unix_timestamp,
+    relative_time,
+)
 
 
 def test_url_builder():
@@ -40,7 +47,7 @@ def test_persian_utils():
 
 
 def test_time_utils():
-    now = datetime.now(tz=timezone.utc)
+    now = datetime.now(tz=UTC)
     assert relative_time(now - timedelta(seconds=10)) == "۱۰ ثانیه پیش"
     assert relative_time(now - timedelta(minutes=5)) == "۵ دقیقه پیش"
     assert relative_time(now - timedelta(hours=2)) == "۲ ساعت پیش"
@@ -59,3 +66,43 @@ def test_time_utils():
     # format_time_tehran
     tehran_str = format_time_tehran(now)
     assert len(tehran_str) == 5  # HH:MM
+
+
+def test_parse_relative_age_minutes():
+    """Verify Persian relative strings properly convert to elapsed minutes."""
+    assert parse_relative_age_minutes("لحظاتی پیش") == 1
+    assert parse_relative_age_minutes("۵ دقیقه پیش") == 5
+    assert parse_relative_age_minutes("۱۰ دقیقه پیش") == 10
+    assert parse_relative_age_minutes("نیم ساعت پیش") == 30
+    assert parse_relative_age_minutes("۱ ساعت پیش") == 60
+    assert parse_relative_age_minutes("۳ ساعت پیش") == 180
+    assert parse_relative_age_minutes("دیروز") == 1440
+    assert parse_relative_age_minutes("پریروز") == 2880
+    assert parse_relative_age_minutes("۳ روز پیش") == 4320
+    assert parse_relative_age_minutes("هفته پیش") == 10080
+    assert parse_relative_age_minutes("۲ هفته پیش") == 20160
+    assert parse_relative_age_minutes("ماه پیش") == 43200
+    assert parse_relative_age_minutes("۲ ماه پیش") == 86400
+    assert parse_relative_age_minutes("سال پیش") == 525600
+    assert parse_relative_age_minutes("پارسال") == 525600
+    assert parse_relative_age_minutes(None) is None
+
+
+def test_relative_time_age_filter_integration():
+    """Verify that an ad posted 'سال پیش' is marked too old while fresh ads pass."""
+    old_dt = parse_relative_time_to_datetime("سال پیش")
+    assert old_dt is not None
+    assert is_too_old(old_dt, max_age_minutes=180) is True
+
+    month_dt = parse_relative_time_to_datetime("۲ ماه پیش")
+    assert month_dt is not None
+    assert is_too_old(month_dt, max_age_minutes=180) is True
+
+    day_dt = parse_relative_time_to_datetime("دیروز")
+    assert day_dt is not None
+    assert is_too_old(day_dt, max_age_minutes=180) is True
+
+    fresh_dt = parse_relative_time_to_datetime("۵ دقیقه پیش")
+    assert fresh_dt is not None
+    assert is_too_old(fresh_dt, max_age_minutes=180) is False
+

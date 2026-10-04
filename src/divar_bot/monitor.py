@@ -210,9 +210,18 @@ class MonitorService:
             ad = DivarParser.parse_detail(token, detail_json)
             await self.storage.mark_seen(ad)
 
-            # Check age limit (prevent notification storm after long bot downtime)
+            # Check age limit (prevent notification storm after long bot downtime or bumped old ads)
             if is_too_old(ad.created_at, self.settings.max_ad_age_minutes):
-                logger.info("skipped_old_listing", token=token, age_minutes=self.settings.max_ad_age_minutes)
+                logger.info(
+                    "skipped_old_listing",
+                    token=token,
+                    relative_time=ad.created_at_relative,
+                    max_age_minutes=self.settings.max_ad_age_minutes,
+                )
+                await self.storage.mark_skipped_old(
+                    token,
+                    f"Ad published {ad.created_at_relative} (older than {self.settings.max_ad_age_minutes}m)",
+                )
                 continue
 
             # Price & area optional filters from config
@@ -252,6 +261,22 @@ class MonitorService:
                     if result == ClassifierResult.PERSONAL:
                         ad = DivarParser.parse_detail(token, detail_json)
                         await self.storage.mark_seen(ad)
+
+                        if is_too_old(ad.created_at, self.settings.max_ad_age_minutes):
+                            logger.info(
+                                "first_run_skipped_old_listing",
+                                token=token,
+                                relative_time=ad.created_at_relative,
+                            )
+                            await self.storage.mark_skipped_old(
+                                token,
+                                f"Ad published {ad.created_at_relative} (older than {self.settings.max_ad_age_minutes}m)",
+                            )
+                            continue
+
+                        if not self._passes_user_filters(ad):
+                            continue
+
                         msg_ids = await self.bot.send_notification(ad)
                         if msg_ids:
                             await self.storage.mark_notified(token, msg_ids[0])

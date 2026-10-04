@@ -8,7 +8,7 @@ import pytest
 from divar_bot.config import Settings
 from divar_bot.divar.client import DivarClient, DivarNetworkError
 from divar_bot.monitor import MonitorService
-from divar_bot.storage import Storage
+from divar_bot.storage import AdStatus, Storage
 from divar_bot.telegram.bot import TelegramBot
 
 
@@ -171,3 +171,54 @@ async def test_circuit_breaker_health_alert(temp_storage, mock_settings):
     await monitor.run_cycle()
     # Recovery alert sent!
     assert mock_bot.send_health_alert.call_count == 2
+
+
+@pytest.mark.asyncio
+async def test_monitor_skips_old_bumped_ad(temp_storage, mock_settings):
+    """Verify that an ad posted long ago (e.g., 'سال پیش') bumped by Divar is skipped."""
+    mock_divar = MagicMock(spec=DivarClient)
+    mock_divar.fetch_listings = AsyncMock(return_value=[
+        {"widget_type": "POST_ROW", "data": {"token": "old_token_123", "title": "هتل آپارتمان نردبان شده"}}
+    ])
+    # Detail response has 'سال پیش در اهواز' in EXPANDABLE_SECTION
+    mock_divar.fetch_detail = AsyncMock(return_value={
+        "webengage": {"business_type": "personal", "business_ref": "", "price": 0},
+        "seo": {"title": "هتل آپارتمان"},
+        "sections": [
+            {
+                "section_name": "TITLE",
+                "widgets": [
+                    {"widget_type": "TITLE_ROW", "data": {"title": "هتل آپارتمان"}},
+                    {"widget_type": "EXPANDABLE_SECTION", "data": {"title": "سال پیش در اهواز، گلستان"}},
+                ]
+            }
+        ]
+    })
+
+    mock_bot = MagicMock(spec=TelegramBot)
+    mock_bot.is_paused = False
+    mock_bot.send_notification = AsyncMock()
+
+    monitor = MonitorService(
+        settings=mock_settings,
+        storage=temp_storage,
+        divar_client=mock_divar,
+        telegram_bot=mock_bot,
+    )
+    monitor._is_first_run = False  # Normal cycle
+
+    stats = await monitor.run_cycle()
+    assert stats.ads_new == 1
+    assert stats.ads_personal == 1
+    assert stats.ads_sent == 0
+    mock_bot.send_notification.assert_not_called()
+
+    # Verify status in database is SKIPPED_OLD
+    status = await temp_storage.get_status("old_token_123")
+    assert status == AdStatus.SKIPPED_OLD
+
+    # On next cycle, deduplication ensures it is not processed again
+    stats2 = await monitor.run_cycle()
+    assert stats2.ads_new == 0
+    assert stats2.ads_sent == 0
+

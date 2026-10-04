@@ -12,7 +12,6 @@ from telegram import Update
 from telegram.constants import ParseMode
 from telegram.error import RetryAfter, TelegramError
 from telegram.ext import (
-    Application,
     ApplicationBuilder,
     CommandHandler,
     ContextTypes,
