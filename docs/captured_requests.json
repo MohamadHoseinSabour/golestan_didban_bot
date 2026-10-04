@@ -1,0 +1,546 @@
+[
+  {
+    "url": "https://api.divar.ir/v8/search-bookmark/web/get-search-bar-empty-state",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "x-web-serving-mode": "desktop",
+      "referer": "https://divar.ir/",
+      "accept-language": "fa,en;q=0.9",
+      "sec-ch-ua": "\"Chromium\";v=\"148\", \"HeadlessChrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+      "sec-ch-ua-mobile": "?0",
+      "baggage": "sentry-environment=client,sentry-release=the-wall-v14-133-9,sentry-public_key=7e7d19d51ebe4bd5955fda8ab50107b1,sentry-trace_id=fa0f7b7ad2fa10844541402ee2ba0a45,sentry-sampled=false,sentry-sample_rand=0.873289240903878,sentry-sample_rate=0.01",
+      "sentry-trace": "fa0f7b7ad2fa10844541402ee2ba0a45-4f03af89e2b3ca48-0",
+      "traceparent": "00-fa0f7b7ad2fa10844541402ee2ba0a45-4f03af89e2b3ca48-00",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "accept": "application/json-divar-filled",
+      "x-screen-size": "1280x720",
+      "content-type": "application/json",
+      "tracestate": "sentry.sampled_not_recording=1,sentry.sample_rand=0.873289240903878,sentry.sample_rate=0.01,sentry.url=https://api.divar.ir/v8/search-bookmark/web/get-search-bar-empty-state"
+    },
+    "body": {
+      "recent_searches": [],
+      "support_search_data": true,
+      "city_ids": [
+        "7"
+      ],
+      "user_selected_location": {
+        "places": [
+          {
+            "place_id": "7"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://api.divar.ir/v8/my-divar/web/menu",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "x-web-serving-mode": "desktop",
+      "referer": "https://divar.ir/",
+      "accept-language": "fa,en;q=0.9",
+      "sec-ch-ua": "\"Chromium\";v=\"148\", \"HeadlessChrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+      "sec-ch-ua-mobile": "?0",
+      "baggage": "sentry-environment=client,sentry-release=the-wall-v14-133-9,sentry-public_key=7e7d19d51ebe4bd5955fda8ab50107b1,sentry-trace_id=1a39de4a25743ced4a9bbb4abff89597,sentry-sampled=false,sentry-sample_rand=0.3944711524316623,sentry-sample_rate=0.01",
+      "sentry-trace": "1a39de4a25743ced4a9bbb4abff89597-62bee246743449ab-0",
+      "traceparent": "00-1a39de4a25743ced4a9bbb4abff89597-62bee246743449ab-00",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "accept": "application/json-divar-filled",
+      "x-screen-size": "1280x720",
+      "content-type": "application/json",
+      "tracestate": "sentry.sampled_not_recording=1,sentry.sample_rand=0.3944711524316623,sentry.sample_rate=0.01,sentry.url=https://api.divar.ir/v8/my-divar/web/menu"
+    },
+    "body": {
+      "menu_id": "MY_DIVAR_MENU_ID_HEADER"
+    }
+  },
+  {
+    "url": "https://api.divar.ir/v1/client-exporter/send-report",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://divar.ir/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"148\", \"HeadlessChrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+      "content-type": "text/plain;charset=UTF-8",
+      "sec-ch-ua-mobile": "?0",
+      "accept-language": "fa,en;q=0.9"
+    },
+    "body": {
+      "reports": [
+        {
+          "user_event": {
+            "timestamp": "1791152679894",
+            "web_view_event": {
+              "serving_mode": "desktop",
+              "is_pwa": false,
+              "host_os_name": "Windows",
+              "theme": "light",
+              "browser": "Chrome",
+              "browser_version": "124",
+              "os_version": "10",
+              "rwv": {
+                "platform": "",
+                "version": "",
+                "api_version": "",
+                "version_code": ""
+              }
+            }
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152679918",
+            "path": "https://s100.divarcdn.com/static/public/search/filters-config.json?version=1.0",
+            "method": "GET",
+            "status_code": 200,
+            "response_time": 23,
+            "cdn_edge_node": "80004",
+            "cdn_provider": "sotoon cdn",
+            "cdn_cache_status": "UPDATING"
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152679922",
+            "path": "https://map.divarcdn.com/places-web.json",
+            "method": "GET",
+            "status_code": 200,
+            "response_time": 27,
+            "cdn_edge_node": "70004",
+            "cdn_provider": "sotoon cdn",
+            "cdn_cache_status": "HIT"
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152680013",
+            "widget_render_event": {
+              "widget_name": "TITLE_ROW",
+              "version": "v2"
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "web_sentry_sample_rate",
+              "double_value": 0.2
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "web_sentry_replays_sample_rate",
+              "double_value": 0
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "is_circle_location_enabled",
+              "bool_value": true
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "post-stats-batch-event-web-flush-interval-sec",
+              "double_value": 20
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "post-stats-batch-event-web-max-batch-size",
+              "double_value": 20
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "is_web_proactive_refresh_enabled",
+              "bool_value": true
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "web_client_exporter_disabled",
+              "bool_value": false
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "web_client_exporter_user_event_sample_rate",
+              "double_value": 1
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "web_sentry_traces_sample_rate",
+              "double_value": 0.01
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "web_client_exporter_api_call_sample_rate",
+              "double_value": 1
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "divar_default_call_center",
+              "string_value": "neda"
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681135",
+            "read_flag_event": {
+              "name": "divar_neda_call_center_phone_number",
+              "string_value": "02191007945"
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681136",
+            "read_flag_event": {
+              "name": "enable-tabbed-places-hierarchy-web",
+              "bool_value": false
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681136",
+            "read_flag_event": {
+              "name": "enable-places-selector-online-search-web",
+              "bool_value": true
+            }
+          }
+        }
+      ],
+      "device": {
+        "os": {
+          "name": "web",
+          "version": "124.0.0.0"
+        }
+      }
+    }
+  },
+  {
+    "url": "https://api.divar.ir/v8/mapview/viewport",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "x-web-serving-mode": "desktop",
+      "referer": "https://divar.ir/",
+      "accept-language": "fa,en;q=0.9",
+      "sec-ch-ua": "\"Chromium\";v=\"148\", \"HeadlessChrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+      "sec-ch-ua-mobile": "?0",
+      "baggage": "sentry-environment=client,sentry-release=the-wall-v14-133-9,sentry-public_key=7e7d19d51ebe4bd5955fda8ab50107b1,sentry-trace_id=f466bca4d44df4bb8f089f28d93c32fa,sentry-sampled=false,sentry-sample_rand=0.6350523355753157,sentry-sample_rate=0.01",
+      "sentry-trace": "f466bca4d44df4bb8f089f28d93c32fa-befaa7cdbbe54026-0",
+      "traceparent": "00-f466bca4d44df4bb8f089f28d93c32fa-befaa7cdbbe54026-00",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "x-screen-size": "1280x720",
+      "content-type": "application/json",
+      "tracestate": "sentry.sampled_not_recording=1,sentry.sample_rand=0.6350523355753157,sentry.sample_rate=0.01,sentry.url=https://api.divar.ir/v8/mapview/viewport"
+    },
+    "body": {
+      "search_data": {
+        "form_data": {
+          "data": {
+            "bbox": {
+              "repeated_float": {
+                "value": [
+                  {
+                    "value": 48.6043
+                  },
+                  {
+                    "value": 31.2658939
+                  },
+                  {
+                    "value": 48.6834793
+                  },
+                  {
+                    "value": 31.3184261
+                  }
+                ]
+              }
+            },
+            "business-type": {
+              "repeated_string": {
+                "value": [
+                  "personal"
+                ]
+              }
+            },
+            "map_free_roaming": {
+              "boolean": {
+                "value": true
+              }
+            },
+            "category": {
+              "str": {
+                "value": "real-estate"
+              }
+            },
+            "districts": {
+              "repeated_string": {
+                "value": [
+                  "323"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "camera_info": {
+        "bbox": {
+          "min_latitude": 31.252807,
+          "min_longitude": 48.604301,
+          "max_latitude": 31.331504,
+          "max_longitude": 48.683479
+        },
+        "place_hash": "7|323|real-estate||",
+        "zoom": 12.290163628190141
+      },
+      "city_ids": [
+        "7"
+      ],
+      "user_selected_location": {
+        "places": [
+          {
+            "place_id": "7"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://api.divar.ir/v1/client-exporter/send-report",
+    "method": "POST",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://divar.ir/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"148\", \"HeadlessChrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+      "content-type": "text/plain;charset=UTF-8",
+      "sec-ch-ua-mobile": "?0",
+      "accept-language": "fa,en;q=0.9"
+    },
+    "body": {
+      "reports": [
+        {
+          "user_event": {
+            "timestamp": "1791152681139",
+            "read_flag_event": {
+              "name": "auth_logout_otp_network_warning",
+              "bool_value": false
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681139",
+            "read_flag_event": {
+              "name": "web_show_ios_appstore_promotion_banner",
+              "bool_value": false
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681139",
+            "read_flag_event": {
+              "name": "dx-clarity",
+              "bool_value": false
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152681139",
+            "read_flag_event": {
+              "name": "web_action_log_disabled",
+              "bool_value": false
+            }
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152681521",
+            "path": "https://api.divar.ir/v8/my-divar/web/menu",
+            "method": "POST",
+            "status_code": 200,
+            "response_time": 1426,
+            "cdn_edge_node": "2003",
+            "cdn_provider": "sotoon cdn",
+            "cdn_cache_status": "BYPASS"
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152682076",
+            "widget_render_event": {
+              "widget_name": "MAP_POST_COUNT_ROW",
+              "version": "v2"
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152682076",
+            "widget_render_event": {
+              "widget_name": "SEO_LINKS",
+              "version": "v2"
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152683201",
+            "read_flag_event": {
+              "name": "web_client_exporter_api_call_sample_rate",
+              "double_value": 1
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152683201",
+            "read_flag_event": {
+              "name": "is_circle_location_enabled",
+              "bool_value": true
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152683201",
+            "read_flag_event": {
+              "name": "web_client_exporter_user_event_sample_rate",
+              "double_value": 1
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152683201",
+            "read_flag_event": {
+              "name": "post-stats-batch-event-web-enabled",
+              "bool_value": true
+            }
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152683201",
+            "read_flag_event": {
+              "name": "web_action_log_disabled",
+              "bool_value": false
+            }
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152685395",
+            "path": "https://api-divar.neshan.org/tile/basemap/12/2601/1672.pbf",
+            "method": "GET",
+            "status_code": 200,
+            "response_time": 1674,
+            "request_size": 0
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152685597",
+            "path": "https://api-divar.neshan.org/tile/basemap/12/2601/1673.pbf",
+            "method": "GET",
+            "status_code": 200,
+            "response_time": 1876,
+            "request_size": 0
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152686422",
+            "path": "https://api.divar.ir/v8/mapview/viewport",
+            "method": "POST",
+            "status_code": 200,
+            "response_time": 802,
+            "cdn_edge_node": "2003",
+            "cdn_provider": "sotoon cdn",
+            "cdn_cache_status": "BYPASS"
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152687163",
+            "path": "https://api-divar.neshan.org/tile/basemap/12/2601/1673.pbf",
+            "method": "GET",
+            "status_code": 200,
+            "response_time": 1876,
+            "request_size": 0
+          }
+        },
+        {
+          "api_call": {
+            "timestamp": "1791152687500",
+            "path": "https://api-divar.neshan.org/tile/basemap/12/2601/1672.pbf",
+            "method": "GET",
+            "status_code": 200,
+            "response_time": 1674,
+            "request_size": 0
+          }
+        },
+        {
+          "user_event": {
+            "timestamp": "1791152688503",
+            "read_flag_event": {
+              "name": "web_client_exporter_api_call_sample_rate",
+              "double_value": 1
+            }
+          }
+        }
+      ],
+      "device": {
+        "os": {
+          "name": "web",
+          "version": "124.0.0.0"
+        }
+      }
+    }
+  }
+]

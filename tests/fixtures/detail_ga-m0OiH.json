@@ -1,0 +1,936 @@
+{
+  "sections": [
+    {
+      "section_name": "BREADCRUMB",
+      "widgets": [
+        {
+          "widget_type": "BREADCRUMB",
+          "data": {
+            "@type": "type.googleapis.com/widgets.BreadcrumbData",
+            "parent_items": [
+              {
+                "title": "املاک",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "real-estate"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              },
+              {
+                "title": "فروش مسکونی",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "residential-sell"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              },
+              {
+                "title": "فروش آپارتمان",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "apartment-sell"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              }
+            ],
+            "current_page_title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+            "padded": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "TITLE",
+      "widgets": [
+        {
+          "widget_type": "LEGEND_TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.LegendTitleRowData",
+            "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+            "high_level_heading": true,
+            "padding": "NO_PADDING"
+          }
+        },
+        {
+          "widget_type": "EXPANDABLE_SECTION",
+          "data": {
+            "@type": "type.googleapis.com/widgets.ExpandableSectionData",
+            "widget_list": [
+              {
+                "widget_type": "DESCRIPTION_ROW",
+                "data": {
+                  "@type": "type.googleapis.com/widgets.DescriptionRowData",
+                  "text": "انتشار آگهی: ۹ مهر ۱۴۰۵، ۱۵:۲۲\nآخرین نردبان: ۱۲ مهر ۱۴۰۵، ۲۱:۵۰",
+                  "is_primary": true,
+                  "small": true,
+                  "text_alignment": "RIGHT"
+                }
+              }
+            ],
+            "title": "۳ روز پیش در اهواز، گلستان، بلوار کارگر شرقی",
+            "icon": {}
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "زنگ خطرهای قبل از معامله",
+            "action": {
+              "type": "OPEN_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenPagePayload",
+                "request_http_method": "POST",
+                "request_data": {
+                  "@type": "type.googleapis.com/post_api_v2.GetFraudAlertPageRequest.Data",
+                  "category": "apartment-sell"
+                },
+                "specification": {
+                  "@type": "type.googleapis.com/widgets.OpenPagePayload.SimplePageSpecification",
+                  "navigation_button": "BACK"
+                },
+                "is_modal": true,
+                "rest_request_path": "/v8/postview/fraud-alert",
+                "grpc_request_path": "/post_api_v2.PostApi/GetFraudAlertPage"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/warning.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/warning.png",
+              "icon_name": "WARNING",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.PostWarningInfo",
+                "post_token": "ga-m0OiH"
+              },
+              "item_type": {
+                "type": "POST_WARNING"
+              }
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "DESCRIPTION",
+      "widgets": [
+        {
+          "widget_type": "TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.TitleRowData",
+            "text": "توضیحات",
+            "text_color": "TEXT_PRIMARY",
+            "text_type": "SECONDARY"
+          }
+        },
+        {
+          "widget_type": "DESCRIPTION_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.DescriptionRowData",
+            "text": "سلام\n... منزل اول به همسایشه...\nاداری پزشکی مجوز میدن بدون اونهم میتونی کارکنی بدون مزاحمت... \n100متر درسند(98/80)وجدا در افراز نامه قانونی11متر پارکینگ،انباری و2تراس اضافه مجموعا\"120متر،3خواب،5طبقه15واحدزمین500متری،توی اتوبان اصلی بهترین جا، روبروی فضای سبز و مجتمع مسکونی فرهنگی آب و برق، استخر رستوران مسجد مدرسه های دولتی نانوایی فروشگاه و هتل و پارک داره روبرو و کلاسهای فوق برنامه در سالن ورزشی هم هست،بین بوستان و سعدی توی اتوبان کارگر، روبرومون ساختمان نیست که مشرف باشه به داخل منزل،طبقه اول جلو کاری به برق و تعمیرات آسانسور نداری... \n3تراس داری که یکیش آشپزخانه اندرونی شده و بوی غذا داخل نمیپیچه... \nیکیش برای رخت و لباس دوجداره هم شده از درون و روبه بیرون... \nتراس پشت تمام سرامیک با لوله کشی آب و گاز و فاضلاب و جای توالت... آماده برای احداث سرویس بهداشتی کامل...  \nهمسایه ها محترم باشخصیت قدیمی آروم کمصدا خلوت و کمپیدا ...!\nجای پارکینگ عالی11مترقانونی جای پارک مهمان توی مشاعات زیاده\nزمین پربرکت و انرژی مثبتیه خیلی\nبیش از10ساله لذت بردم ازش مبارک عزیز بعدی، ان شاءالله",
+            "is_primary": true,
+            "text_alignment": "RIGHT"
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "IMAGE",
+      "widgets": [
+        {
+          "widget_type": "IMAGE_CAROUSEL",
+          "data": {
+            "@type": "type.googleapis.com/widgets.ImageCarouselData",
+            "items": [
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/en3Sb-w3A2LLESTsuKVflA/de945742-25a8-487e-8f92-f75756cd97f6.webp",
+                  "alt": "منزل قابلیت اداری 3خواب اتوبان اصلی|فروش آپارتمان|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/U0-KD_zstXmrMJaJIsjefQ/de945742-25a8-487e-8f92-f75756cd97f6.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/TiB-qPRMQK9a6lpfCHpY9g/5dd55d8b-c046-40c9-b797-23062138a469.webp",
+                  "alt": "منزل قابلیت اداری 3خواب اتوبان اصلی|فروش آپارتمان|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/VANTtiJtSFTIUeaXBxN_3Q/5dd55d8b-c046-40c9-b797-23062138a469.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/-bs05-UFUeplzXr6-vZIPg/490ef37e-7873-496f-acbf-a701c0e40806.webp",
+                  "alt": "منزل قابلیت اداری 3خواب اتوبان اصلی|فروش آپارتمان|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Nvd1M9VrF8G9pCaY8O4XdQ/490ef37e-7873-496f-acbf-a701c0e40806.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/1wDtqOHfT6TP42HuEoru3A/cd3e5a65-95c1-47ca-800d-6a90aae88bfd.webp",
+                  "alt": "منزل قابلیت اداری 3خواب اتوبان اصلی|فروش آپارتمان|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/sREF7uzQgXzOb8ppqGBgrg/cd3e5a65-95c1-47ca-800d-6a90aae88bfd.webp"
+                }
+              }
+            ],
+            "image_aspect_ratio": {
+              "dynamic_aspect_ratio": {
+                "height": 3,
+                "width": 4
+              }
+            },
+            "has_preview": true,
+            "has_thumbnails": true,
+            "show_tooltip": true,
+            "tooltip_data": {
+              "icon": {
+                "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/fullscreen.png",
+                "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/fullscreen.png",
+                "icon_name": "FULLSCREEN",
+                "icon_color": "WHITE_PRIMARY"
+              },
+              "text": "عکس‌ها: تزئینی"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "LIST_DATA",
+      "widgets": [
+        {
+          "widget_type": "GROUP_INFO_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.GroupInfoRow",
+            "items": [
+              {
+                "title": "متراژ",
+                "value": "۱۲۰"
+              },
+              {
+                "title": "ساخت",
+                "value": "۱۳۸۸"
+              },
+              {
+                "title": "اتاق",
+                "value": "۳"
+              }
+            ],
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "تصویر‌ها برای همین ملک است؟",
+            "value": "خیر",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "قیمت کل",
+            "value": "‏۱۰,۲۰۰,۰۰۰,۰۰۰ تومان",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "قیمت هر متر",
+            "value": "‏۸۵,۰۰۰,۰۰۰ تومان",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "طبقه",
+            "value": "۱ از ۵",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "SECTION_TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SectionTitleRowData",
+            "title": "ویژگی‌ها و امکانات",
+            "title_color": "TEXT_PRIMARY",
+            "padding": "ALT"
+          }
+        },
+        {
+          "widget_type": "GROUP_FEATURE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.GroupFeatureRow",
+            "items": [
+              {
+                "title": "آسانسور",
+                "icon": {
+                  "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/elevator.png",
+                  "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/elevator.png",
+                  "icon_name": "ELEVATOR",
+                  "icon_color": "ICON_SECONDARY"
+                },
+                "available": true
+              },
+              {
+                "title": "پارکینگ",
+                "icon": {
+                  "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/parking.png",
+                  "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/parking.png",
+                  "icon_name": "PARKING",
+                  "icon_color": "ICON_SECONDARY"
+                },
+                "available": true
+              },
+              {
+                "title": "انباری",
+                "icon": {
+                  "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/cabinet.png",
+                  "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/cabinet.png",
+                  "icon_name": "CABINET",
+                  "icon_color": "ICON_SECONDARY"
+                },
+                "available": true
+              }
+            ],
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "سایر ویژگی‌ها و امکانات",
+            "action": {
+              "type": "LOAD_MODAL_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.LoadModalPagePayload",
+                "modal_page": {
+                  "title": "ویژگی‌ها و امکانات",
+                  "widget_list": [
+                    {
+                      "widget_type": "TITLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.TitleRowData",
+                        "text": "ویژگی‌ها",
+                        "has_divider": true,
+                        "text_color": "TEXT_PRIMARY"
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "تعداد کل طبقات ساختمان",
+                        "value": "۵",
+                        "has_divider": true
+                      }
+                    },
+                    {
+                      "widget_type": "TITLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.TitleRowData",
+                        "text": "امکانات",
+                        "has_divider": true,
+                        "text_color": "TEXT_PRIMARY"
+                      }
+                    },
+                    {
+                      "widget_type": "FEATURE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.FeatureRowData",
+                        "title": "آسانسور",
+                        "has_divider": true,
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/elevator.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/elevator.png",
+                          "icon_name": "ELEVATOR",
+                          "icon_color": "ICON_SECONDARY"
+                        }
+                      }
+                    },
+                    {
+                      "widget_type": "FEATURE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.FeatureRowData",
+                        "title": "پارکینگ",
+                        "has_divider": true,
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/parking.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/parking.png",
+                          "icon_name": "PARKING",
+                          "icon_color": "ICON_SECONDARY"
+                        }
+                      }
+                    },
+                    {
+                      "widget_type": "FEATURE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.FeatureRowData",
+                        "title": "انباری",
+                        "has_divider": true,
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/cabinet.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/cabinet.png",
+                          "icon_name": "CABINET",
+                          "icon_color": "ICON_SECONDARY"
+                        }
+                      }
+                    },
+                    {
+                      "widget_type": "FEATURE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.FeatureRowData",
+                        "title": "بالکن دارد",
+                        "has_divider": true,
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/balcony.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/balcony.png",
+                          "icon_name": "BALCONY",
+                          "icon_color": "ICON_SECONDARY"
+                        }
+                      }
+                    },
+                    {
+                      "widget_type": "FEATURE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.FeatureRowData",
+                        "title": "جنس کف سرامیک",
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/texture.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/texture.png",
+                          "icon_name": "TEXTURE",
+                          "icon_color": "ICON_SECONDARY"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "has_divider": true,
+            "icon": {},
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z",
+            "fullwidth": true
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.ViewPostFeaturesInfo",
+                "post_token": "ga-m0OiH"
+              },
+              "item_type": {
+                "type": "VIEW_POST_FEATURES"
+              }
+            },
+            "enabled": true
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "بررسی و کارشناسی",
+            "action": {
+              "type": "OPEN_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenPagePayload",
+                "request_http_method": "POST",
+                "request_data": {
+                  "@type": "type.googleapis.com/service_providers.GetServiceProvidersPageRequest.RequestData",
+                  "source_v2": "DEMAND_POST",
+                  "filter": {
+                    "service_types": [
+                      "REPORT_INSPECTION"
+                    ],
+                    "city_id": 7,
+                    "category": "apartment-sell",
+                    "post_token": "ga-m0OiH",
+                    "touchpoint": "DEMAND_POST"
+                  },
+                  "action_data_builder": {
+                    "conversation_id": "ga-m0OiH",
+                    "post_token": "ga-m0OiH",
+                    "touchpoint": "DEMAND_POST",
+                    "source": "DEMAND_POST",
+                    "lead_source": "DEMAND"
+                  },
+                  "display_data": {
+                    "page_title": "بررسی و کارشناسی"
+                  },
+                  "trace_id": "ed0d9509-fd52-4dd2-afe7-419e5a7fc45c",
+                  "source": "DEMAND_POST",
+                  "lead_source": "DEMAND"
+                },
+                "specification": {
+                  "@type": "type.googleapis.com/widgets.OpenPagePayload.SimplePageSpecification"
+                },
+                "is_modal": true,
+                "rest_request_path": "/v8/open-platform/service-providers",
+                "grpc_request_path": "/service_providers.ServiceProviders/GetServiceProvidersPage"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/article-magnifier.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/article-magnifier.png",
+              "icon_name": "ARTICLE_MAGNIFIER",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "TAGS",
+      "widgets": [
+        {
+          "widget_type": "WRAPPER_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.WrapperRowData",
+            "chip_list": {
+              "chips": [
+                {
+                  "text": "فروش آپارتمان",
+                  "type": "ACTION",
+                  "action": {
+                    "type": "OPEN_POSTLIST_PAGE_GRPC",
+                    "payload": {
+                      "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                      "search_data": {
+                        "form_data": {
+                          "data": {
+                            "category": {
+                              "str": {
+                                "value": "apartment-sell"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "source_view": "CATEGORY_BREAD_CRUMB",
+                      "source_view_str": "CATEGORY_BREAD_CRUMB"
+                    }
+                  }
+                },
+                {
+                  "text": "فروش آپارتمان در گلستان",
+                  "type": "ACTION",
+                  "action": {
+                    "type": "OPEN_POSTLIST_PAGE_GRPC",
+                    "payload": {
+                      "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                      "search_data": {
+                        "form_data": {
+                          "data": {
+                            "districts": {
+                              "repeated_string": {
+                                "value": [
+                                  "323"
+                                ]
+                              }
+                            },
+                            "category": {
+                              "str": {
+                                "value": "apartment-sell"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "source_view": "CATEGORY_BREAD_CRUMB",
+                      "source_view_str": "CATEGORY_BREAD_CRUMB"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "MAP",
+      "widgets": [
+        {
+          "widget_type": "MAP_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.MapRowData",
+            "location": {
+              "exact_data": {
+                "point": {
+                  "latitude": 31.287982217906,
+                  "longitude": 48.635574736337
+                }
+              }
+            },
+            "image_url": "https://mapimage.divarcdn.com/v8/mapimage?encrypted_data=MTIzNDU2Nzg5MTIzXB_TzaLnXtLuQqHqeaJ0ivtLS-K1ah6OBQABcUdYwpumBg=="
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.MapInfo",
+                "post_token": "ga-m0OiH"
+              },
+              "item_type": {
+                "type": "MAP"
+              }
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "NOTE",
+      "widgets": [
+        {
+          "widget_type": "NOTE",
+          "data": {
+            "@type": "type.googleapis.com/widgets.NoteData",
+            "title": "یادداشت من",
+            "button_title": "ویرایش یادداشت",
+            "post_token": "ga-m0OiH",
+            "icon_button": {
+              "icon": {
+                "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/more_vert.png",
+                "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/more_vert.png",
+                "icon_name": "MORE_VERT",
+                "icon_color": "ICON_SECONDARY"
+              },
+              "action": {
+                "type": "LOAD_MENU",
+                "payload": {
+                  "@type": "type.googleapis.com/widgets.LoadMenuPayload",
+                  "menu": {
+                    "items": [
+                      {
+                        "text": "ویرایش یادداشت",
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/edit.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/edit.png",
+                          "icon_name": "EDIT",
+                          "icon_color": "ICON_SECONDARY"
+                        },
+                        "action": {
+                          "type": "NOTE",
+                          "payload": {
+                            "@type": "type.googleapis.com/widgets.NotePayload",
+                            "post_token": "ga-m0OiH",
+                            "max_character_count": 256
+                          }
+                        },
+                        "alignment": "RIGHT"
+                      },
+                      {
+                        "text": "حذف یادداشت",
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_primary/v1/trash_o.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_primary/v1/trash_o.png",
+                          "icon_name": "TRASH_O",
+                          "icon_color": "ICON_PRIMARY"
+                        },
+                        "action": {
+                          "type": "MAKE_NETWORK_CALL",
+                          "payload": {
+                            "@type": "type.googleapis.com/widgets.MakeNetworkCallPayload",
+                            "grpc_request_path": "/yaad_v2.YaadV2/DeleteNoteV2",
+                            "rest_request_path": "/yaad/delete-note-v2",
+                            "request_data": {
+                              "@type": "type.googleapis.com/yaad_v2.DeleteNoteV2Request.RequestData",
+                              "token": "ga-m0OiH"
+                            },
+                            "needs_auth": true
+                          }
+                        },
+                        "alignment": "RIGHT",
+                        "state": "STATE_NEGATIVE"
+                      }
+                    ],
+                    "banner": {}
+                  },
+                  "display_type": "LOAD_MENU_DISPLAY_TYPE_BOTTOM_SHEET"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "STATIC",
+      "widgets": [
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "گزارش آگهی",
+            "action": {
+              "type": "OPEN_FORM_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenFormPagePayload",
+                "grpc_servicer": "/post_quality.PostQualityFeedback/GetFeedbackForm",
+                "request_data": {
+                  "@type": "type.googleapis.com/post_quality.GetFeedbackFormRequest.RequestData",
+                  "post_token": "ga-m0OiH"
+                },
+                "rest_request_path": "/v8/post-quality/feedback-form"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/report.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/report.png",
+              "icon_name": "REPORT",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+    "web_url": "https://divar.ir/v/ga-m0OiH"
+  },
+  "seo": {
+    "title": "فروش منزل قابلیت اداری 3خواب اتوبان اصلی در اهواز - ۱۲ مهر ۱۴۰۵",
+    "description": "آگهی منزل قابلیت اداری 3خواب اتوبان اصلی در دیوار اهواز",
+    "android_package_name": "ir.divar",
+    "android_app_url": "android-app://ir.divar/http/v/منزل قابلیت اداری 3خواب اتوبان اصلی/ga-m0OiH/",
+    "web_info": {
+      "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+      "district_persian": "گلستان",
+      "city_persian": "اهواز",
+      "category_slug_persian": "فروش آپارتمان"
+    },
+    "unavailable_after": "2026-11-01T15:22:03.610413",
+    "bread_crumb": [
+      {
+        "name": "فروش آپارتمان",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "apartment-sell"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "فروش مسکونی",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              },
+              "category": {
+                "str": {
+                  "value": "residential-sell"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "املاک",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "real-estate"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "گلستان",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "7",
+        "search_data": {
+          "form_data": {}
+        }
+      },
+      {
+        "name": "دیوار"
+      }
+    ],
+    "post_seo_schema": {
+      "@type": "Apartment",
+      "web_info": {
+        "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+        "city_persian": "اهواز",
+        "district_persian": "گلستان",
+        "category_slug_persian": "فروش آپارتمان"
+      },
+      "name": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+      "description": "سلام\n... منزل اول به همسایشه...\nاداری پزشکی مجوز میدن بدون اونهم میتونی کارکنی بدون مزاحمت... \n100متر درسند(98/80)وجدا در افراز نامه قانونی11متر پارکینگ،انباری و2تراس اضافه مجموعا\"120متر،3خواب،5طبقه15واحدزمین500متری،توی اتوبان اصلی بهترین جا، روبروی فضای سبز و مجتمع مسکونی فرهنگی آب و برق، استخر رستوران مسجد مدرسه های دولتی نانوایی فروشگاه و هتل و پارک داره روبرو و کلاسهای فوق برنامه در سالن ورزشی هم هست،بین بوستان و سعدی توی اتوبان کارگر، روبرومون ساختمان نیست که مشرف باشه به داخل منزل،طبقه اول جلو کاری به برق و تعمیرات آسانسور نداری... \n3تراس داری که یکیش آشپزخانه اندرونی شده و بوی غذا داخل نمیپیچه... \nیکیش برای رخت و لباس دوجداره هم شده از درون و روبه بیرون... \nتراس پشت تمام سرامیک با لوله کشی آب و گاز و فاضلاب و جای توالت... آماده برای احداث سرویس بهداشتی کامل...  \nهمسایه ها محترم باشخصیت قدیمی آروم کمصدا خلوت و کمپیدا ...!\nجای پارکینگ عالی11مترقانونی جای پارک مهمان توی مشاعات زیاده\nزمین پربرکت و انرژی مثبتیه خیلی\nبیش از10ساله لذت بردم ازش مبارک عزیز بعدی، ان شاءالله",
+      "url": "https://divar.ir/v/منزل-قابلیت-اداری-3خواب-اتوبان-اصلی/ga-m0OiH",
+      "accommodationCategory": "فروش آپارتمان",
+      "@context": "https://schema.org",
+      "image": "https://s100.divarcdn.com/static/photo/neda/webp_post/en3Sb-w3A2LLESTsuKVflA/de945742-25a8-487e-8f92-f75756cd97f6.webp",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": "120",
+        "unitCode": "MTK"
+      },
+      "geo": {
+        "address": "اهواز, گلستان",
+        "latitude": "31.287982217906",
+        "longitude": "48.635574736337",
+        "@type": "GeoCoordinates"
+      },
+      "numberOfRooms": "سه"
+    },
+    "image_url": "https://s100.divarcdn.com/static/photo/neda/post/UEE7-UwV52-6ZsrPN_Erog/de945742-25a8-487e-8f92-f75756cd97f6.jpg"
+  },
+  "contact": {
+    "chat_enabled": true,
+    "action_log": {
+      "server_side_info": {
+        "info": {
+          "@type": "type.googleapis.com/action_log.ContactInfoInfo",
+          "post_token": "ga-m0OiH",
+          "method_name": "GetContactWeb",
+          "contact_uuid": "805cf788-47f3-4c50-8613-60c3da499cc6"
+        },
+        "item_type": {
+          "type": "CONTACT_INFO"
+        }
+      },
+      "enabled": true
+    },
+    "contact_uuid": "805cf788-47f3-4c50-8613-60c3da499cc6"
+  },
+  "webengage": {
+    "credit": 0,
+    "originality": "",
+    "brand_model": "",
+    "gender": "",
+    "cat_2": "residential-sell",
+    "image_count": 4,
+    "cat_3": "apartment-sell",
+    "token": "ga-m0OiH",
+    "city": "ahvaz",
+    "business_ref": "",
+    "price": 10200000512,
+    "cat_1": "real-estate",
+    "category": "apartment-sell",
+    "rent": 0,
+    "district": "golestan-ahvaz",
+    "status": "",
+    "business_type": "personal",
+    "source_view": ""
+  },
+  "analytics": {
+    "cat1": "real-estate",
+    "cat2": "residential-sell",
+    "cat3": "apartment-sell",
+    "city": "ahvaz"
+  },
+  "city": {
+    "city_id": "7",
+    "name": "اهواز",
+    "parent_id": "902",
+    "second_slug": "ahvaz"
+  }
+}

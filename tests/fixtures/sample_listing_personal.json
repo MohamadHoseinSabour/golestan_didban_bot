@@ -1,0 +1,4088 @@
+{
+  "list_top_widgets": [
+    {
+      "widget_type": "POST_LIST_HEADLINE",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostListHeadline",
+        "text": "خرید، فروش و اجاره انواع املاک در گلستان اهواز"
+      }
+    },
+    {
+      "widget_type": "SEARCH_ALERT_TOGGLE_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.SearchAlertToggleRowData",
+        "title": "آگهی جدید اومد خبرم کن",
+        "icon": {
+          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/bell.png",
+          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/bell.png",
+          "icon_name": "BELL",
+          "icon_color": "ICON_SECONDARY"
+        },
+        "search_hash": "36dbc0ee4f4c39ee80ae4c7e2fa8ceb3",
+        "has_divider": true,
+        "push_notification_info_box": {
+          "title": "دیوار برای خبردادن انتشار آگهی‌های جدید به دسترسی ارسال نوتیفیکیشن نیاز دارد.",
+          "button_text": "دادن دسترسی ارسال نوتیفیکیشن",
+          "dismiss_time_seconds": "604800"
+        }
+      },
+      "action_log": {
+        "server_side_info": {
+          "item_type": {
+            "type": "SEARCH_ALERT_TOGGLE"
+          }
+        },
+        "enabled": true
+      },
+      "uid": "search_alert_toggle_row"
+    },
+    {
+      "widget_type": "MAP_POST_COUNT_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.MapPostCountRowData"
+      },
+      "uid": "map_post_count_row"
+    }
+  ],
+  "list_widgets": [
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "ga-m0OiH",
+            "web_info": {
+              "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga-m0OiH_P"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/U0-KD_zstXmrMJaJIsjefQ/de945742-25a8-487e-8f92-f75756cd97f6.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "پله شده",
+        "middle_description_text": "۱۰,۲۰۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 4,
+        "image_top_left_tag": {
+          "text": "پله",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/stairs.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/stairs.png",
+            "icon_name": "STAIRS",
+            "icon_color": "WHITE_PRIMARY"
+          }
+        },
+        "token": "ga-m0OiH",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga-m0OiH_P",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "ga-m0OiH",
+            "index": 0,
+            "post_type": "PELLE",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T18:20:21.480772Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "فروش اپارتمان70متری",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gavC7obu",
+            "web_info": {
+              "title": "فروش اپارتمان70متری",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gavC7obu_P"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/RoH9-5e3AqzV5ryMOOFtDA/22ce50f4-1fcb-430b-9adf-fea4bdc2a311.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "پله شده",
+        "middle_description_text": "۵,۲۵۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 6,
+        "image_top_left_tag": {
+          "text": "پله",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/stairs.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/stairs.png",
+            "icon_name": "STAIRS",
+            "icon_color": "WHITE_PRIMARY"
+          }
+        },
+        "token": "gavC7obu",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gavC7obu_P",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gavC7obu",
+            "index": 1,
+            "post_type": "PELLE",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-09-26T00:18:16.435587Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "واحد ۱۵۴ متر در گلستان رهن",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaC7Lwp7",
+            "web_info": {
+              "title": "واحد ۱۵۴ متر در گلستان رهن",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC7Lwp7_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/3b4cxITficjt3BfbZhYe8A/9ec8fd88-e61e-486d-b05c-76fcc367bdcf.webp",
+        "bottom_description_text": "۱ ساعت پیش در گلستان",
+        "middle_description_text": "اجاره: ۱,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 4,
+        "top_description_text": "ودیعه: ۲,۵۰۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۴",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaC7Lwp7",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC7Lwp7_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaC7Lwp7",
+            "index": 0,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T21:01:58.746153Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "رهن",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaCrLnQt",
+            "web_info": {
+              "title": "رهن",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCrLnQt_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/qnROWy9pfeGMJVG_hulu7Q/1afa8b2a-8707-465a-972e-19255cfe036b.webp",
+        "bottom_description_text": "۲ ساعت پیش در گلستان",
+        "middle_description_text": "رهن کامل",
+        "has_divider": true,
+        "image_count": 14,
+        "top_description_text": "ودیعه: ۱,۱۰۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۱۴",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaCrLnQt",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCrLnQt_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaCrLnQt",
+            "index": 1,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T20:44:30.929434Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gai5pvUe",
+            "web_info": {
+              "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gai5pvUe_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/6HA_vdGCwr_UHrf3TnF8Bw/9418fb2c-55c6-4913-b1f1-6941c9c10dbb.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۵,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 4,
+        "top_description_text": "۲ اتاق, تا ۴ نفر",
+        "image_top_left_tag": {
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/videocam.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/videocam.png",
+            "icon_name": "VIDEOCAM",
+            "icon_color": "WHITE_PRIMARY"
+          }
+        },
+        "token": "gai5pvUe",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gai5pvUe_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gai5pvUe",
+            "index": 2,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T20:14:46.200531Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "۱۳۰متر/واحدجلو/کلید اول /کار برند",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaCXqA65",
+            "web_info": {
+              "title": "۱۳۰متر/واحدجلو/کلید اول /کار برند",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCXqA65_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/rWD-kfdes00i1mU_XOfWaA/f2378308-d93d-40ad-afb7-ee4574f5873a.webp",
+        "bottom_description_text": "۳ ساعت پیش در گلستان",
+        "middle_description_text": "۱۶,۲۰۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaCXqA65",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCXqA65_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaCXqA65",
+            "index": 3,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T19:19:02.886809Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "خانه اجاره روزانه",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "ga72e2Cu",
+            "web_info": {
+              "title": "خانه اجاره روزانه",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga72e2Cu_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/k9PSTCCrznTl7Mgu-i5aKg/e7f91f81-1bf5-4b43-8594-bc63d9a826f2.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۲۵,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 7,
+        "top_description_text": "۱ اتاق, تا ۴ نفر",
+        "image_top_left_tag": {
+          "text": "۷",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "ga72e2Cu",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga72e2Cu_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "ga72e2Cu",
+            "index": 4,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T19:11:09.375726Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "ga-m0OiH",
+            "web_info": {
+              "title": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga-m0OiH_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/U0-KD_zstXmrMJaJIsjefQ/de945742-25a8-487e-8f92-f75756cd97f6.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "۱۰,۲۰۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 4,
+        "image_top_left_tag": {
+          "text": "۴",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "ga-m0OiH",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga-m0OiH_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "ga-m0OiH",
+            "index": 5,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T18:20:21.480772Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "گلستان۱۰۰متری رهن واجاره",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "ga6qBeB-",
+            "web_info": {
+              "title": "گلستان۱۰۰متری رهن واجاره",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga6qBeB-_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/qrQU5KLIKWSFhVXxB3gpaA/0abaf0d2-0389-43f9-a1d0-8ecd5b295cea.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "اجاره: ۱,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 2,
+        "top_description_text": "ودیعه: ۱,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۲",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "ga6qBeB-",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga6qBeB-_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "ga6qBeB-",
+            "index": 6,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T18:06:22.805872Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "سوئیت اجاره پاره وقت وروزانه.سوییت امنیت فول",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "Qag3HqME",
+            "web_info": {
+              "title": "سوئیت اجاره پاره وقت وروزانه.سوییت امنیت فول",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_Qag3HqME_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Zi7uOAwzeiGYXl8E54QWeg/fbf1aac9-c83d-4e1a-994d-82f40a7da47b.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۱,۴۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 3,
+        "top_description_text": "۱ اتاق, تا ۲ نفر",
+        "image_top_left_tag": {
+          "text": "۳",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "Qag3HqME",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_Qag3HqME_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "Qag3HqME",
+            "index": 7,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T17:53:36.810842Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "خانه رهن کامل در گلستان",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaC_Y4pf",
+            "web_info": {
+              "title": "خانه رهن کامل در گلستان",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC_Y4pf_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/XNRY82q8qCaKsqUSc3A0Sw/b30b9259-2689-41eb-af73-facbdd90795e.webp",
+        "bottom_description_text": "۴ ساعت پیش در گلستان",
+        "middle_description_text": "رهن کامل",
+        "has_divider": true,
+        "image_count": 1,
+        "top_description_text": "ودیعه: ۸۰۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaC_Y4pf",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC_Y4pf_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaC_Y4pf",
+            "index": 8,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T17:46:58.996735Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "خونه در قلب گلستان معاوضه با چانگان",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaC_Icas",
+            "web_info": {
+              "title": "خونه در قلب گلستان معاوضه با چانگان",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC_Icas_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Ap83FCgm8hrJXPM6tZGfyw/0d337b50-8c9c-4327-97b3-9994cb3825d8.webp",
+        "bottom_description_text": "۵ ساعت پیش در گلستان",
+        "middle_description_text": "۵,۵۰۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaC_Icas",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC_Icas_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaC_Icas",
+            "index": 9,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T17:41:21.520372Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "شقه اجاره سوییت تمیز روزانه،هفتگی",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaztgCCa",
+            "web_info": {
+              "title": "شقه اجاره سوییت تمیز روزانه،هفتگی",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaztgCCa_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/GLImSgxDTQJdozJ1FHvKpQ/4613c63c-9d70-44e8-90eb-7ca473648271.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۵,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 3,
+        "top_description_text": "۲ اتاق, تا ۶ نفر",
+        "image_top_left_tag": {
+          "text": "۳",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaztgCCa",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaztgCCa_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaztgCCa",
+            "index": 10,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T17:34:39.949831Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "آپارتمان 175متری/فول امکانات/واحد جلو/قابل تبدیل",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "garerPGY",
+            "web_info": {
+              "title": "آپارتمان 175متری/فول امکانات/واحد جلو/قابل تبدیل",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_garerPGY_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/ws1LJooPfeRwYR1Dmw72PQ/4fe48224-e9cd-44bb-8abf-5baa7613f66e.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "رهن کامل",
+        "has_divider": true,
+        "image_count": 1,
+        "top_description_text": "ودیعه: ۲,۶۵۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "garerPGY",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_garerPGY_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "garerPGY",
+            "index": 11,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T17:13:14.529450Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "خانه اجاره ای روزانه",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "QaW3gfmA",
+            "web_info": {
+              "title": "خانه اجاره ای روزانه",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_QaW3gfmA_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/M_yzWQovhWXH3at13HVQaw/113b9028-35cd-40df-860c-ed2348acd9ad.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۲۲,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 7,
+        "top_description_text": "۲ اتاق, تا ۵ نفر",
+        "image_top_left_tag": {
+          "text": "۷",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "QaW3gfmA",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_QaW3gfmA_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "QaW3gfmA",
+            "index": 12,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T17:11:25.544285Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "رهن واحد دوبلکس",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaCfYrjr",
+            "web_info": {
+              "title": "رهن واحد دوبلکس",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCfYrjr_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Is6g3Ln665z_Bult0J0eMw/8a1c7430-3936-4691-bf8d-0556c316168f.webp",
+        "bottom_description_text": "۵ ساعت پیش در گلستان",
+        "middle_description_text": "اجاره: ۱,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "top_description_text": "ودیعه: ۴,۰۰۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaCfYrjr",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCfYrjr_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaCfYrjr",
+            "index": 13,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T17:08:25.457459Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "هتل اپارتمان",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "ga9swjX_",
+            "web_info": {
+              "title": "هتل اپارتمان",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga9swjX__N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/uJVWCgQVab-TzFt_JEwfzQ/7d6caebc-cdcf-4284-b9f0-0eb908dd1d85.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۱۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 13,
+        "top_description_text": "۲ اتاق, تا ۸ نفر",
+        "image_top_left_tag": {
+          "text": "۱۳",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "ga9swjX_",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga9swjX__N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "ga9swjX_",
+            "index": 14,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T16:52:41.715393Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "سویت گلستان",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaC3U1Kh",
+            "web_info": {
+              "title": "سویت گلستان",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC3U1Kh_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/-g0L__oEPIIRXGlf8SQk6Q/14efabdb-7d5c-48c6-850b-6c0ab73842da.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۲۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 2,
+        "top_description_text": "۲ اتاق, تا ۶ نفر",
+        "image_top_left_tag": {
+          "text": "۲",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaC3U1Kh",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC3U1Kh_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaC3U1Kh",
+            "index": 15,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T16:52:40.845338Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "رهن واحد ۱۷۵ متری سوپر لاکچری",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaCH4pN1",
+            "web_info": {
+              "title": "رهن واحد ۱۷۵ متری سوپر لاکچری",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCH4pN1_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/uiS4fmRW1SW_GxbZ57mdkQ/e0e5c446-373c-4dd1-a80d-181da766419b.webp",
+        "bottom_description_text": "۶ ساعت پیش در گلستان",
+        "middle_description_text": "اجاره: ۱۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "top_description_text": "ودیعه: ۳,۵۰۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaCH4pN1",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCH4pN1_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaCH4pN1",
+            "index": 16,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T16:41:27.145043Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "فروش زیر قیمت به علت مهاجرت130متر اصفهان واحدجلو",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaCn3wJG",
+            "web_info": {
+              "title": "فروش زیر قیمت به علت مهاجرت130متر اصفهان واحدجلو",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCn3wJG_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/PziyWrpQEV9R2e3FE3oxlg/b0933a3d-cded-4a61-b85e-d275c3909bdf.webp",
+        "bottom_description_text": "۶ ساعت پیش در گلستان",
+        "middle_description_text": "۲۷,۰۰۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 4,
+        "image_top_left_tag": {
+          "text": "۴",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaCn3wJG",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaCn3wJG_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaCn3wJG",
+            "index": 17,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T16:08:12.361845Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "آپارتمان تمیز وفول امکانات درگلستان رهن داده میشود",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gauW41Ex",
+            "web_info": {
+              "title": "آپارتمان تمیز وفول امکانات درگلستان رهن داده میشود",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gauW41Ex_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/ivIr2cTCbamofleRh7p3Rg/e7ec7e25-f507-4f11-8d6d-a5e985010e9f.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "اجاره: ۱۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "top_description_text": "ودیعه: ۱,۸۵۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gauW41Ex",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gauW41Ex_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gauW41Ex",
+            "index": 18,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T16:04:07.839784Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "سویت سویت مبله",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "QaxFxvaG",
+            "web_info": {
+              "title": "سویت سویت مبله",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_QaxFxvaG_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/wswkStG-Kp9q73p0rwWlSg/fff33955-f072-417d-8749-9a340afa9503.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۱۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 6,
+        "top_description_text": "۲ اتاق, تا ۸ نفر",
+        "image_top_left_tag": {
+          "text": "۶",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "QaxFxvaG",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_QaxFxvaG_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "QaxFxvaG",
+            "index": 19,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T15:58:33.179303Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "فروش آپارتمان 170متری در گلستان",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gauysNAK",
+            "web_info": {
+              "title": "فروش آپارتمان 170متری در گلستان",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gauysNAK_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/vIyCH2WXHESNc-c4m8oH-g/ccbda1b2-2cba-4af9-bb29-446621907392.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "۳۴,۰۰۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gauysNAK",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gauysNAK_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gauysNAK",
+            "index": 20,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T15:52:45.565002Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "هتل آپارتمان سوییت اهواز",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaZscX2G",
+            "web_info": {
+              "title": "هتل آپارتمان سوییت اهواز",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaZscX2G_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/jugV6fblP2vfEjw98tVODg/ba07e8d9-6b81-4bab-8026-8d20f78af6f5.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "از ۱,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 9,
+        "top_description_text": "۲ اتاق, تا ۸ نفر",
+        "image_top_left_tag": {
+          "text": "۹",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaZscX2G",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaZscX2G_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaZscX2G",
+            "index": 21,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T15:43:01.562316Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "واحد 96 متری دو خواب",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gaC_WsWu",
+            "web_info": {
+              "title": "واحد 96 متری دو خواب",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC_WsWu_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/t0Lp6wuBtlQ7Rz1LrRxikw/02149b61-e7e5-4ace-ad23-372874caaa1e.webp",
+        "bottom_description_text": "۷ ساعت پیش در گلستان",
+        "middle_description_text": "۸,۸۰۰,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 8,
+        "image_top_left_tag": {
+          "text": "۸",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "gaC_WsWu",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_gaC_WsWu_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gaC_WsWu",
+            "index": 22,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ],
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                }
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T15:33:43.418277Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "آپارتمان / 170متر واحد جلو/  گلستان",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "ga2ObliT",
+            "web_info": {
+              "title": "آپارتمان / 170متر واحد جلو/  گلستان",
+              "district_persian": "گلستان",
+              "city_persian": "اهواز"
+            },
+            "ad_instance_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga2ObliT_N"
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/RwE32mKBtHR0bwsJ7-ljmQ/a8f5bc3f-efe9-4b1a-8e66-19a2b1e365a7.webp",
+        "bottom_description_text": "در گلستان",
+        "red_text": "نردبان شده",
+        "middle_description_text": "اجاره: ۳۴,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "top_description_text": "ودیعه: ۱,۵۰۰,۰۰۰,۰۰۰ تومان",
+        "image_top_left_tag": {
+          "text": "۱",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/camera.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/camera.png",
+            "icon_name": "CAMERA",
+            "icon_color": "WHITE_PRIMARY"
+          },
+          "is_icon_left": true
+        },
+        "token": "ga2ObliT",
+        "should_indicate_seen_status": true,
+        "tracker_session_id": "e97344c5-44db-470e-9b1c-02f0eabe5653_ga2ObliT_N",
+        "layout_type": "GRID_ITEM"
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "ga2ObliT",
+            "index": 23,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "real-estate"
+                },
+                "sort": {
+                  "value": "sort_date"
+                },
+                "districts": {
+                  "vacancies": [
+                    "323"
+                  ]
+                },
+                "business-type": {
+                  "value": [
+                    "personal"
+                  ]
+                },
+                "places": {
+                  "value": [
+                    "7"
+                  ]
+                },
+                "cities": [
+                  "7"
+                ]
+              },
+              "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "7"
+                ],
+                "query_input_type": "TEXT",
+                "user_selected_location": {
+                  "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                  "places": [
+                    {
+                      "place_id": "7"
+                    }
+                  ]
+                }
+              }
+            },
+            "sort_date": "2026-10-04T15:29:26.382225Z"
+          },
+          "item_type": {
+            "type": "POST_ITEM"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ],
+  "list_bottom_widgets": [
+    {
+      "widget_type": "SEO_LINKS",
+      "data": {
+        "@type": "type.googleapis.com/widgets.SeoLinksData",
+        "links": [
+          {
+            "title": " آپارتمان دوبلکس در اهواز",
+            "action": {
+              "type": "OPEN_WEB_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenWebPagePayload",
+                "link": "https://divar.ir/s/ahvaz/list/آپارتمان-دوطبقه-و-دوبلکس",
+                "page_type": "SAME_PAGE"
+              }
+            }
+          },
+          {
+            "title": " گلخانه در اهواز",
+            "action": {
+              "type": "OPEN_WEB_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenWebPagePayload",
+                "link": "https://divar.ir/s/ahvaz/list/خرید-و-اجاره-گلخانه",
+                "page_type": "SAME_PAGE"
+              }
+            }
+          }
+        ],
+        "title": "لینک های مرتبط با جستجوهای مشابه"
+      }
+    }
+  ],
+  "search_data": {
+    "form_data": {
+      "data": {
+        "category": {
+          "str": {
+            "value": "real-estate"
+          }
+        },
+        "districts": {
+          "repeated_string": {
+            "value": [
+              "323"
+            ]
+          }
+        },
+        "business-type": {
+          "repeated_string": {
+            "value": [
+              "personal"
+            ]
+          }
+        }
+      }
+    },
+    "server_payload": {
+      "@type": "type.googleapis.com/widgets.SearchData.ServerPayload",
+      "additional_form_data": {
+        "data": {
+          "sort": {
+            "str": {
+              "value": "sort_date"
+            }
+          }
+        }
+      }
+    }
+  },
+  "action_log": {
+    "server_side_info": {
+      "info": {
+        "@type": "type.googleapis.com/action_log.PostListLoadPageInfo",
+        "cities": [
+          "7"
+        ],
+        "current_tab": "default",
+        "search_data": {
+          "form_data_json": "{\"data\":{\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}}}}",
+          "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\",\"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+          "cities": [
+            "7"
+          ],
+          "query_input_type": "TEXT",
+          "user_selected_location": {
+            "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+            "places": [
+              {
+                "place_id": "7"
+              }
+            ]
+          }
+        },
+        "tokens": [
+          "gaC7Lwp7",
+          "gaCrLnQt",
+          "gai5pvUe",
+          "gaCXqA65",
+          "ga72e2Cu",
+          "ga-m0OiH",
+          "ga6qBeB-",
+          "Qag3HqME",
+          "gaC_Y4pf",
+          "gaC_Icas",
+          "gaztgCCa",
+          "garerPGY",
+          "QaW3gfmA",
+          "gaCfYrjr",
+          "ga9swjX_",
+          "gaC3U1Kh",
+          "gaCH4pN1",
+          "gaCn3wJG",
+          "gauW41Ex",
+          "QaxFxvaG",
+          "gauysNAK",
+          "gaZscX2G",
+          "gaC_WsWu",
+          "ga2ObliT"
+        ],
+        "has_next_page": true,
+        "pelle": {
+          "elastic": {
+            "tokens": [
+              "ga-m0OiH",
+              "gavC7obu"
+            ],
+            "total_hits_count": 7,
+            "documents": [
+              {
+                "token": "ga-m0OiH",
+                "type": "NORMAL"
+              },
+              {
+                "token": "gavC7obu",
+                "type": "NORMAL",
+                "index": 1
+              }
+            ]
+          }
+        },
+        "last_post_date_epoch": "1791127766382225",
+        "search_id": "36dbc0ee4f4c39ee80ae4c7e2fa8ceb3",
+        "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+        "source_view": "MAP_DISCOVERY_MAP",
+        "posts_metadata": [
+          {
+            "token": "gaC7Lwp7",
+            "sort_date": "1791147718746153",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":5380}"
+          },
+          {
+            "token": "gaCrLnQt",
+            "sort_date": "1791146670929434",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":6427}"
+          },
+          {
+            "token": "gai5pvUe",
+            "sort_date": "1791144886200531",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":8212}"
+          },
+          {
+            "token": "gaCXqA65",
+            "sort_date": "1791141542886809",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-sell\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":11555}"
+          },
+          {
+            "token": "ga72e2Cu",
+            "sort_date": "1791141069375726",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":12029}"
+          },
+          {
+            "token": "ga-m0OiH",
+            "sort_date": "1791138021480772",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-sell\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":15077}"
+          },
+          {
+            "token": "ga6qBeB-",
+            "sort_date": "1791137182805872",
+            "source": "f",
+            "extra_info": "{\"category\":\"house-villa-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":15916}"
+          },
+          {
+            "token": "Qag3HqME",
+            "sort_date": "1791136416810842",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":16682}"
+          },
+          {
+            "token": "gaC_Y4pf",
+            "sort_date": "1791136018996735",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":17079}"
+          },
+          {
+            "token": "gaC_Icas",
+            "sort_date": "1791135681520372",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-sell\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":17417}"
+          },
+          {
+            "token": "gaztgCCa",
+            "sort_date": "1791135279949831",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":17818}"
+          },
+          {
+            "token": "garerPGY",
+            "sort_date": "1791133994529450",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":19104}"
+          },
+          {
+            "token": "QaW3gfmA",
+            "sort_date": "1791133885544285",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":19213}"
+          },
+          {
+            "token": "gaCfYrjr",
+            "sort_date": "1791133705457459",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":19393}"
+          },
+          {
+            "token": "ga9swjX_",
+            "sort_date": "1791132761715393",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":20337}"
+          },
+          {
+            "token": "gaC3U1Kh",
+            "sort_date": "1791132760845338",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":20338}"
+          },
+          {
+            "token": "gaCH4pN1",
+            "sort_date": "1791132087145043",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":21011}"
+          },
+          {
+            "token": "gaCn3wJG",
+            "sort_date": "1791130092361845",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-sell\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":23006}"
+          },
+          {
+            "token": "gauW41Ex",
+            "sort_date": "1791129847839784",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":23251}"
+          },
+          {
+            "token": "QaxFxvaG",
+            "sort_date": "1791129513179303",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":23585}"
+          },
+          {
+            "token": "gauysNAK",
+            "sort_date": "1791129165565002",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-sell\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":23933}"
+          },
+          {
+            "token": "gaZscX2G",
+            "sort_date": "1791128581562316",
+            "source": "f",
+            "extra_info": "{\"category\":\"suite-apartment\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":24517}"
+          },
+          {
+            "token": "gaC_WsWu",
+            "sort_date": "1791128023418277",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-sell\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":25075}"
+          },
+          {
+            "token": "ga2ObliT",
+            "sort_date": "1791127766382225",
+            "source": "f",
+            "extra_info": "{\"category\":\"apartment-rent\",\"highlight\":null,\"matched_rules\":[],\"is_enriched_pipeline_consumed\":true,\"enriched_pipeline_name\":\"-\",\"freshness\":25332}"
+          }
+        ],
+        "jli": {
+          "business-type": {
+            "value": [
+              "personal"
+            ]
+          },
+          "places": {
+            "value": [
+              "7"
+            ]
+          },
+          "cities": [
+            "7"
+          ],
+          "category": {
+            "value": "real-estate"
+          },
+          "sort": {
+            "value": "sort_date"
+          },
+          "districts": {
+            "vacancies": [
+              "323"
+            ]
+          }
+        },
+        "search_layer": "fulltext_t1",
+        "bookmark_info": {
+          "search_hash": "36dbc0ee4f4c39ee80ae4c7e2fa8ceb3",
+          "bookmark_state": {},
+          "alert_state": {}
+        },
+        "widget_order": [
+          {
+            "type": "PELLE",
+            "track_id": "ga-m0OiH"
+          },
+          {
+            "index": 1,
+            "type": "PELLE",
+            "track_id": "gavC7obu"
+          },
+          {
+            "index": 2,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaC7Lwp7"
+          },
+          {
+            "index": 3,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaCrLnQt"
+          },
+          {
+            "index": 4,
+            "type": "SEARCH_RESULT",
+            "track_id": "gai5pvUe"
+          },
+          {
+            "index": 5,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaCXqA65"
+          },
+          {
+            "index": 6,
+            "type": "SEARCH_RESULT",
+            "track_id": "ga72e2Cu"
+          },
+          {
+            "index": 7,
+            "type": "SEARCH_RESULT",
+            "track_id": "ga-m0OiH"
+          },
+          {
+            "index": 8,
+            "type": "SEARCH_RESULT",
+            "track_id": "ga6qBeB-"
+          },
+          {
+            "index": 9,
+            "type": "SEARCH_RESULT",
+            "track_id": "Qag3HqME"
+          },
+          {
+            "index": 10,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaC_Y4pf"
+          },
+          {
+            "index": 11,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaC_Icas"
+          },
+          {
+            "index": 12,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaztgCCa"
+          },
+          {
+            "index": 13,
+            "type": "SEARCH_RESULT",
+            "track_id": "garerPGY"
+          },
+          {
+            "index": 14,
+            "type": "SEARCH_RESULT",
+            "track_id": "QaW3gfmA"
+          },
+          {
+            "index": 15,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaCfYrjr"
+          },
+          {
+            "index": 16,
+            "type": "SEARCH_RESULT",
+            "track_id": "ga9swjX_"
+          },
+          {
+            "index": 17,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaC3U1Kh"
+          },
+          {
+            "index": 18,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaCH4pN1"
+          },
+          {
+            "index": 19,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaCn3wJG"
+          },
+          {
+            "index": 20,
+            "type": "SEARCH_RESULT",
+            "track_id": "gauW41Ex"
+          },
+          {
+            "index": 21,
+            "type": "SEARCH_RESULT",
+            "track_id": "QaxFxvaG"
+          },
+          {
+            "index": 22,
+            "type": "SEARCH_RESULT",
+            "track_id": "gauysNAK"
+          },
+          {
+            "index": 23,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaZscX2G"
+          },
+          {
+            "index": 24,
+            "type": "SEARCH_RESULT",
+            "track_id": "gaC_WsWu"
+          },
+          {
+            "index": 25,
+            "type": "SEARCH_RESULT",
+            "track_id": "ga2ObliT"
+          }
+        ],
+        "list_level_extra_info": "{}",
+        "user_selected_location": {
+          "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+          "places": [
+            {
+              "place_id": "7"
+            }
+          ]
+        }
+      },
+      "item_type": {
+        "type": "POST_LIST_LOAD_PAGE"
+      }
+    },
+    "enabled": true
+  },
+  "search_bar": {
+    "bookmark": {
+      "toggle_action_log": {
+        "server_side_info": {
+          "item_type": {
+            "type": "SEARCH_BAR_BOOKMARKED_STATE_CHANGE_STATE"
+          }
+        },
+        "enabled": true
+      },
+      "enabled": true,
+      "bookmark_info": {
+        "search_hash": "36dbc0ee4f4c39ee80ae4c7e2fa8ceb3",
+        "bookmark_state": {},
+        "alert_state": {}
+      }
+    }
+  },
+  "pagination": {
+    "has_next_page": true,
+    "data": {
+      "@type": "type.googleapis.com/post_list.PaginationData",
+      "last_post_date": "2026-10-04T15:29:26.382225Z",
+      "page": 1,
+      "layer_page": 1,
+      "search_uid": "e97344c5-44db-470e-9b1c-02f0eabe5653",
+      "cumulative_widgets_count": 26,
+      "viewed_tokens": "H4sIAAAAAAAE/xzK3U7CMBiH8Rt6SVw7WDwcDTIFwSaSbp4sf0n3OiKka9mHXj3pzp788jBUth9dRgzl9zd9J0a7dMPJRim7fLUkRiasUD0xFtenY1sQY9Wt7XpBGiyL7n0T57pKXTPH6xmBGP93VgrE8NZ/bCvSMJKbax6fpvIXT4znMF7KOoo8JbufGEXqDkmMmxzftsToTZpsJtKYXqYBs/yFQ74jxlc4lyKKqk0wPTHE8fu3/XwEAAD///u8cp3XAAAA",
+      "search_bookmark_info": {
+        "search_hash": "36dbc0ee4f4c39ee80ae4c7e2fa8ceb3",
+        "bookmark_state": {},
+        "alert_state": {}
+      },
+      "first_page_viewed_at": "2026-10-04T22:31:38.873974785Z",
+      "filters_hash": "NtvA7k9MOe6Arkx+L6jOsw=="
+    },
+    "is_first_page": true
+  },
+  "search_id": "36dbc0ee4f4c39ee80ae4c7e2fa8ceb3",
+  "seo_details": {
+    "title": "بهترین آگهی‌های خرید، فروش و اجاره املاک در گلستان اهواز | دیوار",
+    "description": "بهترین آگهی‌های خرید، فروش و اجاره انواع املاک در گلستان اهواز را در دیوار پیدا کنید.",
+    "headline": "خرید، فروش و اجاره انواع املاک در گلستان اهواز",
+    "robots_metadata": {
+      "follow": true
+    },
+    "bread_crumb": [
+      {
+        "name": "املاک",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "real-estate"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "گلستان",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "اهواز",
+        "search_data": {
+          "form_data": {}
+        }
+      },
+      {
+        "name": "دیوار"
+      }
+    ],
+    "linked_data": [
+      {
+        "geo": {
+          "latitude": "31.293895178394",
+          "longitude": "48.645082440518",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان"
+        },
+        "web_info": {
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "واحد ۱۵۴ متر در گلستان رهن",
+          "city_persian": "اهواز"
+        },
+        "accommodationCategory": "آپارتمان",
+        "name": "واحد ۱۵۴ متر در گلستان رهن",
+        "@context": "https://schema.org",
+        "@type": "Apartment",
+        "floorSize": {
+          "value": "154",
+          "unitCode": "MTK",
+          "@type": "QuantitativeValue"
+        },
+        "url": "https://divar.ir/v/واحد-۱۵۴-متر-در-گلستان-رهن/gaC7Lwp7",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/3b4cxITficjt3BfbZhYe8A/9ec8fd88-e61e-486d-b05c-76fcc367bdcf.webp",
+        "numberOfRooms": "یک"
+      },
+      {
+        "@context": "https://schema.org",
+        "web_info": {
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "رهن"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/qnROWy9pfeGMJVG_hulu7Q/1afa8b2a-8707-465a-972e-19255cfe036b.webp",
+        "numberOfRooms": "دو",
+        "accommodationCategory": "آپارتمان",
+        "url": "https://divar.ir/v/رهن/gaCrLnQt",
+        "name": "رهن",
+        "geo": {
+          "longitude": "48.638490903984",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.288559865057"
+        },
+        "@type": "Apartment",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "103",
+          "unitCode": "MTK"
+        }
+      },
+      {
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/6HA_vdGCwr_UHrf3TnF8Bw/9418fb2c-55c6-4913-b1f1-6941c9c10dbb.webp",
+        "@context": "https://schema.org",
+        "name": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+        "numberOfRooms": "دو",
+        "@type": "CampingPitch",
+        "web_info": {
+          "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان و سوئیت"
+        },
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "120",
+          "unitCode": "MTK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.292177383146",
+          "longitude": "48.644473535956"
+        },
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "url": "https://divar.ir/v/شقه-اجاره-سوییت-تمیزپاسخ۲۴ساعته-نیم-روز-روزانه/gai5pvUe"
+      },
+      {
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/rWD-kfdes00i1mU_XOfWaA/f2378308-d93d-40ad-afb7-ee4574f5873a.webp",
+        "geo": {
+          "longitude": "48.640654801196",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.293622641409"
+        },
+        "url": "https://divar.ir/v/۱۳۰متر-واحدجلو-کلید-اول-کار-برند/gaCXqA65",
+        "name": "۱۳۰متر/واحدجلو/کلید اول /کار برند",
+        "accommodationCategory": "آپارتمان",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "130",
+          "unitCode": "MTK"
+        },
+        "@type": "Apartment",
+        "web_info": {
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "۱۳۰متر/واحدجلو/کلید اول /کار برند",
+          "city_persian": "اهواز"
+        },
+        "numberOfRooms": "سه",
+        "@context": "https://schema.org"
+      },
+      {
+        "name": "خانه اجاره روزانه",
+        "numberOfRooms": "یک",
+        "geo": {
+          "longitude": "48.656145974153",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.287163174284"
+        },
+        "web_info": {
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان و سوئیت",
+          "title": "خانه اجاره روزانه"
+        },
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "75",
+          "unitCode": "MTK"
+        },
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "url": "https://divar.ir/v/خانه-اجاره-روزانه/ga72e2Cu",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/k9PSTCCrznTl7Mgu-i5aKg/e7f91f81-1bf5-4b43-8594-bc63d9a826f2.webp",
+        "@context": "https://schema.org",
+        "@type": "CampingPitch"
+      },
+      {
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.287982217906",
+          "longitude": "48.635574736337"
+        },
+        "web_info": {
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "منزل قابلیت اداری 3خواب اتوبان اصلی"
+        },
+        "@context": "https://schema.org",
+        "name": "منزل قابلیت اداری 3خواب اتوبان اصلی",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/U0-KD_zstXmrMJaJIsjefQ/de945742-25a8-487e-8f92-f75756cd97f6.webp",
+        "@type": "Apartment",
+        "url": "https://divar.ir/v/منزل-قابلیت-اداری-3خواب-اتوبان-اصلی/ga-m0OiH",
+        "numberOfRooms": "سه",
+        "accommodationCategory": "آپارتمان",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "120",
+          "unitCode": "MTK"
+        }
+      },
+      {
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/qrQU5KLIKWSFhVXxB3gpaA/0abaf0d2-0389-43f9-a1d0-8ecd5b295cea.webp",
+        "numberOfRooms": "دو",
+        "floorSize": {
+          "value": "100",
+          "unitCode": "MTK",
+          "@type": "QuantitativeValue"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.29159669120972",
+          "longitude": "48.642655270411964"
+        },
+        "accommodationCategory": "خانه و ویلا",
+        "url": "https://divar.ir/v/گلستان۱۰۰متری-رهن-واجاره/ga6qBeB-",
+        "web_info": {
+          "title": "گلستان۱۰۰متری رهن واجاره",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "خانه و ویلا"
+        },
+        "name": "گلستان۱۰۰متری رهن واجاره",
+        "@context": "https://schema.org",
+        "@type": "House"
+      },
+      {
+        "numberOfRooms": "یک",
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "70",
+          "unitCode": "MTK"
+        },
+        "@context": "https://schema.org",
+        "web_info": {
+          "category_slug_persian": "آپارتمان و سوئیت",
+          "title": "سوئیت اجاره پاره وقت وروزانه.سوییت امنیت فول",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان"
+        },
+        "name": "سوئیت اجاره پاره وقت وروزانه.سوییت امنیت فول",
+        "@type": "CampingPitch",
+        "geo": {
+          "address": "اهواز, گلستان",
+          "latitude": "31.29076380855171",
+          "longitude": "48.65589085897959",
+          "@type": "GeoCoordinates"
+        },
+        "url": "https://divar.ir/v/سوئیت-اجاره-پاره-وقت-وروزانه-سوییت-امنیت-فول/Qag3HqME",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Zi7uOAwzeiGYXl8E54QWeg/fbf1aac9-c83d-4e1a-994d-82f40a7da47b.webp"
+      },
+      {
+        "numberOfRooms": "دو",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "85",
+          "unitCode": "MTK"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/XNRY82q8qCaKsqUSc3A0Sw/b30b9259-2689-41eb-af73-facbdd90795e.webp",
+        "accommodationCategory": "آپارتمان",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.286616885906234",
+          "longitude": "48.65041800607416"
+        },
+        "name": "خانه رهن کامل در گلستان",
+        "@context": "https://schema.org",
+        "@type": "Apartment",
+        "web_info": {
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "خانه رهن کامل در گلستان",
+          "city_persian": "اهواز"
+        },
+        "url": "https://divar.ir/v/خانه-رهن-کامل-در-گلستان/gaC_Y4pf"
+      },
+      {
+        "@type": "Apartment",
+        "web_info": {
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "خونه در قلب گلستان معاوضه با چانگان",
+          "city_persian": "اهواز"
+        },
+        "name": "خونه در قلب گلستان معاوضه با چانگان",
+        "numberOfRooms": "دو",
+        "geo": {
+          "address": "اهواز, گلستان",
+          "latitude": "31.291867491282698",
+          "longitude": "48.643367644927594",
+          "@type": "GeoCoordinates"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Ap83FCgm8hrJXPM6tZGfyw/0d337b50-8c9c-4327-97b3-9994cb3825d8.webp",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "75",
+          "unitCode": "MTK"
+        },
+        "url": "https://divar.ir/v/خونه-در-قلب-گلستان-معاوضه-با-چانگان/gaC_Icas",
+        "accommodationCategory": "آپارتمان",
+        "@context": "https://schema.org"
+      },
+      {
+        "name": "شقه اجاره سوییت تمیز روزانه،هفتگی",
+        "web_info": {
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان و سوئیت",
+          "title": "شقه اجاره سوییت تمیز روزانه،هفتگی",
+          "city_persian": "اهواز"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/GLImSgxDTQJdozJ1FHvKpQ/4613c63c-9d70-44e8-90eb-7ca473648271.webp",
+        "url": "https://divar.ir/v/شقه-اجاره-سوییت-تمیز-روزانه-هفتگی/gaztgCCa",
+        "numberOfRooms": "دو",
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.293410815112",
+          "longitude": "48.641722337292"
+        },
+        "@type": "CampingPitch",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "120",
+          "unitCode": "MTK"
+        },
+        "@context": "https://schema.org"
+      },
+      {
+        "name": "آپارتمان 175متری/فول امکانات/واحد جلو/قابل تبدیل",
+        "web_info": {
+          "title": "آپارتمان 175متری/فول امکانات/واحد جلو/قابل تبدیل",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان"
+        },
+        "accommodationCategory": "آپارتمان",
+        "url": "https://divar.ir/v/آپارتمان-175متری-فول-امکانات-واحد-جلو-قابل-تبدیل/garerPGY",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/ws1LJooPfeRwYR1Dmw72PQ/4fe48224-e9cd-44bb-8abf-5baa7613f66e.webp",
+        "numberOfRooms": "سه",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "175",
+          "unitCode": "MTK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.291948909611",
+          "longitude": "48.65363050817"
+        },
+        "@context": "https://schema.org",
+        "@type": "Apartment"
+      },
+      {
+        "url": "https://divar.ir/v/خانه-اجاره-ای-روزانه/QaW3gfmA",
+        "name": "خانه اجاره ای روزانه",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/M_yzWQovhWXH3at13HVQaw/113b9028-35cd-40df-860c-ed2348acd9ad.webp",
+        "web_info": {
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان و سوئیت",
+          "title": "خانه اجاره ای روزانه"
+        },
+        "numberOfRooms": "دو",
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "@type": "CampingPitch",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "90",
+          "unitCode": "MTK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.284158288728",
+          "longitude": "48.657010881552"
+        },
+        "@context": "https://schema.org"
+      },
+      {
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/Is6g3Ln665z_Bult0J0eMw/8a1c7430-3936-4691-bf8d-0556c316168f.webp",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "300",
+          "unitCode": "MTK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.293501863166917",
+          "longitude": "48.64331556631124"
+        },
+        "accommodationCategory": "آپارتمان",
+        "url": "https://divar.ir/v/رهن-واحد-دوبلکس/gaCfYrjr",
+        "web_info": {
+          "category_slug_persian": "آپارتمان",
+          "title": "رهن واحد دوبلکس",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان"
+        },
+        "@context": "https://schema.org",
+        "name": "رهن واحد دوبلکس",
+        "numberOfRooms": "سه",
+        "@type": "Apartment"
+      },
+      {
+        "@type": "CampingPitch",
+        "web_info": {
+          "title": "هتل اپارتمان",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان و سوئیت"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/uJVWCgQVab-TzFt_JEwfzQ/7d6caebc-cdcf-4284-b9f0-0eb908dd1d85.webp",
+        "numberOfRooms": "دو",
+        "floorSize": {
+          "value": "100",
+          "unitCode": "MTK",
+          "@type": "QuantitativeValue"
+        },
+        "geo": {
+          "longitude": "48.643566131592",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.291524887085"
+        },
+        "url": "https://divar.ir/v/هتل-اپارتمان/ga9swjX_",
+        "name": "هتل اپارتمان",
+        "@context": "https://schema.org",
+        "accommodationCategory": "آپارتمان و سوئیت"
+      },
+      {
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "90",
+          "unitCode": "MTK"
+        },
+        "web_info": {
+          "category_slug_persian": "آپارتمان و سوئیت",
+          "title": "سویت گلستان",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان"
+        },
+        "@type": "CampingPitch",
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "geo": {
+          "latitude": "31.291661123093",
+          "longitude": "48.648535782122",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان"
+        },
+        "@context": "https://schema.org",
+        "url": "https://divar.ir/v/سویت-گلستان/gaC3U1Kh",
+        "name": "سویت گلستان",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/-g0L__oEPIIRXGlf8SQk6Q/14efabdb-7d5c-48c6-850b-6c0ab73842da.webp",
+        "numberOfRooms": "دو"
+      },
+      {
+        "url": "https://divar.ir/v/رهن-واحد-۱۷۵-متری-سوپر-لاکچری/gaCH4pN1",
+        "name": "رهن واحد ۱۷۵ متری سوپر لاکچری",
+        "numberOfRooms": "سه",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/uiS4fmRW1SW_GxbZ57mdkQ/e0e5c446-373c-4dd1-a80d-181da766419b.webp",
+        "geo": {
+          "address": "اهواز, گلستان",
+          "latitude": "31.293515673511713",
+          "longitude": "48.64299583321656",
+          "@type": "GeoCoordinates"
+        },
+        "@context": "https://schema.org",
+        "@type": "Apartment",
+        "accommodationCategory": "آپارتمان",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "175",
+          "unitCode": "MTK"
+        },
+        "web_info": {
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "رهن واحد ۱۷۵ متری سوپر لاکچری"
+        }
+      },
+      {
+        "numberOfRooms": "سه",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.294265207432",
+          "longitude": "48.641567797599"
+        },
+        "@context": "https://schema.org",
+        "name": "فروش زیر قیمت به علت مهاجرت130متر اصفهان واحدجلو",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "135",
+          "unitCode": "MTK"
+        },
+        "url": "https://divar.ir/v/فروش-زیر-قیمت-به-علت-مهاجرت130متر-اصفهان-واحدجلو/gaCn3wJG",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/PziyWrpQEV9R2e3FE3oxlg/b0933a3d-cded-4a61-b85e-d275c3909bdf.webp",
+        "accommodationCategory": "آپارتمان",
+        "@type": "Apartment",
+        "web_info": {
+          "category_slug_persian": "آپارتمان",
+          "title": "فروش زیر قیمت به علت مهاجرت130متر اصفهان واحدجلو",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان"
+        }
+      },
+      {
+        "accommodationCategory": "آپارتمان",
+        "floorSize": {
+          "value": "100",
+          "unitCode": "MTK",
+          "@type": "QuantitativeValue"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.287953096791",
+          "longitude": "48.647893032422"
+        },
+        "web_info": {
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "آپارتمان تمیز وفول امکانات درگلستان رهن داده میشود"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/ivIr2cTCbamofleRh7p3Rg/e7ec7e25-f507-4f11-8d6d-a5e985010e9f.webp",
+        "@type": "Apartment",
+        "name": "آپارتمان تمیز وفول امکانات درگلستان رهن داده میشود",
+        "@context": "https://schema.org",
+        "numberOfRooms": "دو",
+        "url": "https://divar.ir/v/آپارتمان-تمیز-وفول-امکانات-درگلستان-رهن-داده-میشود/gauW41Ex"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "CampingPitch",
+        "geo": {
+          "longitude": "48.64455381685522",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.294726021035714"
+        },
+        "web_info": {
+          "title": "سویت سویت مبله",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان و سوئیت"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/wswkStG-Kp9q73p0rwWlSg/fff33955-f072-417d-8749-9a340afa9503.webp",
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "name": "سویت سویت مبله",
+        "numberOfRooms": "دو",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "100",
+          "unitCode": "MTK"
+        },
+        "url": "https://divar.ir/v/سویت-سویت-مبله/QaxFxvaG"
+      },
+      {
+        "url": "https://divar.ir/v/فروش-آپارتمان-170متری-در-گلستان/gauysNAK",
+        "web_info": {
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "فروش آپارتمان 170متری در گلستان"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/vIyCH2WXHESNc-c4m8oH-g/ccbda1b2-2cba-4af9-bb29-446621907392.webp",
+        "@type": "Apartment",
+        "@context": "https://schema.org",
+        "name": "فروش آپارتمان 170متری در گلستان",
+        "numberOfRooms": "سه",
+        "accommodationCategory": "آپارتمان",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "170",
+          "unitCode": "MTK"
+        },
+        "geo": {
+          "latitude": "31.292164204112773",
+          "longitude": "48.64574655458756",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان"
+        }
+      },
+      {
+        "numberOfRooms": "دو",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.289082016942",
+          "longitude": "48.639988813466"
+        },
+        "url": "https://divar.ir/v/هتل-آپارتمان-سوییت-اهواز/gaZscX2G",
+        "accommodationCategory": "آپارتمان و سوئیت",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "100",
+          "unitCode": "MTK"
+        },
+        "@context": "https://schema.org",
+        "@type": "CampingPitch",
+        "web_info": {
+          "title": "هتل آپارتمان سوییت اهواز",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان و سوئیت"
+        },
+        "name": "هتل آپارتمان سوییت اهواز",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/jugV6fblP2vfEjw98tVODg/ba07e8d9-6b81-4bab-8026-8d20f78af6f5.webp"
+      },
+      {
+        "geo": {
+          "latitude": "31.29027467286926",
+          "longitude": "48.638971889674515",
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان"
+        },
+        "@context": "https://schema.org",
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/t0Lp6wuBtlQ7Rz1LrRxikw/02149b61-e7e5-4ace-ad23-372874caaa1e.webp",
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": "96",
+          "unitCode": "MTK"
+        },
+        "@type": "Apartment",
+        "numberOfRooms": "دو",
+        "url": "https://divar.ir/v/واحد-96-متری-دو-خواب/gaC_WsWu",
+        "web_info": {
+          "title": "واحد 96 متری دو خواب",
+          "city_persian": "اهواز",
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان"
+        },
+        "name": "واحد 96 متری دو خواب",
+        "accommodationCategory": "آپارتمان"
+      },
+      {
+        "url": "https://divar.ir/v/آپارتمان-170متر-واحد-جلو-گلستان/ga2ObliT",
+        "accommodationCategory": "آپارتمان",
+        "floorSize": {
+          "value": "170",
+          "unitCode": "MTK",
+          "@type": "QuantitativeValue"
+        },
+        "image": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/RwE32mKBtHR0bwsJ7-ljmQ/a8f5bc3f-efe9-4b1a-8e66-19a2b1e365a7.webp",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "address": "اهواز, گلستان",
+          "latitude": "31.293451661789504",
+          "longitude": "48.6535475601908"
+        },
+        "@type": "Apartment",
+        "web_info": {
+          "district_persian": "گلستان",
+          "category_slug_persian": "آپارتمان",
+          "title": "آپارتمان / 170متر واحد جلو/  گلستان",
+          "city_persian": "اهواز"
+        },
+        "name": "آپارتمان / 170متر واحد جلو/  گلستان",
+        "numberOfRooms": "سه",
+        "@context": "https://schema.org"
+      }
+    ]
+  },
+  "map_data": {
+    "encoded_polygon_list": [
+      "s`~}DqsygHgALmu@uZGBYhAEHG@aH{Bx@_E|Gwc@fGy`@pDoT}Bc@Q}@eBwDsBwDrKi^zDoQt\\vArcAbKcC~IkDlPu@jDaFzUaAnEmTvw@eElOwIrYcCzK"
+    ],
+    "state": {
+      "camera_info": {
+        "bbox": {
+          "min_longitude": 48.63297653198242,
+          "min_latitude": 31.278528213500977,
+          "max_longitude": 48.66356658935547,
+          "max_latitude": 31.29933738708496
+        },
+        "place_hash": "7|323|real-estate||"
+      },
+      "page_state": "HALF_STATE",
+      "state_hash": "list"
+    },
+    "search_this_area_button": {
+      "enabled": true,
+      "button_text": "حذف مرزبندی",
+      "click_action": {
+        "type": "OPEN_POSTLIST_PAGE_GRPC",
+        "payload": {
+          "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+          "search_data": {
+            "form_data": {
+              "data": {
+                "map_free_roaming": {
+                  "boolean": {
+                    "value": true
+                  }
+                },
+                "category": {
+                  "str": {
+                    "value": "real-estate"
+                  }
+                },
+                "sort": {
+                  "str": {
+                    "value": "sort_date"
+                  }
+                },
+                "districts": {
+                  "repeated_string": {
+                    "value": [
+                      "323"
+                    ]
+                  }
+                },
+                "business-type": {
+                  "repeated_string": {
+                    "value": [
+                      "personal"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "source_view": "MAP_VIEW_SEARCH_THIS_AREA_BUTTON",
+          "change_city": {
+            "tooltip_text": "با انتخاب شهر از اینجا، فقط آگهی‌های آن شهر را ببینید.",
+            "new_location": {
+              "places": [
+                {
+                  "place_id": "7",
+                  "name": "اهواز",
+                  "parent_id": "902",
+                  "type": "CITY",
+                  "second_slug": "ahvaz",
+                  "parent_name": "خوزستان"
+                }
+              ]
+            }
+          },
+          "source_view_str": "MAP_VIEW_SEARCH_THIS_AREA_BUTTON",
+          "is_not_link": true,
+          "map_interaction": {
+            "search_this_area_enabled": {}
+          }
+        }
+      },
+      "action_log": {
+        "server_side_info": {
+          "info": {
+            "@type": "type.googleapis.com/action_log.MapSearchThisAreaActionInfo",
+            "search_data": {
+              "sort": "sort_date",
+              "cities": [
+                "7"
+              ],
+              "user_selected_location": {
+                "@type": "type.googleapis.com/widgets.UserSelectedLocation",
+                "places": [
+                  {
+                    "place_id": "7"
+                  }
+                ]
+              }
+            }
+          },
+          "item_type": {
+            "type": "MAP_SEARCH_THIS_AREA_ACTION"
+          }
+        },
+        "enabled": true
+      }
+    },
+    "post_count_text": "۸۵۵ آگهی در این محدوده",
+    "post_count": 855,
+    "config": {
+      "style_url": "https://map.divar.ir/back/style/prod/style-light-view-port-v1.0.0-abef6830-neshan.json",
+      "dark_style_url": "https://map.divar.ir/back/style/prod/style-dark-view-port-v1.0.0-abef6830-neshan.json",
+      "source_id": "divar-map-discovery-posts-source-v0.1.1",
+      "layer_ids": [
+        "divar-map-discovery-posts-layer-mini-pins-view-port",
+        "divar-map-discovery-posts-layer-long-text-pins-view-port",
+        "divar-map-discovery-new-posts-layer-long-text-pins-view-port",
+        "divar-map-discovery-posts-history-layer-mini-pins",
+        "divar-map-discovery-posts-history-layer-long-text-pins",
+        "divar-map-discovery-posts-layer-mini-pins-view-port-problematic",
+        "divar-map-discovery-posts-layer-mini-pins-view-port-llm-verified",
+        "divar-map-discovery-posts-history-layer-long-text-pins-problematic",
+        "divar-map-discovery-posts-layer-long-text-pins-view-port-llm-verified",
+        "divar-map-discovery-new-posts-layer-long-text-pins-view-port-llm-verified",
+        "divar-map-discovery-posts-layer-long-text-pins-view-port-verified",
+        "divar-map-discovery-posts-history-layer-long-text-pins-verified"
+      ],
+      "marker_source_id": "divar-map-discovery-active-marker-source",
+      "history_source_id": "divar-map-discovery-posts-history-source",
+      "satellite_style_url": "https://map.divar.ir/back/style/style-android-v0.2.0.json",
+      "clustering_layer_ids": [
+        "divar-map-discovery-clustered-posts-layer-view-port"
+      ],
+      "click_padding": {
+        "top": 12,
+        "bottom": 24,
+        "left": 12,
+        "right": 12
+      },
+      "clustering_click_padding": {
+        "top": 12,
+        "bottom": 24,
+        "left": 12,
+        "right": 12
+      },
+      "view_port_post_source_id": "divar-map-discovery-view-port-posts-source",
+      "view_port_cluster_source_id": "divar-map-discovery-view-port-clusters-source"
+    },
+    "map_switch_mode": "BOTTOM_SHEET"
+  },
+  "suggestion_cache_data": [
+    {
+      "input_data": {
+        "repeated_string": {
+          "value": [
+            "323"
+          ]
+        }
+      },
+      "display": "گلستان",
+      "cache_key": "districts"
+    }
+  ],
+  "show_no_search_result_notice": true
+}

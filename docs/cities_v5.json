@@ -1,0 +1,448 @@
+{
+  "cities": [
+    {
+      "level": "place2",
+      "radius": 28339,
+      "centroid": {
+        "latitude": 35.7032433,
+        "longitude": 51.3891716
+      },
+      "id": 1,
+      "name": "تهران",
+      "slug": "tehran",
+      "new": false,
+      "parent": 904,
+      "neighbors": [],
+      "second_slug": "tehran",
+      "tags": [],
+      "default_location": {
+        "latitude": 35.7037392,
+        "longitude": 51.3457832
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 17522,
+      "centroid": {
+        "latitude": 36.5660934,
+        "longitude": 59.6603813
+      },
+      "id": 3,
+      "name": "مشهد",
+      "slug": "mashhad",
+      "new": false,
+      "parent": 880,
+      "neighbors": [],
+      "second_slug": "mashhad",
+      "tags": [],
+      "default_location": {
+        "latitude": 36.3050117,
+        "longitude": 59.579586
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 16060,
+      "centroid": {
+        "latitude": 35.8344879,
+        "longitude": 50.9456711
+      },
+      "id": 2,
+      "name": "کرج",
+      "slug": "karaj",
+      "new": false,
+      "parent": 895,
+      "neighbors": [],
+      "second_slug": "karaj",
+      "tags": [],
+      "default_location": {
+        "latitude": 35.8053398,
+        "longitude": 50.8977623
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 24750,
+      "centroid": {
+        "latitude": 29.6170444,
+        "longitude": 52.5911407
+      },
+      "id": 6,
+      "name": "شیراز",
+      "slug": "shiraz",
+      "new": false,
+      "parent": 898,
+      "neighbors": [],
+      "second_slug": "shiraz",
+      "tags": [],
+      "default_location": {
+        "latitude": 29.670145,
+        "longitude": 52.5039597
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 23206,
+      "centroid": {
+        "latitude": 32.5937233,
+        "longitude": 51.828949
+      },
+      "id": 4,
+      "name": "اصفهان",
+      "slug": "isfahan",
+      "new": false,
+      "parent": 890,
+      "neighbors": [],
+      "second_slug": "isfahan",
+      "tags": [],
+      "default_location": {
+        "latitude": 32.6557312,
+        "longitude": 51.6893196
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 20993,
+      "centroid": {
+        "latitude": 31.2195549,
+        "longitude": 48.6884193
+      },
+      "id": 7,
+      "name": "اهواز",
+      "slug": "ahvaz",
+      "new": false,
+      "parent": 902,
+      "neighbors": [],
+      "second_slug": "ahvaz",
+      "tags": [],
+      "default_location": {
+        "latitude": 31.3818111,
+        "longitude": 48.6470451
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 15873,
+      "centroid": {
+        "latitude": 38.1282768,
+        "longitude": 46.2652626
+      },
+      "id": 5,
+      "name": "تبریز",
+      "slug": "tabriz",
+      "new": false,
+      "parent": 891,
+      "neighbors": [],
+      "second_slug": "tabriz",
+      "tags": [],
+      "default_location": {
+        "latitude": 38.0931091,
+        "longitude": 46.2801
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 17131,
+      "centroid": {
+        "latitude": 30.2029839,
+        "longitude": 48.5961151
+      },
+      "id": 24,
+      "name": "آبادان",
+      "slug": "abadan",
+      "new": false,
+      "parent": 902,
+      "neighbors": [],
+      "second_slug": "abadan",
+      "tags": [],
+      "default_location": {
+        "latitude": 30.3118229,
+        "longitude": 48.3425713
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 4164,
+      "centroid": {
+        "latitude": 31.2799187,
+        "longitude": 52.5770111
+      },
+      "id": 851,
+      "name": "آباده",
+      "slug": "abadeh",
+      "new": false,
+      "parent": 898,
+      "neighbors": [],
+      "second_slug": "abadeh",
+      "tags": [],
+      "default_location": {
+        "latitude": 31.1627159,
+        "longitude": 52.6421127
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 2893,
+      "centroid": {
+        "latitude": 29.3625011,
+        "longitude": 50.9417534
+      },
+      "id": 3619,
+      "name": "آبپخش",
+      "slug": "abpakhsh",
+      "new": false,
+      "parent": 900,
+      "neighbors": [],
+      "second_slug": "abpakhsh",
+      "tags": [],
+      "default_location": {
+        "latitude": 29.3646736,
+        "longitude": 51.0713387
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 2035,
+      "centroid": {
+        "latitude": 28.0619011,
+        "longitude": 51.7713051
+      },
+      "id": 3629,
+      "name": "آبدان",
+      "slug": "abdan",
+      "new": false,
+      "parent": 900,
+      "neighbors": [],
+      "second_slug": "abdan",
+      "tags": [],
+      "default_location": {
+        "latitude": 28.0761814,
+        "longitude": 51.7710342
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 2936,
+      "centroid": {
+        "latitude": 32.9935646,
+        "longitude": 47.3011551
+      },
+      "id": 775,
+      "name": "آبدانان",
+      "slug": "abdanan",
+      "new": false,
+      "parent": 888,
+      "neighbors": [],
+      "second_slug": "abdanan",
+      "tags": [],
+      "default_location": {
+        "latitude": 32.9924164,
+        "longitude": 47.4217758
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 6748,
+      "centroid": {
+        "latitude": 35.6134682,
+        "longitude": 52.1451
+      },
+      "id": 1709,
+      "name": "آبسرد",
+      "slug": "absard",
+      "new": false,
+      "parent": 904,
+      "neighbors": [],
+      "second_slug": "absard",
+      "tags": [],
+      "default_location": {
+        "latitude": 35.6134682,
+        "longitude": 52.1451
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 1709,
+      "centroid": {
+        "latitude": 39.1292267,
+        "longitude": 47.3498878
+      },
+      "id": 3497,
+      "name": "آبش احمد",
+      "slug": "abesh-ahmad",
+      "new": false,
+      "parent": 891,
+      "neighbors": [],
+      "second_slug": "abesh-ahmad",
+      "tags": [],
+      "default_location": {
+        "latitude": 39.0489616,
+        "longitude": 47.3180237
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 2600,
+      "centroid": {
+        "latitude": 35.7862473,
+        "longitude": 51.9380035
+      },
+      "id": 1715,
+      "name": "آبعلی",
+      "slug": "abali",
+      "new": false,
+      "parent": 904,
+      "neighbors": [],
+      "second_slug": "abali",
+      "tags": [],
+      "default_location": {
+        "latitude": 35.7675972,
+        "longitude": 51.9666519
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 0,
+      "centroid": {
+        "latitude": 36.8709335,
+        "longitude": 58.6605034
+      },
+      "id": 2947,
+      "name": "آبکوه",
+      "slug": "abkuh-city",
+      "new": false,
+      "parent": 880,
+      "neighbors": [],
+      "second_slug": "abkuh-city",
+      "tags": [],
+      "default_location": {
+        "latitude": 36.8709335,
+        "longitude": 58.6605034
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 1420,
+      "centroid": {
+        "latitude": 35.6599731,
+        "longitude": 49.3968468
+      },
+      "id": 3787,
+      "name": "آبگرم",
+      "slug": "abgarm",
+      "new": false,
+      "parent": 878,
+      "neighbors": [],
+      "second_slug": "abgarm",
+      "tags": [],
+      "default_location": {
+        "latitude": 35.7564125,
+        "longitude": 49.2856979
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 4214,
+      "centroid": {
+        "latitude": 36.1517487,
+        "longitude": 50.4388084
+      },
+      "id": 869,
+      "name": "آبیک",
+      "slug": "abyek",
+      "new": false,
+      "parent": 878,
+      "neighbors": [],
+      "second_slug": "abyek",
+      "tags": [],
+      "default_location": {
+        "latitude": 36.0517616,
+        "longitude": 50.5374146
+      },
+      "bbox": [],
+      "polygon_encoded": "",
+      "multi_polygon_encoded": [],
+      "multi_polygon": []
+    },
+    {
+      "level": "place2",
+      "radius": 4027,
+      "centroid": {
+        "latitude": 37.6838,
+        "longitude": 45.9246407
+      },
+      "id": 853,
+      "name": "آذرشهر",
+      "slug": "azarshahr",
+      "new": false,
+      "parent": 891,
+      "neighbors": [],
+ 

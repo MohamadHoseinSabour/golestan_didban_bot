@@ -1,0 +1,17 @@
+[Unit]
+Description=Divar Real-Estate Monitor Telegram Bot (Golestan Ahvaz)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/golestan_didban_bot
+EnvironmentFile=/opt/golestan_didban_bot/.env
+ExecStart=/opt/golestan_didban_bot/.venv/bin/python -m divar_bot
+Restart=always
+RestartSec=10
+StandardOutput=append:/opt/golestan_didban_bot/logs/systemd_out.log
+StandardError=append:/opt/golestan_didban_bot/logs/systemd_err.log
+
+[Install]
+WantedBy=multi-user.target

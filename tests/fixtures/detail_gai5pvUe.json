@@ -1,0 +1,1045 @@
+{
+  "sections": [
+    {
+      "section_name": "BREADCRUMB",
+      "widgets": [
+        {
+          "widget_type": "BREADCRUMB",
+          "data": {
+            "@type": "type.googleapis.com/widgets.BreadcrumbData",
+            "parent_items": [
+              {
+                "title": "املاک",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "real-estate"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              },
+              {
+                "title": "اجارهٔ کوتاه‌مدت",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "temporary-rent"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              },
+              {
+                "title": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+                "action": {
+                  "type": "OPEN_POSTLIST_PAGE_GRPC",
+                  "payload": {
+                    "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                    "search_data": {
+                      "form_data": {
+                        "data": {
+                          "category": {
+                            "str": {
+                              "value": "suite-apartment"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "source_view": "CATEGORY_BREAD_CRUMB",
+                    "source_view_str": "CATEGORY_BREAD_CRUMB"
+                  }
+                }
+              }
+            ],
+            "current_page_title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+            "padded": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "TITLE",
+      "widgets": [
+        {
+          "widget_type": "LEGEND_TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.LegendTitleRowData",
+            "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+            "high_level_heading": true,
+            "padding": "NO_PADDING"
+          }
+        },
+        {
+          "widget_type": "EXPANDABLE_SECTION",
+          "data": {
+            "@type": "type.googleapis.com/widgets.ExpandableSectionData",
+            "widget_list": [
+              {
+                "widget_type": "DESCRIPTION_ROW",
+                "data": {
+                  "@type": "type.googleapis.com/widgets.DescriptionRowData",
+                  "text": "انتشار آگهی: ۲ مرداد ۱۴۰۵، ۰۲:۳۹\nآخرین نردبان: ۱۲ مهر ۱۴۰۵، ۲۳:۴۴",
+                  "is_primary": true,
+                  "small": true,
+                  "text_alignment": "RIGHT"
+                }
+              }
+            ],
+            "title": "۲ ماه پیش در اهواز، گلستان، خ خرداد",
+            "icon": {}
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "زنگ خطرهای قبل از معامله",
+            "action": {
+              "type": "OPEN_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenPagePayload",
+                "request_http_method": "POST",
+                "request_data": {
+                  "@type": "type.googleapis.com/post_api_v2.GetFraudAlertPageRequest.Data",
+                  "category": "suite-apartment"
+                },
+                "specification": {
+                  "@type": "type.googleapis.com/widgets.OpenPagePayload.SimplePageSpecification",
+                  "navigation_button": "BACK"
+                },
+                "is_modal": true,
+                "rest_request_path": "/v8/postview/fraud-alert",
+                "grpc_request_path": "/post_api_v2.PostApi/GetFraudAlertPage"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/warning.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/warning.png",
+              "icon_name": "WARNING",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.PostWarningInfo",
+                "post_token": "gai5pvUe"
+              },
+              "item_type": {
+                "type": "POST_WARNING"
+              }
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "DESCRIPTION",
+      "widgets": [
+        {
+          "widget_type": "TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.TitleRowData",
+            "text": "توضیحات",
+            "text_color": "TEXT_PRIMARY",
+            "text_type": "SECONDARY"
+          }
+        },
+        {
+          "widget_type": "DESCRIPTION_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.DescriptionRowData",
+            "text": "پاسخگویی ۲۴ ساعته\nبدون واریز بیعانه هیچگونه رزوی انجام نمیشود .\n✅️ سوییت دنج امن در محیطی آرام و بی‌سروصدا .\nتمیز تحویل می‌دهیم و تمیز تحویل می‌گیریم .\n⚜️ امکانات:\n⏺️120 متر مربع\n⏺ ۲ اتاقه با تخت دونفره\n⏺ حال پذیرایی ۴۰ مترمربعی\n⏺ سرویس بهداشتی تکمیل و تمیز\n⏺ ماشین لباسشویی\n⏺️سیستم صوتی و نورپردازی جهت انجام جشن تولد \n⏺️نزدیک بازارچه میتوه‌،ترهبار،گوشت،سوپری و...\n⏺️داری شماره اشتراک رستوران غذا جهت سفارش تلفنی .\n⏺️نزدیک به مرکز شهر (نادری) .\n\nشرایط :\n✅️تمیز و مرتب تحویل میدهیم و به همان صورت تحویل میگیرم\n✅️تسویه حساب کامل اجاره  در حین ورود به سوییت",
+            "is_primary": true,
+            "text_alignment": "RIGHT"
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "IMAGE",
+      "widgets": [
+        {
+          "widget_type": "IMAGE_CAROUSEL",
+          "data": {
+            "@type": "type.googleapis.com/widgets.ImageCarouselData",
+            "items": [
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/videos/thumbnails/thumbnail/da58bdb5-b84c-41e9-a391-e2810d8e7231.jpg",
+                  "alt": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار"
+                },
+                "video_url": "https://video1.divarcdn.com/static/videos/post/d/da58bdb5-b84c-41e9-a391-e2810d8e7231/video.mp4",
+                "action_log": {
+                  "server_side_info": {
+                    "info": {
+                      "@type": "type.googleapis.com/action_log.PostVideoInfo",
+                      "post_token": "gai5pvUe",
+                      "video_url": "https://video1.divarcdn.com/static/videos/post/d/da58bdb5-b84c-41e9-a391-e2810d8e7231/video.mp4",
+                      "index_in_slider": 1
+                    },
+                    "item_type": {
+                      "type": "POST_VIDEO"
+                    }
+                  },
+                  "enabled": true
+                },
+                "seo": {
+                  "name": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+                  "upload_date": "2026-07-23T23:09:05.403803Z"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/H0SKB9Z04wKMOQvGsbzQmg/9418fb2c-55c6-4913-b1f1-6941c9c10dbb.webp",
+                  "alt": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/6HA_vdGCwr_UHrf3TnF8Bw/9418fb2c-55c6-4913-b1f1-6941c9c10dbb.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/XgnGp1KXmZLh4XWz-0QAZQ/b919dc44-b61e-4fd0-b0c1-b583311f5a91.webp",
+                  "alt": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/pJY9J9Iz6Txku_NpX0xL8A/b919dc44-b61e-4fd0-b0c1-b583311f5a91.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/deKv1bb3fUGPxHyhcJlLoQ/b74869ac-d49b-4bdd-8638-e1840b5b263a.webp",
+                  "alt": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/OpjESNoFqrkmsHxF2_yy0w/b74869ac-d49b-4bdd-8638-e1840b5b263a.webp"
+                }
+              },
+              {
+                "image": {
+                  "url": "https://s100.divarcdn.com/static/photo/neda/webp_post/ggTnZTXC0OPZhWsi-NzdVw/fc1b5cd7-bbe8-462a-b2cb-569b0f427fa1.webp",
+                  "alt": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه|اجارهٔ کوتاه‌مدت آپارتمان و سوئیت|اهواز, گلستان|دیوار",
+                  "thumbnail_url": "https://s100.divarcdn.com/static/photo/neda/webp_thumbnail/poQMdMLj20TGzX932L5khQ/fc1b5cd7-bbe8-462a-b2cb-569b0f427fa1.webp"
+                }
+              }
+            ],
+            "image_aspect_ratio": {
+              "dynamic_aspect_ratio": {
+                "height": 3,
+                "width": 4
+              }
+            },
+            "has_preview": true,
+            "has_thumbnails": true,
+            "show_tooltip": true,
+            "tooltip_data": {
+              "icon": {
+                "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/white_primary/v1/fullscreen.png",
+                "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/white_primary/v1/fullscreen.png",
+                "icon_name": "FULLSCREEN",
+                "icon_color": "WHITE_PRIMARY"
+              },
+              "text": "۵"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "LIST_DATA",
+      "widgets": [
+        {
+          "widget_type": "GROUP_INFO_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.GroupInfoRow",
+            "items": [
+              {
+                "title": "متراژ",
+                "value": "۱۲۰"
+              },
+              {
+                "title": "اتاق",
+                "value": "۲"
+              }
+            ],
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "نوع اقامتگاه",
+            "value": "سوئیت",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "تصویر‌ها برای همین ملک است؟",
+            "value": "بله",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "ظرفیت استاندارد",
+            "value": "۲ نفر",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "ظرفیت اضافه",
+            "value": "۲ نفر",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "SECTION_TITLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SectionTitleRowData",
+            "title": "اجاره",
+            "title_color": "TEXT_PRIMARY",
+            "padding": "ALT"
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "روزهای عادی (شنبه تا سه‌شنبه)",
+            "value": "۵,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "آخر هفته",
+            "value": "۵,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "تعطیلات و مناسبت‌ها",
+            "value": "۵,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "UNEXPANDABLE_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+            "title": "هزینهٔ هر نفر اضافه",
+            "value": "۵,۰۰۰ تومان / شب",
+            "has_divider": true
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "سایر ویژگی‌ها و امکانات",
+            "action": {
+              "type": "LOAD_MODAL_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.LoadModalPagePayload",
+                "modal_page": {
+                  "title": "ویژگی‌ها و امکانات",
+                  "widget_list": [
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "طبقه",
+                        "value": "اول",
+                        "has_divider": true
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "آسانسور",
+                        "value": "ندارد",
+                        "has_divider": true
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "حیوان خانگی مجاز",
+                        "value": "بله",
+                        "has_divider": true
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "پارکینگ",
+                        "value": "دارد",
+                        "has_divider": true
+                      }
+                    },
+                    {
+                      "widget_type": "DESCRIPTION_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.DescriptionRowData",
+                        "text": "دوره اجاره",
+                        "is_primary": true,
+                        "expandable": true,
+                        "padded": true,
+                        "preview_max_line": 4,
+                        "text_alignment": "RIGHT"
+                      }
+                    },
+                    {
+                      "widget_type": "WRAPPER_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.WrapperRowData",
+                        "chip_list": {
+                          "chips": [
+                            {
+                              "text": "روزانه",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "هفتگی",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "کمتر از یک روز",
+                              "type": "ACTION",
+                              "small": true
+                            }
+                          ]
+                        },
+                        "padded": true
+                      }
+                    },
+                    {
+                      "widget_type": "DESCRIPTION_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.DescriptionRowData",
+                        "text": "سیستم گرمایش/سرمایش",
+                        "is_primary": true,
+                        "expandable": true,
+                        "padded": true,
+                        "preview_max_line": 4,
+                        "text_alignment": "RIGHT"
+                      }
+                    },
+                    {
+                      "widget_type": "WRAPPER_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.WrapperRowData",
+                        "chip_list": {
+                          "chips": [
+                            {
+                              "text": "کولر گازی",
+                              "type": "ACTION",
+                              "small": true
+                            }
+                          ]
+                        },
+                        "padded": true
+                      }
+                    },
+                    {
+                      "widget_type": "DESCRIPTION_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.DescriptionRowData",
+                        "text": "امکانات رفاهی",
+                        "is_primary": true,
+                        "expandable": true,
+                        "padded": true,
+                        "preview_max_line": 4,
+                        "text_alignment": "RIGHT"
+                      }
+                    },
+                    {
+                      "widget_type": "WRAPPER_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.WrapperRowData",
+                        "chip_list": {
+                          "chips": [
+                            {
+                              "text": "سیستم صوتی",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "ماشین لباسشویی",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "یخچال",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "اجاق گاز",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "تخت خواب",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "سرویس خواب",
+                              "type": "ACTION",
+                              "small": true
+                            },
+                            {
+                              "text": "آشپزخانه",
+                              "type": "ACTION",
+                              "small": true
+                            }
+                          ]
+                        },
+                        "padded": true
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "ساعت ورود",
+                        "value": "۱۲",
+                        "has_divider": true
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "حداقل مدت اقامت",
+                        "value": "۱ روز",
+                        "has_divider": true
+                      }
+                    },
+                    {
+                      "widget_type": "UNEXPANDABLE_ROW",
+                      "data": {
+                        "@type": "type.googleapis.com/widgets.UnexpandableRowData",
+                        "title": "ساعت خروج",
+                        "value": "۱۲",
+                        "has_divider": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "has_divider": true,
+            "icon": {},
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z",
+            "fullwidth": true
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.ViewPostFeaturesInfo",
+                "post_token": "gai5pvUe"
+              },
+              "item_type": {
+                "type": "VIEW_POST_FEATURES"
+              }
+            },
+            "enabled": true
+          }
+        },
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "بررسی و کارشناسی",
+            "action": {
+              "type": "OPEN_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenPagePayload",
+                "request_http_method": "POST",
+                "request_data": {
+                  "@type": "type.googleapis.com/service_providers.GetServiceProvidersPageRequest.RequestData",
+                  "source_v2": "DEMAND_POST",
+                  "filter": {
+                    "service_types": [
+                      "REPORT_INSPECTION"
+                    ],
+                    "city_id": 7,
+                    "category": "suite-apartment",
+                    "post_token": "gai5pvUe",
+                    "touchpoint": "DEMAND_POST"
+                  },
+                  "action_data_builder": {
+                    "conversation_id": "gai5pvUe",
+                    "post_token": "gai5pvUe",
+                    "touchpoint": "DEMAND_POST",
+                    "source": "DEMAND_POST",
+                    "lead_source": "DEMAND"
+                  },
+                  "display_data": {
+                    "page_title": "بررسی و کارشناسی"
+                  },
+                  "trace_id": "f28640c1-02b9-486f-9c5d-2f2ea1dca93c",
+                  "source": "DEMAND_POST",
+                  "lead_source": "DEMAND"
+                },
+                "specification": {
+                  "@type": "type.googleapis.com/widgets.OpenPagePayload.SimplePageSpecification"
+                },
+                "is_modal": true,
+                "rest_request_path": "/v8/open-platform/service-providers",
+                "grpc_request_path": "/service_providers.ServiceProviders/GetServiceProvidersPage"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/article-magnifier.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/article-magnifier.png",
+              "icon_name": "ARTICLE_MAGNIFIER",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "has_arrow": true,
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "TAGS",
+      "widgets": [
+        {
+          "widget_type": "WRAPPER_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.WrapperRowData",
+            "chip_list": {
+              "chips": [
+                {
+                  "text": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+                  "type": "ACTION",
+                  "action": {
+                    "type": "OPEN_POSTLIST_PAGE_GRPC",
+                    "payload": {
+                      "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                      "search_data": {
+                        "form_data": {
+                          "data": {
+                            "category": {
+                              "str": {
+                                "value": "suite-apartment"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "source_view": "CATEGORY_BREAD_CRUMB",
+                      "source_view_str": "CATEGORY_BREAD_CRUMB"
+                    }
+                  }
+                },
+                {
+                  "text": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت در گلستان",
+                  "type": "ACTION",
+                  "action": {
+                    "type": "OPEN_POSTLIST_PAGE_GRPC",
+                    "payload": {
+                      "@type": "type.googleapis.com/widgets.OpenPostListPageGRPCPayload",
+                      "search_data": {
+                        "form_data": {
+                          "data": {
+                            "category": {
+                              "str": {
+                                "value": "suite-apartment"
+                              }
+                            },
+                            "districts": {
+                              "repeated_string": {
+                                "value": [
+                                  "323"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "source_view": "CATEGORY_BREAD_CRUMB",
+                      "source_view_str": "CATEGORY_BREAD_CRUMB"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "MAP",
+      "widgets": [
+        {
+          "widget_type": "MAP_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.MapRowData",
+            "location": {
+              "exact_data": {
+                "point": {
+                  "latitude": 31.292177383146,
+                  "longitude": 48.644473535956
+                }
+              }
+            },
+            "image_url": "https://mapimage.divarcdn.com/v8/mapimage?encrypted_data=MTIzNDU2Nzg5MTIzXHBRA7KSXdLuQv2_9DpQiftLAA_zrHXYH9XUJkxBXvnf6g=="
+          },
+          "action_log": {
+            "server_side_info": {
+              "info": {
+                "@type": "type.googleapis.com/action_log.MapInfo",
+                "post_token": "gai5pvUe"
+              },
+              "item_type": {
+                "type": "MAP"
+              }
+            },
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "NOTE",
+      "widgets": [
+        {
+          "widget_type": "NOTE",
+          "data": {
+            "@type": "type.googleapis.com/widgets.NoteData",
+            "title": "یادداشت من",
+            "button_title": "ویرایش یادداشت",
+            "post_token": "gai5pvUe",
+            "icon_button": {
+              "icon": {
+                "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/more_vert.png",
+                "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/more_vert.png",
+                "icon_name": "MORE_VERT",
+                "icon_color": "ICON_SECONDARY"
+              },
+              "action": {
+                "type": "LOAD_MENU",
+                "payload": {
+                  "@type": "type.googleapis.com/widgets.LoadMenuPayload",
+                  "menu": {
+                    "items": [
+                      {
+                        "text": "ویرایش یادداشت",
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/edit.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/edit.png",
+                          "icon_name": "EDIT",
+                          "icon_color": "ICON_SECONDARY"
+                        },
+                        "action": {
+                          "type": "NOTE",
+                          "payload": {
+                            "@type": "type.googleapis.com/widgets.NotePayload",
+                            "post_token": "gai5pvUe",
+                            "max_character_count": 256
+                          }
+                        },
+                        "alignment": "RIGHT"
+                      },
+                      {
+                        "text": "حذف یادداشت",
+                        "icon": {
+                          "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_primary/v1/trash_o.png",
+                          "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_primary/v1/trash_o.png",
+                          "icon_name": "TRASH_O",
+                          "icon_color": "ICON_PRIMARY"
+                        },
+                        "action": {
+                          "type": "MAKE_NETWORK_CALL",
+                          "payload": {
+                            "@type": "type.googleapis.com/widgets.MakeNetworkCallPayload",
+                            "grpc_request_path": "/yaad_v2.YaadV2/DeleteNoteV2",
+                            "rest_request_path": "/yaad/delete-note-v2",
+                            "request_data": {
+                              "@type": "type.googleapis.com/yaad_v2.DeleteNoteV2Request.RequestData",
+                              "token": "gai5pvUe"
+                            },
+                            "needs_auth": true
+                          }
+                        },
+                        "alignment": "RIGHT",
+                        "state": "STATE_NEGATIVE"
+                      }
+                    ],
+                    "banner": {}
+                  },
+                  "display_type": "LOAD_MENU_DISPLAY_TYPE_BOTTOM_SHEET"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "section_name": "STATIC",
+      "widgets": [
+        {
+          "widget_type": "SELECTOR_ROW",
+          "data": {
+            "@type": "type.googleapis.com/widgets.SelectorRowData",
+            "title": "گزارش آگهی",
+            "action": {
+              "type": "OPEN_FORM_PAGE",
+              "payload": {
+                "@type": "type.googleapis.com/widgets.OpenFormPagePayload",
+                "grpc_servicer": "/post_quality.PostQualityFeedback/GetFeedbackForm",
+                "request_data": {
+                  "@type": "type.googleapis.com/post_quality.GetFeedbackFormRequest.RequestData",
+                  "post_token": "gai5pvUe"
+                },
+                "rest_request_path": "/v8/post-quality/feedback-form"
+              }
+            },
+            "has_divider": true,
+            "icon": {
+              "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/icon_secondary/v1/report.png",
+              "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/icon_secondary/v1/report.png",
+              "icon_name": "REPORT",
+              "icon_color": "ICON_SECONDARY"
+            },
+            "last_notification_date": "0001-01-01T00:00:00Z"
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+    "web_url": "https://divar.ir/v/gai5pvUe"
+  },
+  "seo": {
+    "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه در اهواز",
+    "description": "آگهی شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه در دیوار اهواز",
+    "android_package_name": "ir.divar",
+    "android_app_url": "android-app://ir.divar/http/v/شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه/gai5pvUe/",
+    "web_info": {
+      "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+      "district_persian": "گلستان",
+      "city_persian": "اهواز",
+      "category_slug_persian": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت"
+    },
+    "unavailable_after": "2026-10-23T02:39:05.404427",
+    "bread_crumb": [
+      {
+        "name": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "suite-apartment"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "اجارهٔ کوتاه‌مدت",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "category": {
+                "str": {
+                  "value": "temporary-rent"
+                }
+              },
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "املاک",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              },
+              "category": {
+                "str": {
+                  "value": "real-estate"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "گلستان",
+        "search_data": {
+          "form_data": {
+            "data": {
+              "districts": {
+                "repeated_string": {
+                  "value": [
+                    "323"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "7",
+        "search_data": {
+          "form_data": {}
+        }
+      },
+      {
+        "name": "دیوار"
+      }
+    ],
+    "post_seo_schema": {
+      "image": "https://s100.divarcdn.com/static/photo/neda/webp_post/H0SKB9Z04wKMOQvGsbzQmg/9418fb2c-55c6-4913-b1f1-6941c9c10dbb.webp",
+      "@type": "CampingPitch",
+      "url": "https://divar.ir/v/شقه-اجاره-سوییت-تمیزپاسخ۲۴ساعته-نیم-روز-روزانه/gai5pvUe",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": "120",
+        "unitCode": "MTK"
+      },
+      "web_info": {
+        "title": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+        "city_persian": "اهواز",
+        "district_persian": "گلستان",
+        "category_slug_persian": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت"
+      },
+      "numberOfRooms": "دو",
+      "accommodationCategory": "اجارهٔ کوتاه‌مدت آپارتمان و سوئیت",
+      "@context": "https://schema.org",
+      "geo": {
+        "longitude": "48.644473535956",
+        "@type": "GeoCoordinates",
+        "address": "اهواز, گلستان",
+        "latitude": "31.292177383146"
+      },
+      "name": "شقه اجاره سوییت تمیزپاسخ۲۴ساعته نیم‌روز،روزانه",
+      "description": "پاسخگویی ۲۴ ساعته\nبدون واریز بیعانه هیچگونه رزوی انجام نمیشود .\n✅️ سوییت دنج امن در محیطی آرام و بی‌سروصدا .\nتمیز تحویل می‌دهیم و تمیز تحویل می‌گیریم .\n⚜️ امکانات:\n⏺️120 متر مربع\n⏺ ۲ اتاقه با تخت دونفره\n⏺ حال پذیرایی ۴۰ مترمربعی\n⏺ سرویس بهداشتی تکمیل و تمیز\n⏺ ماشین لباسشویی\n⏺️سیستم صوتی و نورپردازی جهت انجام جشن تولد \n⏺️نزدیک بازارچه میتوه‌،ترهبار،گوشت،سوپری و...\n⏺️داری شماره اشتراک رستوران غذا جهت سفارش تلفنی .\n⏺️نزدیک به مرکز شهر (نادری) .\n\nشرایط :\n✅️تمیز و مرتب تحویل میدهیم و به همان صورت تحویل میگیرم\n✅️تسویه حساب کامل اجاره  در حین ورود به سوییت"
+    },
+    "image_url": "https://s100.divarcdn.com/static/photo/neda/post/SDPe217L_qupRKH1u-HMlg/9418fb2c-55c6-4913-b1f1-6941c9c10dbb.jpg"
+  },
+  "contact": {
+    "chat_enabled": true,
+    "action_log": {
+      "server_side_info": {
+        "info": {
+          "@type": "type.googleapis.com/action_log.ContactInfoInfo",
+          "post_token": "gai5pvUe",
+          "method_name": "GetContactWeb",
+          "contact_uuid": "9bb72fa8-7c3b-42bd-9ae6-8bec61e2ab09"
+        },
+        "item_type": {
+          "type": "CONTACT_INFO"
+        }
+      },
+      "enabled": true
+    },
+    "contact_uuid": "9bb72fa8-7c3b-42bd-9ae6-8bec61e2ab09"
+  },
+  "webengage": {
+    "district": "golestan-ahvaz",
+    "business_ref": "",
+    "image_count": 4,
+    "business_type": "personal",
+    "city": "ahvaz",
+    "price": 0,
+    "originality": "",
+    "gender": "",
+    "brand_model": "",
+    "cat_1": "real-estate",
+    "token": "gai5pvUe",
+    "cat_2": "temporary-rent",
+    "status": "",
+    "rent": 0,
+    "credit": 0,
+    "cat_3": "suite-apartment",
+    "source_view": "",
+    "category": "suite-apartment"
+  },
+  "analytics": {
+    "cat1": "real-estate",
+    "cat2": "temporary-rent",
+    "cat3": "suite-apartment",
+    "city": "ahvaz"
+  },
+  "city": {
+    "city_id": "7",
+    "name": "اهواز",
+    "parent_id": "902",
+    "second_slug": "ahvaz"
+  }
+}

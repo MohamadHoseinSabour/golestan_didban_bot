@@ -1,0 +1,63 @@
+# Divar Alert Bot — Configuration
+# Copy this to config.yaml and adjust values.
+# All settings can be overridden via environment variables.
+
+divar:
+  # One or more Divar search URLs (personal listings, Golestan Ahvaz)
+  urls:
+    - "https://divar.ir/s/ahvaz/real-estate/golestan?bbox=48.6043%2C31.2658939%2C48.6834793%2C31.3184261&business-type=personal%2C&map_bbox=48.604302%2C31.265893%2C48.68348%2C31.318427&map_free_roaming=true&map_place_hash=7%7C%7Creal-estate%7C%7C"
+
+  # Whether to include bbox parameter in API calls (verified in recon phase)
+  use_bbox: true
+
+  # Polling interval in seconds (±jitter_seconds)
+  poll_interval_seconds: 60
+  jitter_seconds: 5
+
+  # Ignore listings older than this (minutes) — prevents spam after bot restarts
+  max_ad_age_minutes: 180
+
+  # Max listings to send per poll cycle
+  max_send_per_cycle: 20
+
+  # Number of latest listings to send on first run (0 = none, just mark seen)
+  notify_on_first_run: 0
+
+  # Words in title/description that indicate an agency listing (secondary filter)
+  agency_keywords:
+    - "املاک"
+    - "مشاور املاک"
+    - "مشاورین املاک"
+    - "بنگاه"
+    - "آژانس املاک"
+    - "گروه املاک"
+    - "دپارتمان املاک"
+    - "مسکن مهر"
+    - "کارگزاری املاک"
+    - "دفتر املاک"
+
+  # Optional price/area filters (null = no filter)
+  min_price: null
+  max_price: null
+  min_area_m2: null
+  max_area_m2: null
+
+  # Send thumbnail image with notification
+  send_thumbnail: true
+
+telegram:
+  # Notification timezone
+  timezone: "Asia/Tehran"
+
+  # Max message length (Telegram limit: 4096)
+  max_message_length: 4096
+
+database:
+  path: "data/divar_bot.db"
+
+logging:
+  level: "INFO"
+  # Log file rotation: max size in MB, backup count
+  max_file_mb: 10
+  backup_count: 5
+  log_dir: "logs"

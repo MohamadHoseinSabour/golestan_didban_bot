@@ -1,0 +1,329 @@
+{
+  "clusters": [
+    {
+      "lon": 48.653029522579374,
+      "lat": 31.29074332545958,
+      "long_preview_title": "۴۳۷",
+      "properties": {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.653029522579374,
+            31.29074332545958
+          ]
+        },
+        "properties": {
+          "lon": 48.653029522579374,
+          "destination_zoom": 14,
+          "count": 437,
+          "text": "۴۳۷",
+          "lat": 31.29074332545958
+        },
+        "type": "Feature"
+      }
+    },
+    {
+      "lon": 48.65570068359375,
+      "lat": 31.321930287314352,
+      "long_preview_title": "۲۵۶",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.65570068359375,
+            31.321930287314352
+          ]
+        },
+        "properties": {
+          "lon": 48.65570068359375,
+          "destination_zoom": 14,
+          "count": 256,
+          "text": "۲۵۶",
+          "lat": 31.321930287314352
+        }
+      }
+    },
+    {
+      "lon": 48.64273203974185,
+      "lat": 31.270712116062978,
+      "long_preview_title": "۲۳۰",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.64273203974185,
+            31.270712116062978
+          ]
+        },
+        "properties": {
+          "lat": 31.270712116062978,
+          "lon": 48.64273203974185,
+          "destination_zoom": 14,
+          "count": 230,
+          "text": "۲۳۰"
+        }
+      }
+    },
+    {
+      "lon": 48.6792761010805,
+      "lat": 31.312517877072178,
+      "long_preview_title": "۳۸۹",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.6792761010805,
+            31.312517877072178
+          ]
+        },
+        "properties": {
+          "count": 389,
+          "text": "۳۸۹",
+          "lat": 31.312517877072178,
+          "lon": 48.6792761010805,
+          "destination_zoom": 14
+        }
+      }
+    },
+    {
+      "lon": 48.6148582664696,
+      "lat": 31.31199138235629,
+      "long_preview_title": "۳۷۰",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.6148582664696,
+            31.31199138235629
+          ]
+        },
+        "properties": {
+          "count": 370,
+          "text": "۳۷۰",
+          "lat": 31.31199138235629,
+          "lon": 48.6148582664696,
+          "destination_zoom": 14
+        }
+      }
+    },
+    {
+      "lon": 48.6724211040296,
+      "lat": 31.288516149817355,
+      "long_preview_title": "۱۷۱",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "coordinates": [
+            48.6724211040296,
+            31.288516149817355
+          ],
+          "type": "Point"
+        },
+        "properties": {
+          "text": "۱۷۱",
+          "lat": 31.288516149817355,
+          "lon": 48.6724211040296,
+          "destination_zoom": 14,
+          "count": 171
+        }
+      }
+    },
+    {
+      "lon": 48.63433271251243,
+      "lat": 31.320270955196747,
+      "long_preview_title": "۳۷۷",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.63433271251243,
+            31.320270955196747
+          ]
+        },
+        "properties": {
+          "destination_zoom": 14,
+          "count": 377,
+          "text": "۳۷۷",
+          "lat": 31.320270955196747,
+          "lon": 48.63433271251243
+        }
+      }
+    },
+    {
+      "lon": 48.61487265744824,
+      "lat": 31.28587551912345,
+      "long_preview_title": "۴۸۹",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.61487265744824,
+            31.28587551912345
+          ]
+        },
+        "properties": {
+          "lon": 48.61487265744824,
+          "destination_zoom": 14,
+          "count": 489,
+          "text": "۴۸۹",
+          "lat": 31.28587551912345
+        }
+      }
+    },
+    {
+      "lon": 48.63834707725414,
+      "lat": 31.291390186173142,
+      "long_preview_title": "۶۱۹",
+      "properties": {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            48.63834707725414,
+            31.291390186173142
+          ]
+        },
+        "properties": {
+          "lat": 31.291390186173142,
+          "lon": 48.63834707725414,
+          "destination_zoom": 14,
+          "count": 619,
+          "text": "۶۱۹"
+        },
+        "type": "Feature"
+      }
+    },
+    {
+      "lon": 48.67165305397727,
+      "lat": 31.265982872727726,
+      "long_preview_title": "۱۹۸",
+      "properties": {
+        "type": "Feature",
+        "geometry": {
+          "coordinates": [
+            48.67165305397727,
+            31.265982872727726
+          ],
+          "type": "Point"
+        },
+        "properties": {
+          "lat": 31.265982872727726,
+          "lon": 48.67165305397727,
+          "destination_zoom": 14,
+          "count": 198,
+          "text": "۱۹۸"
+        }
+      }
+    }
+  ],
+  "count": 3536,
+  "count_text": "۳,۵۳۶ آگهی در این محدوده",
+  "map_idle_action_log": {
+    "server_side_info": {
+      "info": {
+        "@type": "type.googleapis.com/action_log.MapViewIdleActionInfo",
+        "search_data": {
+          "form_data_json": "{\"data\":{\"bbox\":{\"repeated_float\":{\"value\":[{\"value\":48.6043},{\"value\":31.265894},{\"value\":48.68348},{\"value\":31.318426}]}},\"business-type\":{\"repeated_string\":{\"value\":[\"personal\"]}},\"category\":{\"str\":{\"value\":\"real-estate\"}},\"districts\":{\"repeated_string\":{\"value\":[\"323\"]}},\"map_free_roaming\":{\"boolean\":{\"value\":true}}}}",
+          "cities": [
+            "7"
+          ],
+          "query_input_type": "TEXT"
+        },
+        "cluster_infos": [
+          {
+            "location": {
+              "latitude": 31.29074332545958,
+              "longitude": 48.653029522579374
+            },
+            "count": 437
+          },
+          {
+            "location": {
+              "latitude": 31.321930287314352,
+              "longitude": 48.65570068359375
+            },
+            "count": 256
+          },
+          {
+            "location": {
+              "latitude": 31.270712116062978,
+              "longitude": 48.64273203974185
+            },
+            "count": 230
+          },
+          {
+            "location": {
+              "latitude": 31.312517877072178,
+              "longitude": 48.6792761010805
+            },
+            "count": 389
+          },
+          {
+            "location": {
+              "latitude": 31.31199138235629,
+              "longitude": 48.6148582664696
+            },
+            "count": 370
+          },
+          {
+            "location": {
+              "latitude": 31.288516149817355,
+              "longitude": 48.6724211040296
+            },
+            "count": 171
+          },
+          {
+            "location": {
+              "latitude": 31.320270955196747,
+              "longitude": 48.63433271251243
+            },
+            "count": 377
+          },
+          {
+            "location": {
+              "latitude": 31.28587551912345,
+              "longitude": 48.61487265744824
+            },
+            "count": 489
+          },
+          {
+            "location": {
+              "latitude": 31.291390186173142,
+              "longitude": 48.63834707725414
+            },
+            "count": 619
+          },
+          {
+            "location": {
+              "latitude": 31.265982872727726,
+              "longitude": 48.67165305397727
+            },
+            "count": 198
+          }
+        ],
+        "bounding_box": {
+          "ne": {
+            "latitude": 31.331504,
+            "longitude": 48.683479
+          },
+          "sw": {
+            "latitude": 31.252807,
+            "longitude": 48.604301
+          }
+        },
+        "post_count": 3536,
+        "zoom": 12.29
+      },
+      "item_type": {
+        "type": "MAP_VIEW_IDLE"
+      }
+    },
+    "enabled": true
+  },
+  "show_search_this_area_button": true
+}

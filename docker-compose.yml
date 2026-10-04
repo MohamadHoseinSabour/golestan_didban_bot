@@ -1,0 +1,16 @@
+services:
+  golestan-divar-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: golestan_didban_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Asia/Tehran
