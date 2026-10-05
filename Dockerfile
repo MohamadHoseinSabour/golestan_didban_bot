@@ -57,7 +57,6 @@ RUN echo "/app/src" > /opt/venv/lib/python3.12/site-packages/divar_bot.pth
 
 USER botuser
 
-VOLUME ["/app/data", "/app/logs"]
-
 ENTRYPOINT ["python", "-m", "divar_bot"]
 CMD []
+
