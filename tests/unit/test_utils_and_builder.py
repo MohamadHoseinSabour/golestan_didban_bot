@@ -106,3 +106,46 @@ def test_relative_time_age_filter_integration():
     assert fresh_dt is not None
     assert is_too_old(fresh_dt, max_age_minutes=180) is False
 
+
+def test_rent_residential_and_buy_apartment_url_builder():
+    rent_url = (
+        "https://divar.ir/s/ahvaz/rent-residential/golestan"
+        "?bbox=48.6212883%2C31.2400131%2C48.6597023%2C31.2872963"
+        "&business-type=personal%2C&districts=4574%2C"
+        "&map_bbox=48.625774%2C31.261142%2C48.664184%2C31.308414"
+        "&map_place_hash=7%7C323%2C4574%7Cresidential-rent%7C%7C"
+    )
+    rent_params = parse_divar_url(rent_url, use_bbox=True)
+    assert rent_params.city_slug == "ahvaz"
+    assert rent_params.category_slug == "rent-residential"
+    assert rent_params.neighborhood_slug == "golestan"
+    assert rent_params.districts == ["323", "4574"]
+    assert rent_params.district_id == "323"
+    assert rent_params.business_type == "personal"
+    assert rent_params.bbox == [48.6212883, 31.2400131, 48.6597023, 31.2872963]
+
+    rent_payload = rent_params.to_api_payload()
+    form_data = rent_payload["search_data"]["form_data"]["data"]
+    assert form_data["category"]["str"]["value"] == "residential-rent"
+    assert form_data["districts"]["repeated_string"]["value"] == ["323", "4574"]
+    assert form_data["business-type"]["repeated_string"]["value"] == ["personal"]
+
+    buy_url = (
+        "https://divar.ir/s/ahvaz/buy-apartment/golestan"
+        "?bbox=48.6257744%2C31.2611427%2C48.6641846%2C31.3084145"
+        "&business-type=personal%2C&districts=4574%2C"
+        "&map_bbox=48.625774%2C31.261142%2C48.664184%2C31.308414"
+        "&map_place_hash=7%7C323%2C4574%7Cresidential-rent%7C%7C"
+    )
+    buy_params = parse_divar_url(buy_url, use_bbox=True)
+    assert buy_params.city_slug == "ahvaz"
+    assert buy_params.category_slug == "buy-apartment"
+    assert buy_params.districts == ["323", "4574"]
+    assert buy_params.bbox == [48.6257744, 31.2611427, 48.6641846, 31.3084145]
+
+    buy_payload = buy_params.to_api_payload()
+    buy_form_data = buy_payload["search_data"]["form_data"]["data"]
+    assert buy_form_data["category"]["str"]["value"] == "apartment-sell"
+    assert buy_form_data["districts"]["repeated_string"]["value"] == ["323", "4574"]
+
+

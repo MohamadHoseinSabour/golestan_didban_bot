@@ -6,12 +6,19 @@ config.yaml provides defaults; env vars override everything.
 from __future__ import annotations
 
 import os
+import re
 from pathlib import Path
 from typing import Any
 
 import yaml
-from pydantic import Field, field_validator
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import AliasChoices, Field, field_validator
+from pydantic_settings import (
+    BaseSettings,
+    PydanticBaseSettingsSource,
+    SettingsConfigDict,
+)
+
+_DIGITS_TO_ASCII = str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩", "01234567890123456789")
 
 
 # ---------------------------------------------------------------------------
@@ -44,7 +51,7 @@ def _y(*keys: str, default: Any = None) -> Any:
 # ---------------------------------------------------------------------------
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", ".emv"),
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
@@ -56,7 +63,15 @@ class Settings(BaseSettings):
         description="Telegram bot token from BotFather",
     )
     allowed_user_ids: list[int] = Field(
-        default_factory=list,
+        default_factory=lambda: _y("telegram", "allowed_user_ids", default=[]),
+        validation_alias=AliasChoices(
+            "allowed_user_ids",
+            "allowed_user_id",
+            "telegram_user_ids",
+            "telegram_user_id",
+            "user_ids",
+            "user_id",
+        ),
         description="Comma-separated list of allowed Telegram user IDs",
     )
     # Proxy for Telegram (e.g. socks5://user:pass@host:port)
@@ -127,21 +142,81 @@ class Settings(BaseSettings):
     @classmethod
     def parse_user_ids(cls, v: object) -> list[int]:
         if isinstance(v, str):
-            return [int(uid.strip()) for uid in v.split(",") if uid.strip()]
+            s = v.strip().translate(_DIGITS_TO_ASCII)
+            tokens = [t.strip("'\"[]()") for t in re.split(r"[,;\s\u060c]+", s) if t.strip("'\"[]()")]
+            res: list[int] = []
+            for t in tokens:
+                try:
+                    res.append(int(t))
+                except ValueError:
+                    pass
+            return list(dict.fromkeys(res))
         if isinstance(v, int):
             return [v]
-        if isinstance(v, list):
-            return [int(x) for x in v]
+        if isinstance(v, (list, tuple, set)):
+            res_list: list[int] = []
+            for x in v:
+                if isinstance(x, str):
+                    clean = x.strip().translate(_DIGITS_TO_ASCII)
+                    try:
+                        res_list.append(int(clean))
+                    except ValueError:
+                        pass
+                elif isinstance(x, int):
+                    res_list.append(x)
+            return list(dict.fromkeys(res_list))
         return []
 
     @field_validator("divar_urls", mode="before")
     @classmethod
     def parse_urls(cls, v: object) -> list[str]:
         if isinstance(v, str):
-            return [u.strip() for u in v.split(",") if u.strip()]
-        if isinstance(v, list):
-            return [str(u) for u in v]
+            s = v.strip()
+            if (s.startswith("[") and s.endswith("]")) or (s.startswith("(") and s.endswith(")")):
+                s = s[1:-1].strip()
+            tokens = [u.strip().strip("'\"") for u in s.split(",") if u.strip().strip("'\"")]
+            return list(dict.fromkeys(tokens))
+        if isinstance(v, (list, tuple, set)):
+            return list(dict.fromkeys(str(u).strip() for u in v if str(u).strip()))
         return []
+
+    @field_validator("agency_keywords", mode="before")
+    @classmethod
+    def parse_agency_keywords(cls, v: object) -> list[str]:
+        if isinstance(v, str):
+            s = v.strip()
+            if (s.startswith("[") and s.endswith("]")) or (s.startswith("(") and s.endswith(")")):
+                s = s[1:-1].strip()
+            tokens = [k.strip().strip("'\"") for k in re.split(r"[,;\u060c\n]+", s) if k.strip().strip("'\"")]
+            return list(dict.fromkeys(tokens))
+        if isinstance(v, (list, tuple, set)):
+            return list(dict.fromkeys(str(k).strip() for k in v if str(k).strip()))
+        return ["املاک", "مشاور", "بنگاه", "مجتمع", "آژانس", "گروه", "شرکت"]
+
+    @classmethod
+    def settings_customise_sources(
+        cls,
+        settings_cls: type[BaseSettings],
+        init_settings: PydanticBaseSettingsSource,
+        env_settings: PydanticBaseSettingsSource,
+        dotenv_settings: PydanticBaseSettingsSource,
+        file_secret_settings: PydanticBaseSettingsSource,
+    ) -> tuple[PydanticBaseSettingsSource, ...]:
+        def _wrap_tolerant_decode(source: PydanticBaseSettingsSource) -> None:
+            if hasattr(source, "decode_complex_value"):
+                orig_decode: Any = source.decode_complex_value
+
+                def _tolerant_decode(field_name: str, field: Any, value: Any) -> Any:
+                    try:
+                        return orig_decode(field_name, field, value)
+                    except Exception:
+                        return value
+
+                object.__setattr__(source, "decode_complex_value", _tolerant_decode)
+
+        _wrap_tolerant_decode(env_settings)
+        _wrap_tolerant_decode(dotenv_settings)
+        return init_settings, env_settings, dotenv_settings, file_secret_settings
 
 
 _settings_instance: Settings | None = None

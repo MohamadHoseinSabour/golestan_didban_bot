@@ -18,18 +18,31 @@ from divar_bot.utils.logging import get_logger
 logger = get_logger(__name__)
 
 
-def is_user_allowed(user_id: int, allowed_ids: list[int]) -> bool:
+def is_user_allowed(
+    user_id: int | str | None,
+    allowed_ids: list[int] | Callable[[], list[int]],
+) -> bool:
     """Return True if user_id is in allowed_ids list."""
-    if not allowed_ids:
+    if user_id is None:
+        return False
+
+    resolved_ids: list[int] = allowed_ids() if callable(allowed_ids) else allowed_ids
+    if not resolved_ids:
         # If no users configured, fail safe: allow no one
         return False
-    return user_id in allowed_ids
+
+    try:
+        uid = int(user_id)
+        return uid in [int(x) for x in resolved_ids]
+    except (ValueError, TypeError):
+        return False
 
 
-def restricted(allowed_ids: list[int]) -> Callable[..., Any]:
+def restricted(allowed_ids: list[int] | Callable[[], list[int]]) -> Callable[..., Any]:
     """
     Decorator for python-telegram-bot handler functions.
     Silently ignores updates from unauthorized users.
+    Supports either a static list of IDs or a callable returning current IDs.
     """
     def decorator(
         func: Callable[[Update, ContextTypes.DEFAULT_TYPE], Coroutine[Any, Any, Any]]

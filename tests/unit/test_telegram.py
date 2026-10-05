@@ -9,10 +9,18 @@ from divar_bot.telegram.security import is_user_allowed
 
 
 def test_is_user_allowed():
-    allowed_list = [12345, 67890]
-    assert is_user_allowed(12345, allowed_list) is True
+    allowed_list = [275352822, 1069082757]
+    assert is_user_allowed(275352822, allowed_list) is True
+    assert is_user_allowed(1069082757, allowed_list) is True
+    assert is_user_allowed("275352822", allowed_list) is True
     assert is_user_allowed(99999, allowed_list) is False
-    assert is_user_allowed(12345, []) is False
+    assert is_user_allowed(None, allowed_list) is False
+    assert is_user_allowed(275352822, []) is False
+
+    # Callable allowed_ids
+    assert is_user_allowed(1069082757, lambda: allowed_list) is True
+    assert is_user_allowed(99999, lambda: allowed_list) is False
+
 
 
 def test_format_ad_sell_apartment():

@@ -80,10 +80,10 @@ class TelegramBot:
 
     def _register_handlers(self) -> None:
         assert self.app is not None
-        allowed_ids = self.settings.allowed_user_ids
+        get_allowed_ids = lambda: self.settings.allowed_user_ids  # noqa: E731
 
         # Handlers protected with @restricted decorator
-        @restricted(allowed_ids)
+        @restricted(get_allowed_ids)
         async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             text = (
                 "🤖 <b>دیدبان املاک گلستان اهواز</b> فعال است.\n\n"
@@ -97,7 +97,7 @@ class TelegramBot:
             if update.effective_message:
                 await update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
 
-        @restricted(allowed_ids)
+        @restricted(get_allowed_ids)
         async def handle_status(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             status_text = "🟢 در حال پایش" if not self._is_paused else "⏸ متوقف‌شده (Pause)"
             cycle_info = "نامشخص"
@@ -126,19 +126,19 @@ class TelegramBot:
             if update.effective_message:
                 await update.effective_message.reply_text(msg, parse_mode=ParseMode.HTML)
 
-        @restricted(allowed_ids)
+        @restricted(get_allowed_ids)
         async def handle_pause(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             self._is_paused = True
             if update.effective_message:
                 await update.effective_message.reply_text("⏸ پایش آگهی‌ها موقتاً متوقف شد. برای ادامه /resume را ارسال کنید.")
 
-        @restricted(allowed_ids)
+        @restricted(get_allowed_ids)
         async def handle_resume(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             self._is_paused = False
             if update.effective_message:
                 await update.effective_message.reply_text("▶️ پایش آگهی‌ها مجدداً فعال شد.")
 
-        @restricted(allowed_ids)
+        @restricted(get_allowed_ids)
         async def handle_last(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             if not self.monitor_service:
                 if update.effective_message:
@@ -249,7 +249,16 @@ class TelegramBot:
                     logger.error("telegram_send_retry_failed", user_id=user_id, error=str(retry_e))
 
             except TelegramError as tg_err:
-                logger.error("telegram_send_error", user_id=user_id, error=str(tg_err))
+                err_msg = str(tg_err)
+                if "bot can't initiate conversation" in err_msg.lower() or "chat not found" in err_msg.lower():
+                    logger.warning(
+                        "telegram_user_must_start_bot_first",
+                        user_id=user_id,
+                        hint=f"User {user_id} has not clicked /start on the bot yet.",
+                        error=err_msg,
+                    )
+                else:
+                    logger.error("telegram_send_error", user_id=user_id, error=err_msg)
 
         return successful_message_ids
 
