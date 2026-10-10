@@ -104,3 +104,67 @@ def test_classifier_keyword_match():
     result, reason = classifier.classify(fake_data)
     assert result == ClassifierResult.AGENCY
     assert "املاک" in reason or "مشاور" in reason
+
+
+def test_parse_detail_with_phone_numbers():
+    fake_data = {
+        "webengage": {
+            "city": "ahvaz",
+            "district": "golestan",
+            "category": "apartment-sell",
+            "price": 2000000000,
+        },
+        "seo": {
+            "title": "فروش واحد ۹۰ متری (تماس: 09161234567)",
+        },
+        "sections": [
+            {
+                "section_name": "DESCRIPTION",
+                "widgets": [
+                    {
+                        "widget_type": "DESCRIPTION_ROW",
+                        "data": {
+                            "text": "واحد فوق العاده شیک. مالک مستقیم: ۰۹۱۲۳۴۵۶۷۸۹ و واتساپ: +989169998877",
+                        },
+                    }
+                ],
+            },
+            {
+                "section_name": "LIST_DATA",
+                "widgets": [
+                    {
+                        "widget_type": "UNEXPANDABLE_ROW",
+                        "data": {
+                            "title": "تلفن دفتر هماهنگی",
+                            "value": "061-33731122",
+                        },
+                    }
+                ],
+            },
+        ],
+    }
+
+    ad = DivarParser.parse_detail("phone_test_1", fake_data, extra_phones=["09351112233"])
+    assert ad.token == "phone_test_1"
+    # Extra phone + title phone + description phones + widget phone
+    assert "09351112233" in ad.contact_phones
+    assert "09161234567" in ad.contact_phones
+    assert "09123456789" in ad.contact_phones
+    assert "09169998877" in ad.contact_phones
+    assert "06133731122" in ad.contact_phones
+    assert ad.contact_phone == "09351112233"  # First in list
+
+
+def test_extract_phones_from_contact():
+    contact_json = {
+        "widgets": [
+            {
+                "widget_type": "UNEXPANDABLE_ROW",
+                "data": {"title": "شماره تلفن", "value": "۰۹۱۶۱۲۳۴۵۶۷"},
+            }
+        ],
+        "phone": "09161234567",
+    }
+    phones = DivarParser.extract_phones_from_contact(contact_json)
+    assert phones == ["09161234567"]
+    assert DivarParser.extract_phones_from_contact({}) == []

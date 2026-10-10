@@ -1,6 +1,11 @@
 """Package init for utils."""
 from divar_bot.utils.logging import get_logger, setup_logging
-from divar_bot.utils.persian import format_area, format_price, to_persian_digits
+from divar_bot.utils.persian import (
+    extract_phone_numbers,
+    format_area,
+    format_price,
+    to_persian_digits,
+)
 from divar_bot.utils.time import (
     format_time_tehran,
     is_too_old,
@@ -11,6 +16,7 @@ from divar_bot.utils.time import (
 )
 
 __all__ = [
+    "extract_phone_numbers",
     "format_area",
     "format_price",
     "format_time_tehran",

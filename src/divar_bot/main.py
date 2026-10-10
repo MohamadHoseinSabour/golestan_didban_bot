@@ -43,6 +43,7 @@ async def run_bot(dry_run: bool = False) -> None:
 
     divar_client = DivarClient(
         proxy_url=settings.divar_proxy_url,
+        auth_token=settings.divar_auth_token,
     )
     await divar_client.open()
 

@@ -33,6 +33,24 @@ def test_allowed_user_ids_json_format(monkeypatch: pytest.MonkeyPatch) -> None:
     assert settings.allowed_user_ids == [123456789, 987654321]
 
 
+def test_allowed_user_ids_bracket_compact(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("ALLOWED_USER_IDS", "[1,2,3]")
+    settings = Settings()
+    assert settings.allowed_user_ids == [1, 2, 3]
+
+
+def test_allowed_user_ids_quoted_json(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("ALLOWED_USER_IDS", '"[1, 2, 3]"')
+    settings = Settings()
+    assert settings.allowed_user_ids == [1, 2, 3]
+
+
+def test_allowed_user_ids_single_quoted_json(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("ALLOWED_USER_IDS", "'[1,2,3]'")
+    settings = Settings()
+    assert settings.allowed_user_ids == [1, 2, 3]
+
+
 def test_allowed_user_ids_persian_digits_and_comma(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("ALLOWED_USER_IDS", "۱۲۳۴۵۶۷۸۹، ۹۸۷۶۵۴۳۲۱")
     settings = Settings()

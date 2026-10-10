@@ -155,7 +155,9 @@ class TelegramBot:
             for i, item in enumerate(recent, 1):
                 title = item.get("title") or "بدون عنوان"
                 url = item.get("url") or f"https://divar.ir/v/{item.get('token')}"
-                lines.append(f"{to_persian_digits(i)}. <a href=\"{url}\">{title}</a>")
+                phone = item.get("contact_phone")
+                phone_suffix = f" (📞 <code>{phone}</code>)" if phone else ""
+                lines.append(f"{to_persian_digits(i)}. <a href=\"{url}\">{title}</a>{phone_suffix}")
 
             if update.effective_message:
                 await update.effective_message.reply_text("\n".join(lines), parse_mode=ParseMode.HTML, disable_web_page_preview=True)
@@ -196,55 +198,75 @@ class TelegramBot:
         successful_message_ids: list[int] = []
 
         thumbnail = ad.thumbnail_url if self.settings.send_thumbnail else None
+        cached_photo_file_id: str | None = None
 
         for user_id in self.settings.allowed_user_ids:
             try:
-                # Try sending photo with caption if thumbnail is available
-                if thumbnail:
+                sent_msg = None
+                photo_payload = cached_photo_file_id or thumbnail
+
+                # 1. Try sending photo with caption if thumbnail/cached_file_id is available
+                if photo_payload:
                     try:
-                        msg = await self.app.bot.send_photo(
+                        sent_msg = await self.app.bot.send_photo(
                             chat_id=user_id,
-                            photo=thumbnail,
+                            photo=photo_payload,
                             caption=html_text,
                             parse_mode=ParseMode.HTML,
                             reply_markup=keyboard,
                         )
-                        successful_message_ids.append(msg.message_id)
-                        continue
+                        # Cache the telegram file_id so subsequent users receive it instantly
+                        if sent_msg and sent_msg.photo:
+                            cached_photo_file_id = sent_msg.photo[-1].file_id
                     except TelegramError as photo_err:
                         logger.warning(
                             "telegram_photo_send_failed_fallback_text",
+                            user_id=user_id,
                             error=str(photo_err),
                             token=ad.token,
                         )
 
-                # Fallback or normal text send
-                msg = await self.app.bot.send_message(
-                    chat_id=user_id,
-                    text=html_text,
-                    parse_mode=ParseMode.HTML,
-                    reply_markup=keyboard,
-                    disable_web_page_preview=False,
+                # 2. If photo was not sent (or failed), fallback to HTML text message
+                if sent_msg is None:
+                    sent_msg = await self.app.bot.send_message(
+                        chat_id=user_id,
+                        text=html_text,
+                        parse_mode=ParseMode.HTML,
+                        reply_markup=keyboard,
+                        disable_web_page_preview=False,
+                    )
+
+                successful_message_ids.append(sent_msg.message_id)
+                logger.info(
+                    "telegram_ad_sent_to_user",
+                    user_id=user_id,
+                    message_id=sent_msg.message_id,
+                    token=ad.token,
                 )
-                successful_message_ids.append(msg.message_id)
 
             except RetryAfter as rate_err:
-                logger.warning("telegram_rate_limited", retry_after=rate_err.retry_after)
+                logger.warning("telegram_rate_limited", user_id=user_id, retry_after=rate_err.retry_after)
                 sleep_s = (
                     float(rate_err.retry_after.total_seconds())
                     if hasattr(rate_err.retry_after, "total_seconds")
                     else float(rate_err.retry_after)
                 )
                 await asyncio.sleep(sleep_s)
-                # Retry once
+                # Retry once as text message
                 try:
-                    msg = await self.app.bot.send_message(
+                    retry_msg = await self.app.bot.send_message(
                         chat_id=user_id,
                         text=html_text,
                         parse_mode=ParseMode.HTML,
                         reply_markup=keyboard,
                     )
-                    successful_message_ids.append(msg.message_id)
+                    successful_message_ids.append(retry_msg.message_id)
+                    logger.info(
+                        "telegram_ad_sent_to_user_after_retry",
+                        user_id=user_id,
+                        message_id=retry_msg.message_id,
+                        token=ad.token,
+                    )
                 except Exception as retry_e:
                     logger.error("telegram_send_retry_failed", user_id=user_id, error=str(retry_e))
 
@@ -260,6 +282,12 @@ class TelegramBot:
                 else:
                     logger.error("telegram_send_error", user_id=user_id, error=err_msg)
 
+            except Exception as unhandled_err:
+                logger.error("telegram_send_unhandled_error", user_id=user_id, error=str(unhandled_err))
+
+            # Small pause between distinct recipients to respect Telegram rate limits
+            await asyncio.sleep(0.05)
+
         return successful_message_ids
 
     async def send_health_alert(self, text: str) -> None:
@@ -269,10 +297,13 @@ class TelegramBot:
 
         for user_id in self.settings.allowed_user_ids:
             try:
-                await self.app.bot.send_message(
+                msg = await self.app.bot.send_message(
                     chat_id=user_id,
                     text=text,
                     parse_mode=ParseMode.HTML,
                 )
+                logger.info("telegram_health_alert_sent", user_id=user_id, message_id=msg.message_id)
             except Exception as e:
                 logger.error("telegram_health_alert_failed", user_id=user_id, error=str(e))
+
+            await asyncio.sleep(0.05)

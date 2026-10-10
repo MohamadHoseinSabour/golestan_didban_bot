@@ -23,7 +23,7 @@ async def test_storage_ad_lifecycle(storage):
     token = "test_ad_1"
     assert await storage.is_known(token) is False
 
-    ad = Ad(token=token, title="عنوان تستی")
+    ad = Ad(token=token, title="عنوان تستی", contact_phones=["09161234567"])
     await storage.mark_seen(ad)
     assert await storage.is_known(token) is True
     assert await storage.get_status(token) == AdStatus.SEEN
@@ -35,6 +35,7 @@ async def test_storage_ad_lifecycle(storage):
     recent = await storage.get_recent_notified(limit=5)
     assert len(recent) == 1
     assert recent[0]["token"] == token
+    assert recent[0]["contact_phone"] == "09161234567"
 
     # Check counts
     counts = await storage.count_by_status()

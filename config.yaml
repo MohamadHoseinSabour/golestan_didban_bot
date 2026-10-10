@@ -11,6 +11,9 @@ divar:
   # Whether to include bbox parameter in API calls (verified in recon phase)
   use_bbox: true
 
+  # Optional Divar session auth token (cookie or token for official contact info API)
+  auth_token: null
+
   # Polling interval in seconds (±jitter_seconds)
   poll_interval_seconds: 60
   jitter_seconds: 5

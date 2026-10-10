@@ -120,7 +120,12 @@ def format_ad_message(ad: AdDetail) -> tuple[str, InlineKeyboardMarkup]:
         tags_str = " · ".join(escape(t) for t in ad.tags)
         lines.append(f"🏷 وضعیت: {tags_str}")
 
-    # 10. Link
+    # 10. Contact Phone
+    if ad.contact_phones:
+        phone_tags = " · ".join(f"<code>{escape(p)}</code>" for p in ad.contact_phones)
+        lines.append(f"📞 تماس: {phone_tags}")
+
+    # 11. Link
     lines.append(f"🔗 {ad.divar_url}")
 
     # Join and ensure max Telegram limit (4096 chars)

@@ -2,8 +2,14 @@
 Unit tests for Telegram formatter and security modules.
 """
 from datetime import UTC, datetime
+from unittest.mock import AsyncMock, MagicMock
 
+import pytest
+from telegram.error import TelegramError
+
+from divar_bot.config import Settings
 from divar_bot.models import AdCategory, AdDetail, AdImage
+from divar_bot.telegram.bot import TelegramBot
 from divar_bot.telegram.formatter import format_ad_message
 from divar_bot.telegram.security import is_user_allowed
 
@@ -93,3 +99,110 @@ def test_format_ad_rent_omits_missing_fields():
     assert "طبقه" not in text
     assert "آسانسور" not in text
     assert "نامشخص" not in text
+    assert "تماس" not in text
+
+
+def test_format_ad_with_contact_phones():
+    # Single contact phone
+    ad_single = AdDetail(
+        token="phone_123",
+        title="فروش آپارتمان",
+        url="https://divar.ir/v/phone_123",
+        city="ahvaz",
+        district="گلستان",
+        ad_category=AdCategory.SELL,
+        total_price=1500000000,
+        contact_phones=["09161234567"],
+    )
+    text_single, _ = format_ad_message(ad_single)
+    assert "📞 تماس: <code>09161234567</code>" in text_single
+
+    # Multiple contact phones
+    ad_multi = AdDetail(
+        token="phone_456",
+        title="فروش آپارتمان",
+        url="https://divar.ir/v/phone_456",
+        city="ahvaz",
+        district="گلستان",
+        ad_category=AdCategory.SELL,
+        total_price=1500000000,
+        contact_phones=["09161234567", "06133731122"],
+    )
+    text_multi, _ = format_ad_message(ad_multi)
+    assert "📞 تماس: <code>09161234567</code> · <code>06133731122</code>" in text_multi
+
+
+@pytest.mark.asyncio
+async def test_telegram_send_notification_to_all_users_with_cached_photo():
+    settings = Settings(
+        allowed_user_ids=[111, 222],
+        send_thumbnail=True,
+    )
+    bot = TelegramBot(settings)
+    mock_app = MagicMock()
+    mock_bot = AsyncMock()
+    mock_app.bot = mock_bot
+    bot.app = mock_app
+
+    mock_photo_msg1 = MagicMock()
+    mock_photo_msg1.message_id = 1001
+    mock_photo_obj = MagicMock()
+    mock_photo_obj.file_id = "cached_telegram_fid"
+    mock_photo_msg1.photo = [mock_photo_obj]
+
+    mock_photo_msg2 = MagicMock()
+    mock_photo_msg2.message_id = 1002
+    mock_photo_msg2.photo = [mock_photo_obj]
+
+    mock_bot.send_photo.side_effect = [mock_photo_msg1, mock_photo_msg2]
+
+    ad = AdDetail(
+        token="tok1",
+        title="آگهی تستی",
+        url="https://divar.ir/v/tok1",
+        city="ahvaz",
+        district="گلستان",
+        ad_category=AdCategory.SELL,
+        images=[AdImage(url="https://cdn.example.com/photo.jpg")],
+    )
+
+    msg_ids = await bot.send_notification(ad)
+    assert msg_ids == [1001, 1002]
+    assert mock_bot.send_photo.call_count == 2
+
+    assert mock_bot.send_photo.call_args_list[0].kwargs["photo"] == "https://cdn.example.com/photo.jpg"
+    assert mock_bot.send_photo.call_args_list[0].kwargs["chat_id"] == 111
+
+    assert mock_bot.send_photo.call_args_list[1].kwargs["photo"] == "cached_telegram_fid"
+    assert mock_bot.send_photo.call_args_list[1].kwargs["chat_id"] == 222
+
+
+@pytest.mark.asyncio
+async def test_telegram_send_notification_one_user_failure_does_not_block_others():
+    settings = Settings(
+        allowed_user_ids=[111, 222],
+        send_thumbnail=False,
+    )
+    bot = TelegramBot(settings)
+    mock_app = MagicMock()
+    mock_bot = AsyncMock()
+    mock_app.bot = mock_bot
+    bot.app = mock_app
+
+    mock_bot.send_message.side_effect = [
+        TelegramError("Forbidden: bot can't initiate conversation"),
+        MagicMock(message_id=2002),
+    ]
+
+    ad = AdDetail(
+        token="tok2",
+        title="آگهی تستی",
+        url="https://divar.ir/v/tok2",
+        city="ahvaz",
+        district="گلستان",
+        ad_category=AdCategory.SELL,
+    )
+
+    msg_ids = await bot.send_notification(ad)
+    assert msg_ids == [2002]
+    assert mock_bot.send_message.call_count == 2

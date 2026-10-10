@@ -4,7 +4,13 @@ Unit tests for URL builder and utilities (Persian and time).
 from datetime import UTC, datetime, timedelta
 
 from divar_bot.divar.url_builder import parse_divar_url
-from divar_bot.utils.persian import format_area, format_price, normalize_arabic, to_persian_digits
+from divar_bot.utils.persian import (
+    extract_phone_numbers,
+    format_area,
+    format_price,
+    normalize_arabic,
+    to_persian_digits,
+)
 from divar_bot.utils.time import (
     format_time_tehran,
     is_too_old,
@@ -147,5 +153,42 @@ def test_rent_residential_and_buy_apartment_url_builder():
     buy_form_data = buy_payload["search_data"]["form_data"]["data"]
     assert buy_form_data["category"]["str"]["value"] == "apartment-sell"
     assert buy_form_data["districts"]["repeated_string"]["value"] == ["323", "4574"]
+
+
+def test_extract_phone_numbers():
+    assert extract_phone_numbers(None) == []
+    assert extract_phone_numbers("") == []
+    assert extract_phone_numbers("بدون هیچ شماره ای") == []
+
+    # Standard formats
+    assert extract_phone_numbers("تماس: 09161234567") == ["09161234567"]
+    assert extract_phone_numbers("تماس: ۰۹۱۶۱۲۳۴۵۶۷") == ["09161234567"]
+
+    # Delimiters: spaces, dashes, dots, slashes
+    assert extract_phone_numbers("تلفن ۰۹۱۶-۱۲۳-۴۵۶۷") == ["09161234567"]
+    assert extract_phone_numbers("تلفن 0916 123 4567") == ["09161234567"]
+    assert extract_phone_numbers("شماره ۰۹۱۶/۱۲۳/۴۵۶۷") == ["09161234567"]
+    assert extract_phone_numbers("همراه ۰۹۱۶.۱۲۳.۴۵۶۷") == ["09161234567"]
+
+    # Country codes
+    assert extract_phone_numbers("+989161234567") == ["09161234567"]
+    assert extract_phone_numbers("00989161234567") == ["09161234567"]
+
+    # Without leading zero
+    assert extract_phone_numbers("تماس ۹۱۶۱۲۳۴۵۶۷") == ["09161234567"]
+
+    # Landline
+    assert extract_phone_numbers("تلفن ثابت 061-33731122") == ["06133731122"]
+    assert extract_phone_numbers("ثابت ۰۶۱۳۳۷۳۱۱۲۲") == ["06133731122"]
+
+    # Multiple numbers & deduplication
+    multi = "شماره اول 09161112233 و شماره دوم ۰۹۱۲۳۴۵۶۷۸۹ و تکرار 09161112233"
+    assert extract_phone_numbers(multi) == ["09161112233", "09123456789"]
+
+    # Non-phone numbers must NOT match
+    assert extract_phone_numbers("قیمت ۲۵۰۰۰۰۰۰۰۰ تومان") == []
+    assert extract_phone_numbers("قیمت کل ۳۵۰۰۰۰۰۰۰۰۰۰ ریال") == []
+    assert extract_phone_numbers("متراژ ۱۵۰ متر سال ساخت ۱۴۰۲") == []
+    assert extract_phone_numbers("کد پستی ۶۱۵۵۵۱۲۳۴۵") == []
 
 

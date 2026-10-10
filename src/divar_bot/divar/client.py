@@ -23,6 +23,7 @@ logger = get_logger(__name__)
 API_BASE_URL = "https://api.divar.ir"
 SEARCH_ENDPOINT = f"{API_BASE_URL}/v8/postlist/w/search"
 DETAIL_ENDPOINT_TEMPLATE = f"{API_BASE_URL}/v8/posts-v2/web/{{token}}"
+CONTACT_ENDPOINT_TEMPLATE = f"{API_BASE_URL}/v8/postcontact/web/contact_info/{{token}}"
 
 DEFAULT_HEADERS = {
     "User-Agent": (
@@ -66,11 +67,17 @@ class DivarClient:
         self,
         proxy_url: str | None = None,
         timeout_seconds: float = 20.0,
+        auth_token: str | None = None,
     ) -> None:
         self._proxy_url = proxy_url
         self._timeout_seconds = timeout_seconds
+        self._auth_token = auth_token
         self._client: httpx.AsyncClient | None = None
         self._consecutive_failures = 0
+
+    @property
+    def has_auth_token(self) -> bool:
+        return bool(self._auth_token)
 
     @property
     def consecutive_failures(self) -> int:
@@ -203,3 +210,38 @@ class DivarClient:
             return response.json()  # type: ignore[no-any-return]
         except Exception as err:
             raise DivarSchemaError(f"Invalid JSON for token {token}") from err
+
+    async def fetch_contact(self, token: str) -> dict[str, Any] | None:
+        """
+        Fetch contact information using auth_token if available.
+        Returns response dictionary on success, None if no auth_token or call fails.
+        """
+        if not self._auth_token:
+            return None
+
+        client = self._ensure_client()
+        url = CONTACT_ENDPOINT_TEMPLATE.format(token=token)
+        headers = {
+            "Authorization": (
+                f"Basic {self._auth_token}"
+                if not self._auth_token.startswith("Basic ")
+                else self._auth_token
+            ),
+            "Cookie": f"token={self._auth_token}",
+        }
+
+        try:
+            response = await client.get(url, headers=headers)
+            if response.status_code == 200:
+                data = response.json()
+                logger.info("divar_contact_fetched_successfully", token=token)
+                return data if isinstance(data, dict) else None
+            logger.debug(
+                "divar_contact_fetch_status",
+                token=token,
+                status=response.status_code,
+            )
+            return None
+        except Exception as e:
+            logger.debug("divar_contact_fetch_error", token=token, error=str(e))
+            return None

@@ -6,11 +6,12 @@ Missing fields are always None (never placeholder strings).
 
 from __future__ import annotations
 
+import json
 import re
 from typing import Any
 
 from divar_bot.models import AdCategory, AdDetail, AdImage
-from divar_bot.utils.persian import normalize_arabic
+from divar_bot.utils.persian import extract_phone_numbers, normalize_arabic
 from divar_bot.utils.time import now_tehran, parse_relative_time_to_datetime
 
 # Persian digit to ASCII mapping for number parsing
@@ -75,7 +76,19 @@ class DivarParser:
         }
 
     @staticmethod
-    def parse_detail(token: str, detail_data: dict[str, Any]) -> AdDetail:
+    def extract_phones_from_contact(contact_data: dict[str, Any]) -> list[str]:
+        """Extract phone numbers from Divar contact_info endpoint response."""
+        if not contact_data:
+            return []
+        raw_str = json.dumps(contact_data, ensure_ascii=False)
+        return extract_phone_numbers(raw_str)
+
+    @staticmethod
+    def parse_detail(
+        token: str,
+        detail_data: dict[str, Any],
+        extra_phones: list[str] | None = None,
+    ) -> AdDetail:
         """Parse the complete detail response into an AdDetail model."""
         webengage = detail_data.get("webengage", {}) or {}
         seo = detail_data.get("seo", {}) or {}
@@ -233,6 +246,34 @@ class DivarParser:
         if created_at_dt is None:
             created_at_dt = now_tehran()
 
+        # Extract contact phone numbers from text and extra_phones
+        contact_phones: list[str] = []
+        if extra_phones:
+            for p in extra_phones:
+                if p not in contact_phones:
+                    contact_phones.append(p)
+
+        texts_to_search: list[str] = []
+        if title:
+            texts_to_search.append(title)
+        if description:
+            texts_to_search.append(description)
+
+        for section in sections:
+            if not isinstance(section, dict):
+                continue
+            for w in section.get("widgets", []):
+                w_data = w.get("data", {})
+                for key in ("title", "text", "value", "subtitle", "description"):
+                    val = w_data.get(key)
+                    if isinstance(val, str):
+                        texts_to_search.append(val)
+
+        for text in texts_to_search:
+            for p in extract_phone_numbers(text):
+                if p not in contact_phones:
+                    contact_phones.append(p)
+
         return AdDetail(
             token=token,
             title=title,
@@ -260,5 +301,6 @@ class DivarParser:
             tags=tags,
             images=images,
             description=description,
+            contact_phones=contact_phones,
             raw_business_type=webengage.get("business_type"),
         )

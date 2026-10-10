@@ -85,6 +85,10 @@ class Settings(BaseSettings):
         description="One or more Divar search page URLs",
     )
     divar_proxy_url: str | None = Field(default=None)
+    divar_auth_token: str | None = Field(
+        default=_y("divar", "auth_token", default=None),
+        description="Optional Divar session token or cookie for official contact info API",
+    )
     use_bbox: bool = Field(
         default=bool(_y("divar", "use_bbox", default=True)),
     )
@@ -143,27 +147,19 @@ class Settings(BaseSettings):
     def parse_user_ids(cls, v: object) -> list[int]:
         if isinstance(v, str):
             s = v.strip().translate(_DIGITS_TO_ASCII)
-            tokens = [t.strip("'\"[]()") for t in re.split(r"[,;\s\u060c]+", s) if t.strip("'\"[]()")]
-            res: list[int] = []
-            for t in tokens:
-                try:
-                    res.append(int(t))
-                except ValueError:
-                    pass
-            return list(dict.fromkeys(res))
-        if isinstance(v, int):
-            return [v]
+            matches = re.findall(r"-?\d+", s)
+            return list(dict.fromkeys(int(m) for m in matches))
+        if isinstance(v, (int, float)):
+            return [int(v)]
         if isinstance(v, (list, tuple, set)):
             res_list: list[int] = []
             for x in v:
                 if isinstance(x, str):
                     clean = x.strip().translate(_DIGITS_TO_ASCII)
-                    try:
-                        res_list.append(int(clean))
-                    except ValueError:
-                        pass
-                elif isinstance(x, int):
-                    res_list.append(x)
+                    matches = re.findall(r"-?\d+", clean)
+                    res_list.extend(int(m) for m in matches)
+                elif isinstance(x, (int, float)):
+                    res_list.append(int(x))
             return list(dict.fromkeys(res_list))
         return []
 

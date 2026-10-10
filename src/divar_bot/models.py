@@ -96,6 +96,9 @@ class Ad(BaseModel):
     classifier_result: ClassifierResult = ClassifierResult.UNCERTAIN
     classifier_reason: str | None = None
 
+    # Contact
+    contact_phones: list[str] = Field(default_factory=list)
+
     # Raw data for debugging
     raw_business_type: str | None = None
 
@@ -106,6 +109,11 @@ class Ad(BaseModel):
     @property
     def thumbnail_url(self) -> str | None:
         return self.images[0].url if self.images else None
+
+    @property
+    def contact_phone(self) -> str | None:
+        """Primary contact phone number if available."""
+        return self.contact_phones[0] if self.contact_phones else None
 
 
 class AdDetail(Ad):

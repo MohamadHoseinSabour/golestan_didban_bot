@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS ads (
     city        TEXT,
     district    TEXT,
     category    TEXT,
+    contact_phone TEXT,
     created_at  TEXT,
     first_seen  TEXT NOT NULL,
     last_seen   TEXT NOT NULL,
@@ -76,6 +77,11 @@ class Storage:
         await self._conn.execute("PRAGMA journal_mode=WAL")
         await self._conn.execute("PRAGMA foreign_keys=ON")
         await self._conn.executescript(_SCHEMA)
+        # Migrate existing table if contact_phone column is missing
+        try:
+            await self._conn.execute("ALTER TABLE ads ADD COLUMN contact_phone TEXT")
+        except Exception:
+            pass
         await self._conn.commit()
 
     async def close(self) -> None:
@@ -99,14 +105,15 @@ class Storage:
     async def mark_seen(self, ad: Ad) -> None:
         """Insert ad as 'seen' if not already known."""
         now = _now_iso()
+        phone_str = ", ".join(ad.contact_phones) if ad.contact_phones else None
         async with self._lock:
             assert self._conn
             await self._conn.execute(
                 """
                 INSERT OR IGNORE INTO ads
                     (token, status, title, url, city, district, category,
-                     created_at, first_seen, last_seen)
-                VALUES (?,?,?,?,?,?,?,?,?,?)
+                     contact_phone, created_at, first_seen, last_seen)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?)
                 """,
                 (
                     ad.token,
@@ -116,11 +123,17 @@ class Storage:
                     ad.city,
                     ad.district,
                     ad.category_slug,
+                    phone_str,
                     ad.created_at.isoformat() if ad.created_at else None,
                     now,
                     now,
                 ),
             )
+            if phone_str:
+                await self._conn.execute(
+                    "UPDATE ads SET contact_phone=? WHERE token=? AND (contact_phone IS NULL OR contact_phone='')",
+                    (phone_str, ad.token),
+                )
             await self._conn.commit()
 
     async def mark_notified(self, token: str, msg_id: int | None = None) -> None:
@@ -201,7 +214,7 @@ class Storage:
             assert self._conn
             async with self._conn.execute(
                 """
-                SELECT token, title, url, district, notified_at
+                SELECT token, title, url, district, contact_phone, notified_at
                 FROM ads WHERE status='notified'
                 ORDER BY notified_at DESC LIMIT ?
                 """,

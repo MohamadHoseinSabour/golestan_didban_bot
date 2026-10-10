@@ -207,7 +207,18 @@ class MonitorService:
                 continue
 
             stats.ads_personal += 1
-            ad = DivarParser.parse_detail(token, detail_json)
+
+            # Optionally query Divar contact endpoint if auth token is configured
+            extra_phones: list[str] = []
+            if self.client.has_auth_token:
+                try:
+                    contact_data = await self.client.fetch_contact(token)
+                    if contact_data:
+                        extra_phones = DivarParser.extract_phones_from_contact(contact_data)
+                except Exception as c_err:
+                    logger.debug("contact_fetch_error", token=token, error=str(c_err))
+
+            ad = DivarParser.parse_detail(token, detail_json, extra_phones=extra_phones)
             await self.storage.mark_seen(ad)
 
             # Check age limit (prevent notification storm after long bot downtime or bumped old ads)
@@ -259,7 +270,16 @@ class MonitorService:
                     detail_json = await self.client.fetch_detail(token)
                     result, reason = self.classifier.classify(detail_json)
                     if result == ClassifierResult.PERSONAL:
-                        ad = DivarParser.parse_detail(token, detail_json)
+                        extra_phones: list[str] = []
+                        if self.client.has_auth_token:
+                            try:
+                                contact_data = await self.client.fetch_contact(token)
+                                if contact_data:
+                                    extra_phones = DivarParser.extract_phones_from_contact(contact_data)
+                            except Exception as c_err:
+                                logger.debug("first_run_contact_fetch_error", token=token, error=str(c_err))
+
+                        ad = DivarParser.parse_detail(token, detail_json, extra_phones=extra_phones)
                         await self.storage.mark_seen(ad)
 
                         if is_too_old(ad.created_at, self.settings.max_ad_age_minutes):
