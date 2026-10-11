@@ -38,12 +38,17 @@ CATEGORY_SLUG_MAP: dict[str, str] = {
     "rent-villa": "house-villa-rent",
     "rent-commercial": "commercial-rent",
     "rent-room": "suite-apartment-rent",
+    "rahn-ejare": "residential-rent",
+    "rent": "residential-rent",
+    "ejare": "residential-rent",
     # Buy / Sell
     "buy-apartment": "apartment-sell",
     "buy-residential": "residential-sell",
     "buy-villa": "house-villa-sell",
     "buy-commercial": "commercial-sell",
     "buy-old-house": "house-villa-sell",
+    "buy": "residential-sell",
+    "sell": "residential-sell",
     # Direct / API category values (pass-through)
     "residential-rent": "residential-rent",
     "apartment-rent": "apartment-rent",

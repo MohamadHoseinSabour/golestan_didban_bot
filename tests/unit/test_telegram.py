@@ -102,6 +102,56 @@ def test_format_ad_rent_omits_missing_fields():
     assert "تماس" not in text
 
 
+def test_format_ad_rent_rahn_kamel():
+    ad = AdDetail(
+        token="rent_rahn",
+        title="رهن کامل آپارتمان",
+        url="https://divar.ir/v/rent_rahn",
+        city="ahvaz",
+        district="گلستان",
+        ad_category=AdCategory.RENT,
+        mortgage=1000000000,
+        monthly_rent=None,
+    )
+    text, _ = format_ad_message(ad)
+    assert "رهن کامل" in text
+    assert "ودیعه: <b>۱٬۰۰۰٬۰۰۰٬۰۰۰ تومان</b>" in text
+    assert "اجاره ماهانه" not in text
+
+
+def test_format_ad_rent_only():
+    ad = AdDetail(
+        token="rent_only",
+        title="اجاره سوئیت",
+        url="https://divar.ir/v/rent_only",
+        city="ahvaz",
+        district="گلستان",
+        ad_category=AdCategory.RENT,
+        mortgage=None,
+        monthly_rent=15000000,
+    )
+    text, _ = format_ad_message(ad)
+    assert "اجاره" in text
+    assert "اجاره ماهانه: <b>۱۵٬۰۰۰٬۰۰۰ تومان</b>" in text
+    assert "ودیعه" not in text
+
+
+def test_format_ad_rent_tavafoghi():
+    ad = AdDetail(
+        token="rent_tavafoghi",
+        title="رهن و اجاره توافقی",
+        url="https://divar.ir/v/rent_tavafoghi",
+        city="ahvaz",
+        district="گلستان",
+        ad_category=AdCategory.RENT,
+        mortgage=None,
+        monthly_rent=None,
+    )
+    text, _ = format_ad_message(ad)
+    assert "رهن و اجاره" in text
+    assert "قیمت: <b>توافقی</b>" in text
+
+
 def test_format_ad_with_contact_phones():
     # Single contact phone
     ad_single = AdDetail(

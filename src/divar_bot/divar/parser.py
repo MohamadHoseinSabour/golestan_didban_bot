@@ -108,14 +108,14 @@ class DivarParser:
         cat_slug: str | None = webengage.get("category") or webengage.get("cat_3") or webengage.get("cat_2")
         ad_category = AdCategory.UNKNOWN
         if cat_slug:
-            if "sell" in cat_slug:
-                ad_category = AdCategory.SELL
-            elif "rent" in cat_slug or "rahn" in cat_slug:
-                ad_category = AdCategory.RENT
-            elif "commercial" in cat_slug:
+            if "commercial" in cat_slug:
                 ad_category = AdCategory.COMMERCIAL
             elif "plot" in cat_slug or "land" in cat_slug:
                 ad_category = AdCategory.LAND
+            elif "sell" in cat_slug:
+                ad_category = AdCategory.SELL
+            elif "rent" in cat_slug or "rahn" in cat_slug:
+                ad_category = AdCategory.RENT
 
         # 4. Numeric fields
         total_price: int | None = webengage.get("price") if webengage.get("price", 0) > 0 else None
@@ -200,11 +200,11 @@ class DivarParser:
                             total_price = _extract_int_from_text(t_val)
                         elif "قیمت هر متر" in t_label:
                             price_per_m2 = _extract_int_from_text(t_val)
-                        elif "ودیعه" in t_label and "اجاره" not in t_label and mortgage is None:
+                        elif any(k in t_label for k in ("ودیعه", "رهن")) and "اجاره" not in t_label and "تبدیل" not in t_label and mortgage is None:
                             mortgage = _extract_int_from_text(t_val)
-                        elif "اجارهٔ ماهانه" in t_label and monthly_rent is None:
+                        elif "اجاره" in t_label and "ودیعه" not in t_label and "تبدیل" not in t_label and monthly_rent is None:
                             monthly_rent = _extract_int_from_text(t_val)
-                        elif "ودیعه و اجاره" in t_label:
+                        elif "ودیعه و اجاره" in t_label or "تبدیل" in t_label:
                             if "قابل تبدیل" in t_val:
                                 convertible = "غیر" not in t_val
                         elif "طبقه" in t_label:
@@ -235,12 +235,18 @@ class DivarParser:
                         if chip_text:
                             tags.append(chip_text)
 
-        # Fallback category determination from pricing if still UNKNOWN
+        # Fallback category determination from pricing and text if still UNKNOWN
         if ad_category == AdCategory.UNKNOWN:
             if mortgage is not None or monthly_rent is not None:
                 ad_category = AdCategory.RENT
             elif total_price is not None:
                 ad_category = AdCategory.SELL
+            else:
+                full_text = f"{title or ''} {description or ''}"
+                if any(w in full_text for w in ("رهن", "اجاره", "ودیعه")):
+                    ad_category = AdCategory.RENT
+                elif any(w in full_text for w in ("فروش", "فروشی", "خرید")):
+                    ad_category = AdCategory.SELL
 
         # Calculate price_per_m2 if missing and possible
         if total_price and area_m2 and area_m2 > 0 and price_per_m2 is None:

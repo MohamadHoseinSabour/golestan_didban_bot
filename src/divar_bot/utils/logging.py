@@ -18,6 +18,16 @@ def setup_logging(
     backup_count: int = 5,
 ) -> None:
     """Configure structlog + stdlib rotating file handler."""
+    import sys
+
+    # Safe UTF-8 reconfiguration on Windows console
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+            except Exception:
+                pass
+
     Path(log_dir).mkdir(parents=True, exist_ok=True)
     log_file = Path(log_dir) / "divar_bot.log"
 

@@ -26,6 +26,14 @@ from divar_bot.utils.time import is_too_old
 logger = get_logger(__name__)
 
 
+def prioritize_urls(urls: list[str]) -> list[str]:
+    """Prioritize rent/mortgage URLs before sell/other URLs."""
+    return sorted(
+        urls,
+        key=lambda u: 0 if any(k in u.lower() for k in ("rent", "rahn", "ejare")) else 1,
+    )
+
+
 class MonitorService:
     """Orchestrates periodic scraping, filtering, and notification dispatching."""
 
@@ -101,7 +109,7 @@ class MonitorService:
 
         try:
             url_errors: list[str] = []
-            for url in self.settings.divar_urls:
+            for url in prioritize_urls(self.settings.divar_urls):
                 try:
                     await self._process_url(url, stats)
                 except DivarClientError as u_client_err:

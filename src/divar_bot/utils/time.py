@@ -81,9 +81,11 @@ def parse_relative_age_minutes(text: str | None) -> int | None:
     m_num = re.search(r"(\d+)", cleaned)
     num = int(m_num.group(1)) if m_num else 1
 
-    if "ثانیه" in cleaned or "لحظات" in cleaned:
+    if "ثانیه" in cleaned or "لحظات" in cleaned or "لحظاتی" in cleaned:
         return 1
-    if "دقیقه" in cleaned:
+    if "ربع" in cleaned:
+        return 15
+    if "دقیقه" in cleaned or "دقایق" in cleaned:
         if "نیم" in cleaned:
             return 30
         return num

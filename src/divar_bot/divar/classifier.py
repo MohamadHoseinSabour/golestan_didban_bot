@@ -25,14 +25,53 @@ DEFAULT_AGENCY_KEYWORDS = [
     "مسکن مهر",
     "کارگزاری املاک",
     "دفتر املاک",
+    "مشاوراملاکم",
+    "مشاور املاکم",
+]
+
+DEFAULT_DISCLAIMER_PATTERNS = [
+    # Landlord disclaimers: e.g. "املاک تماس نگیرد", "همکاران املاک تماس نگیرند", "همکار بنگاهی لطفا تماس نفرمایید"
+    re.compile(
+        r"(?:املاک|مشاور[\s\u200c]*املاک|مشاورین[\s\u200c]*املاک|بنگاه|بنگاهی|همکار(?:ان)?(?:[\s\u200c]*املاک|[\s\u200c]*بنگاهی)?|واسطه|دلال)"
+        r"\s*(?:محترم|عزیز)?"
+        r"\s*(?:لطفا|لطفاً)?"
+        r"\s*(?:تماس[\s\u200c]*(?:نگیر|نگیرد|نگیرند|نگیرید|نگیره|نفرمایید)|زنگ[\s\u200c]*(?:نزن|نزند|نزنید|نزنه)|پیگیری[\s\u200c]*نکند)",
+        re.IGNORECASE,
+    ),
+    # "بدون واسطه املاک", "بدون دخالت املاک", "بدون کمیسیون"
+    re.compile(
+        r"بدون[\s\u200c]*(?:واسطه|دخالت|کمیسیون)(?:[\s\u200c]*املاک)?",
+        re.IGNORECASE,
+    ),
+    # "همکاری با املاک نداریم/نمیشود", "با املاک همکاری نداریم/نمیشود", "عدم همکاری با املاک"
+    re.compile(
+        r"(?:با[\s\u200c]*املاک[\s\u200c]*همکاری|همکاری[\s\u200c]*با[\s\u200c]*(?:املاک|مشاورین[\s\u200c]*املاک|همکار(?:ان)?)|عدم[\s\u200c]*همکاری[\s\u200c]*با[\s\u200c]*(?:املاک|مشاورین[\s\u200c]*املاک|همکار(?:ان)?))"
+        r"[\s\u200c]*(?:نداریم|ندارم|نمیشود|نمی[\s\u200c]*شود|تماس[\s\u200c]*نگیر(?:ید)?)?",
+        re.IGNORECASE,
+    ),
+    # "به هیچ عنوان/وجه املاک"
+    re.compile(
+        r"به[\s\u200c]*هیچ[\s\u200c]*(?:عنوان|وجه)[\s\u200c]*املاک",
+        re.IGNORECASE,
+    ),
+    # "کمیسیون املاک پرداخت نمیشود"
+    re.compile(
+        r"کمیسیون[\s\u200c]*املاک[\s\u200c]*پرداخت[\s\u200c]*نمی[\s\u200c]*شود",
+        re.IGNORECASE,
+    ),
 ]
 
 
 class AdClassifier:
     """Classifies whether an ad is genuinely personal or from a real-estate agency."""
 
-    def __init__(self, agency_keywords: list[str] | None = None) -> None:
+    def __init__(
+        self,
+        agency_keywords: list[str] | None = None,
+        disclaimer_patterns: list[re.Pattern[str]] | None = None,
+    ) -> None:
         self.agency_keywords = agency_keywords or DEFAULT_AGENCY_KEYWORDS
+        self.disclaimer_patterns = disclaimer_patterns or DEFAULT_DISCLAIMER_PATTERNS
         # Compile regex for fast matching
         escaped_words = [re.escape(k) for k in self.agency_keywords]
         self._pattern = re.compile(rf"\b({'|'.join(escaped_words)})\b", re.IGNORECASE)
@@ -99,8 +138,13 @@ class AdClassifier:
 
         text_to_scan = f"{title} {description}"
 
+        # Strip out explicit personal disclaimer phrases (e.g. "املاک تماس نگیرد") before scanning
+        cleaned_text = text_to_scan
+        for pat in self.disclaimer_patterns:
+            cleaned_text = pat.sub(" ", cleaned_text)
+
         for kw in self.agency_keywords:
-            if kw in text_to_scan:
+            if kw in cleaned_text:
                 reason = f"Keyword match: '{kw}' found in title or description"
                 logger.info("classified_agency_by_keyword", keyword=kw, reason=reason)
                 return ClassifierResult.AGENCY, reason

@@ -168,3 +168,93 @@ def test_extract_phones_from_contact():
     phones = DivarParser.extract_phones_from_contact(contact_json)
     assert phones == ["09161234567"]
     assert DivarParser.extract_phones_from_contact({}) == []
+
+
+def test_classifier_personal_disclaimer_not_flagged_as_agency():
+    """Ensure private landlord disclaimers ('املاک تماس نگیرد') are NOT falsely flagged as agency."""
+    classifier = AdClassifier()
+
+    disclaimer_samples = [
+        "واحد خیلی لوکس خیابان اصفهان ... املاک تماس نگیره فقط رهن کامل ممنونم",
+        "ادرس گلستان خیابان اقبال نبش دماوند همکار بنگاهی لطفا تماس نفرمایید",
+        "رهن کامل آپارتمان ۹۰ متری، لطفا مشاورین املاک تماس نگیرند",
+        "واحد ۷۵ متری کلید اول، بدون واسطه املاک، مستقیم با مالک",
+        "رهن و اجاره شخصی، همکاری با املاک نداریم",
+    ]
+
+    for desc in disclaimer_samples:
+        data = {
+            "webengage": {"business_type": "personal"},
+            "seo": {"title": "رهن و اجاره آپارتمان"},
+            "sections": [
+                {
+                    "section_name": "DESCRIPTION",
+                    "widgets": [
+                        {"widget_type": "DESCRIPTION_ROW", "data": {"text": desc}}
+                    ],
+                }
+            ],
+        }
+        res, reason = classifier.classify(data)
+        assert res == ClassifierResult.PERSONAL, f"Failed on disclaimer: '{desc}' -> {reason}"
+
+
+def test_classifier_agency_with_disclaimer_still_flagged():
+    """Ensure agency ads that include both disclaimers and agency markers are still flagged as AGENCY."""
+    classifier = AdClassifier()
+
+    agency_samples = [
+        "با املاک همکاری نمیشود چون خودم مشاوراملاکم",
+        "با املاک همکاری نمیشود. آدرس دفتر املاک بنیامین خیابان اردیبهشت",
+        "رهن کامل آپارتمان، املاک تماس نگیرد. مشاور شما در دپارتمان املاک ناصری",
+    ]
+
+    for desc in agency_samples:
+        data = {
+            "webengage": {"business_type": "personal"},
+            "seo": {"title": "رهن آپارتمان"},
+            "sections": [
+                {
+                    "section_name": "DESCRIPTION",
+                    "widgets": [
+                        {"widget_type": "DESCRIPTION_ROW", "data": {"text": desc}}
+                    ],
+                }
+            ],
+        }
+        res, reason = classifier.classify(data)
+        assert res == ClassifierResult.AGENCY, f"Should be AGENCY for: '{desc}'"
+
+
+def test_parse_rent_without_hamza_and_various_labels():
+    """Ensure mortgage/rent amounts are extracted properly regardless of hamza or label variations."""
+    fake_data = {
+        "webengage": {"category": "apartment-rent"},
+        "seo": {"title": "رهن و اجاره واحد ۸۰ متری"},
+        "sections": [
+            {
+                "section_name": "LIST_DATA",
+                "widgets": [
+                    {
+                        "widget_type": "UNEXPANDABLE_ROW",
+                        "data": {"title": "ودیعه (قرض‌الحسنه)", "value": "۴۰۰,۰۰۰,۰۰۰ تومان"},
+                    },
+                    {
+                        "widget_type": "UNEXPANDABLE_ROW",
+                        "data": {"title": "اجاره ماهانه", "value": "۱۲,۰۰۰,۰۰۰ تومان"},  # without hamza
+                    },
+                    {
+                        "widget_type": "UNEXPANDABLE_ROW",
+                        "data": {"title": "ودیعه و اجاره", "value": "قابل تبدیل"},
+                    },
+                ],
+            }
+        ],
+    }
+
+    ad = DivarParser.parse_detail("rent_test_1", fake_data)
+    assert ad.ad_category == AdCategory.RENT
+    assert ad.mortgage == 400000000
+    assert ad.monthly_rent == 12000000
+    assert ad.convertible is True
+

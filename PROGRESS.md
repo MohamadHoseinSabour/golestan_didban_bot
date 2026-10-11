@@ -31,16 +31,17 @@
 - [x] **Phase 8** — Full testing with real data (2026-10-04T23:55Z)
 - [x] **Phase 9** — Packaging, docs, delivery (2026-10-05T00:05Z)
 - [x] **Phase 10** — Multi-URL monitoring: Buy Apartment + Residential Rent (2026-10-11)
+- [x] **Phase 11** — Fix Rent/Mortgage priority, disclaimer masking, and district boundary bbox clipping (2026-10-11)
 
 ---
 
 ## Final Project Metrics
-- **Tests:** 54/54 passed (100%)
+- **Tests:** 60/60 passed (100%)
 - **Static Analysis:**
   - `ruff check`: 0 errors
   - `mypy src`: 0 errors (strict mode across 20 source files)
 - **Live Recon:** Real Protobuf-over-JSON endpoints confirmed (`/v8/postlist/w/search` and `/v8/posts-v2/web/:token`)
-- **Classifier:** 2-layer detection (Divar official `business_type`/`business_ref` + keyword heuristic)
+- **Classifier:** 2-layer detection (Divar official `business_type`/`business_ref` + keyword heuristic with landlord disclaimer masking)
 - **Deployment Artifacts:** Dockerfile, docker-compose.yml, railway.json, divar_bot.service
 - **Documentation:** Complete Persian README.md, divar_recon.md, stack_decision.md, architecture.md
 

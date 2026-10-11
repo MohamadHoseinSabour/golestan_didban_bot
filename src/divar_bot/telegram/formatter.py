@@ -87,6 +87,8 @@ def format_ad_message(ad: AdDetail) -> tuple[str, InlineKeyboardMarkup]:
         if ad.convertible is not None:
             conv_text = "✅ قابل تبدیل" if ad.convertible else "❌ غیر قابل تبدیل"
             lines.append(f"🔄 تبدیل: {conv_text}")
+        if ad.mortgage is None and ad.monthly_rent is None:
+            lines.append("💰 قیمت: <b>توافقی</b>")
 
     # Fallback price if uncategorized
     elif ad.total_price:
