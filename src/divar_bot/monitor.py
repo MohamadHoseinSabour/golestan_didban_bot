@@ -100,8 +100,23 @@ class MonitorService:
         stats = CycleStats(cycle_id=cycle_id, started_at=datetime.now(tz=UTC))
 
         try:
+            url_errors: list[str] = []
             for url in self.settings.divar_urls:
-                await self._process_url(url, stats)
+                try:
+                    await self._process_url(url, stats)
+                except DivarClientError as u_client_err:
+                    url_errors.append(f"Client error on {url}: {u_client_err}")
+                    logger.warning("monitor_url_client_error", url=url, error=str(u_client_err))
+                except Exception as u_err:
+                    url_errors.append(f"Error on {url}: {u_err}")
+                    logger.error("monitor_url_error", url=url, error=str(u_err), exc_info=True)
+
+            if url_errors:
+                if len(url_errors) == len(self.settings.divar_urls) and self.settings.divar_urls:
+                    # All URLs failed
+                    raise DivarClientError("; ".join(url_errors))
+                else:
+                    stats.error = "; ".join(url_errors)
 
             # Successfully completed cycle
             if self._health_alert_sent:

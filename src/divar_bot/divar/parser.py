@@ -235,6 +235,13 @@ class DivarParser:
                         if chip_text:
                             tags.append(chip_text)
 
+        # Fallback category determination from pricing if still UNKNOWN
+        if ad_category == AdCategory.UNKNOWN:
+            if mortgage is not None or monthly_rent is not None:
+                ad_category = AdCategory.RENT
+            elif total_price is not None:
+                ad_category = AdCategory.SELL
+
         # Calculate price_per_m2 if missing and possible
         if total_price and area_m2 and area_m2 > 0 and price_per_m2 is None:
             price_per_m2 = int(total_price / area_m2)

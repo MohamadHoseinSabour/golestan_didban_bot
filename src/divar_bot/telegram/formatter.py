@@ -36,7 +36,14 @@ def format_ad_message(ad: AdDetail) -> tuple[str, InlineKeyboardMarkup]:
     if ad.ad_category == AdCategory.SELL:
         header_cat = "فروش آپارتمان" if (ad.floor is not None or "آپارتمان" in (ad.title or "")) else "فروش ملک"
     elif ad.ad_category == AdCategory.RENT:
-        header_cat = "رهن و اجاره" if (ad.mortgage and ad.monthly_rent) else "اجاره ملک"
+        if ad.mortgage and ad.monthly_rent:
+            header_cat = "رهن و اجاره"
+        elif ad.mortgage and not ad.monthly_rent:
+            header_cat = "رهن کامل"
+        elif ad.monthly_rent and not ad.mortgage:
+            header_cat = "اجاره"
+        else:
+            header_cat = "رهن و اجاره"
     elif ad.ad_category == AdCategory.COMMERCIAL:
         header_cat = "تجاری و اداری"
     elif ad.ad_category == AdCategory.LAND:

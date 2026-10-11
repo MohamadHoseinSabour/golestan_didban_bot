@@ -82,6 +82,14 @@ class Settings(BaseSettings):
     # --- Divar ---
     divar_urls: list[str] = Field(
         default_factory=lambda: _y("divar", "urls", default=[]),
+        validation_alias=AliasChoices(
+            "divar_urls",
+            "divar_url",
+            "divar_search_urls",
+            "divar_search_url",
+            "search_urls",
+            "search_url",
+        ),
         description="One or more Divar search page URLs",
     )
     divar_proxy_url: str | None = Field(default=None)
@@ -168,9 +176,21 @@ class Settings(BaseSettings):
     def parse_urls(cls, v: object) -> list[str]:
         if isinstance(v, str):
             s = v.strip()
-            if (s.startswith("[") and s.endswith("]")) or (s.startswith("(") and s.endswith(")")):
-                s = s[1:-1].strip()
-            tokens = [u.strip().strip("'\"") for u in s.split(",") if u.strip().strip("'\"")]
+            # 1. Try parsing valid JSON array if bracketed
+            if s.startswith("[") and s.endswith("]"):
+                try:
+                    import json
+                    parsed = json.loads(s)
+                    if isinstance(parsed, list):
+                        return list(dict.fromkeys(str(u).strip() for u in parsed if str(u).strip()))
+                except Exception:
+                    pass
+            # 2. Extract full HTTP URLs without splitting on query parameter commas
+            found_urls = re.findall(r"https?://[^\s\"']+", s)
+            if found_urls:
+                clean_urls = [u.rstrip(",;\"'") for u in found_urls if u.rstrip(",;\"'")]
+                return list(dict.fromkeys(clean_urls))
+            tokens = [u.strip().strip("'\"") for u in re.split(r"[\n;]+", s) if u.strip().strip("'\"")]
             return list(dict.fromkeys(tokens))
         if isinstance(v, (list, tuple, set)):
             return list(dict.fromkeys(str(u).strip() for u in v if str(u).strip()))

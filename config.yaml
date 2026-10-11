@@ -5,8 +5,8 @@
 divar:
   # One or more Divar search URLs (personal listings, Golestan Ahvaz)
   urls:
-    - "https://divar.ir/s/ahvaz/rent-residential/golestan?bbox=48.6212883%2C31.2400131%2C48.6597023%2C31.2872963&business-type=personal%2C&districts=4574%2C&map_bbox=48.625774%2C31.261142%2C48.664184%2C31.308414&map_place_hash=7%7C323%2C4574%7Cresidential-rent%7C%7C"
     - "https://divar.ir/s/ahvaz/buy-apartment/golestan?bbox=48.6257744%2C31.2611427%2C48.6641846%2C31.3084145&business-type=personal%2C&districts=4574%2C&map_bbox=48.625774%2C31.261142%2C48.664184%2C31.308414&map_place_hash=7%7C323%2C4574%7Cresidential-rent%7C%7C"
+    - "https://divar.ir/s/ahvaz/rent-residential/golestan?bbox=48.6212883%2C31.2400131%2C48.6597023%2C31.2872963&business-type=personal%2C&districts=4574%2C&map_bbox=48.625774%2C31.261142%2C48.664184%2C31.308414&map_place_hash=7%7C323%2C4574%7Cresidential-rent%7C%7C"
 
   # Whether to include bbox parameter in API calls (verified in recon phase)
   use_bbox: true

@@ -117,3 +117,36 @@ def test_allowed_user_ids_aliases(monkeypatch: pytest.MonkeyPatch) -> None:
     settings = Settings()
     assert settings.allowed_user_ids == [275352822, 1069082757]
 
+
+def test_divar_url_singular_alias(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("DIVAR_URLS", raising=False)
+    monkeypatch.setenv("DIVAR_URL", "https://divar.ir/s/ahvaz/buy-apartment/golestan")
+    settings = Settings()
+    assert settings.divar_urls == ["https://divar.ir/s/ahvaz/buy-apartment/golestan"]
+
+
+def test_divar_search_url_alias(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("DIVAR_URLS", raising=False)
+    monkeypatch.delenv("DIVAR_URL", raising=False)
+    monkeypatch.setenv("DIVAR_SEARCH_URL", "https://divar.ir/s/ahvaz/rent-residential/golestan")
+    settings = Settings()
+    assert settings.divar_urls == ["https://divar.ir/s/ahvaz/rent-residential/golestan"]
+
+
+def test_divar_urls_with_query_param_commas(monkeypatch: pytest.MonkeyPatch) -> None:
+    u1 = "https://divar.ir/s/ahvaz/buy-apartment/golestan?bbox=48.625,31.261&business-type=personal,&districts=4574,"
+    u2 = "https://divar.ir/s/ahvaz/rent-residential/golestan?bbox=48.621,31.240&business-type=personal,"
+    monkeypatch.setenv("DIVAR_URLS", f"{u1}, {u2}")
+    settings = Settings()
+    assert len(settings.divar_urls) == 2
+    assert "buy-apartment" in settings.divar_urls[0]
+    assert "rent-residential" in settings.divar_urls[1]
+
+
+def test_divar_urls_json_array_env(monkeypatch: pytest.MonkeyPatch) -> None:
+    u1 = "https://divar.ir/s/ahvaz/buy-apartment/golestan?business-type=personal,"
+    u2 = "https://divar.ir/s/ahvaz/rent-residential/golestan?business-type=personal,"
+    monkeypatch.setenv("DIVAR_URLS", f'["{u1}", "{u2}"]')
+    settings = Settings()
+    assert settings.divar_urls == [u1, u2]
+
