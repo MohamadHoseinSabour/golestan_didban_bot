@@ -11,8 +11,8 @@
 | Start time (UTC) | 2026-10-04T22:10:00Z |
 | Python version | 3.12.10 |
 | Deployment targets | Local Windows laptop (dev) → Railway (prod) |
-| DIVAR_URL | https://divar.ir/s/ahvaz/real-estate/golestan?bbox=...&business-type=personal, |
-| ALLOWED_USER_ID | Set by user in .env |
+| DIVAR_URLS | Buy Apartment & Residential Rent in Golestan Ahvaz |
+| ALLOWED_USER_IDS | Set by user in .env (multi-user support) |
 | TELEGRAM_BOT_TOKEN | Set by user in .env |
 | Proxies needed | Unknown until recon; Railway is outside Iran so Divar proxy may be needed |
 
@@ -30,11 +30,12 @@
 - [x] **Phase 7** — Monitor loop & resilience (2026-10-04T23:45Z)
 - [x] **Phase 8** — Full testing with real data (2026-10-04T23:55Z)
 - [x] **Phase 9** — Packaging, docs, delivery (2026-10-05T00:05Z)
+- [x] **Phase 10** — Multi-URL monitoring: Buy Apartment + Residential Rent (2026-10-11)
 
 ---
 
 ## Final Project Metrics
-- **Tests:** 22/22 passed (100%)
+- **Tests:** 54/54 passed (100%)
 - **Static Analysis:**
   - `ruff check`: 0 errors
   - `mypy src`: 0 errors (strict mode across 20 source files)
