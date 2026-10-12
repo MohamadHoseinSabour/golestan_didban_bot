@@ -150,3 +150,19 @@ def test_divar_urls_json_array_env(monkeypatch: pytest.MonkeyPatch) -> None:
     settings = Settings()
     assert settings.divar_urls == [u1, u2]
 
+
+def test_enable_agency_filter_env(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("ENABLE_AGENCY_FILTER", "false")
+    settings = Settings()
+    assert settings.enable_agency_filter is False
+
+    monkeypatch.setenv("ENABLE_AGENCY_FILTER", "true")
+    settings = Settings()
+    assert settings.enable_agency_filter is True
+
+    monkeypatch.delenv("ENABLE_AGENCY_FILTER", raising=False)
+    monkeypatch.setenv("FILTER_AGENCY", "0")
+    settings = Settings()
+    assert settings.enable_agency_filter is False
+
+

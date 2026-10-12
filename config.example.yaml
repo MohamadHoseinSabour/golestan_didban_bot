@@ -28,7 +28,10 @@ divar:
   # Number of latest listings to send on first run (0 = none, just mark seen)
   notify_on_first_run: 0
 
-  # Words in title/description that indicate an agency listing (secondary filter)
+  # Whether to filter listings by agency / real estate keywords (false = send all ads from the URLs without filtering)
+  enable_agency_filter: false
+
+  # Words in title/description that indicate an agency listing (secondary filter, active only if enable_agency_filter is true)
   agency_keywords:
     - "املاک"
     - "مشاور املاک"

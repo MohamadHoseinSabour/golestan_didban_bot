@@ -89,12 +89,13 @@ async def run_dry_run() -> None:
                         print(f"   ⚠️ خطا در دریافت جزئیات: {e}\n")
                         continue
 
-                    # ۳. بررسی بنگاه یا شخصی بودن
-                    result, reason = classifier.classify(detail_data)
-                    if result == ClassifierResult.AGENCY:
-                        stats["skipped_agency"] += 1
-                        print(f"   ⏭ وضعیت: [رد شد - مشاور املاک/بنگاه] دلیل: {reason}\n")
-                        continue
+                    # ۳. بررسی بنگاه یا شخصی بودن (در صورت فعال بودن فیلتر)
+                    if settings.enable_agency_filter:
+                        result, reason = classifier.classify(detail_data)
+                        if result == ClassifierResult.AGENCY:
+                            stats["skipped_agency"] += 1
+                            print(f"   ⏭ وضعیت: [رد شد - مشاور املاک/بنگاه] دلیل: {reason}\n")
+                            continue
 
                     # ۴. تحلیل زمان و بررسی کهنگی (نردبان‌شده یا زمان گذشته)
                     ad = DivarParser.parse_detail(token, detail_data)

@@ -115,6 +115,15 @@ class Settings(BaseSettings):
     notify_on_first_run: int = Field(
         default=int(_y("divar", "notify_on_first_run", default=0)),
     )
+    enable_agency_filter: bool = Field(
+        default_factory=lambda: bool(_y("divar", "enable_agency_filter", default=False)),
+        validation_alias=AliasChoices(
+            "enable_agency_filter",
+            "filter_agency",
+            "agency_filter",
+        ),
+        description="Whether to filter out agency ads using metadata and keywords (default False)",
+    )
     agency_keywords: list[str] = Field(
         default_factory=lambda: _y(
             "divar", "agency_keywords",
@@ -195,6 +204,17 @@ class Settings(BaseSettings):
         if isinstance(v, (list, tuple, set)):
             return list(dict.fromkeys(str(u).strip() for u in v if str(u).strip()))
         return []
+
+    @field_validator("enable_agency_filter", mode="before")
+    @classmethod
+    def parse_enable_agency_filter(cls, v: object) -> bool:
+        if isinstance(v, str):
+            s = v.strip().lower()
+            if s in ("true", "1", "yes", "on"):
+                return True
+            if s in ("false", "0", "no", "off", ""):
+                return False
+        return bool(v)
 
     @field_validator("agency_keywords", mode="before")
     @classmethod

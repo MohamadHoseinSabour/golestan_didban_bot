@@ -221,13 +221,14 @@ class MonitorService:
                 await self.storage.mark_failed(token, f"Detail fetch failed: {e}")
                 continue
 
-            # Classify
-            result, reason = self.classifier.classify(detail_json)
-            if result == ClassifierResult.AGENCY:
-                stats.ads_skipped_agency += 1
-                logger.info("skipped_agency_listing", token=token, reason=reason)
-                await self.storage.mark_skipped_agency(token, reason)
-                continue
+            # Classify (if agency filter enabled)
+            if self.settings.enable_agency_filter:
+                result, reason = self.classifier.classify(detail_json)
+                if result == ClassifierResult.AGENCY:
+                    stats.ads_skipped_agency += 1
+                    logger.info("skipped_agency_listing", token=token, reason=reason)
+                    await self.storage.mark_skipped_agency(token, reason)
+                    continue
 
             stats.ads_personal += 1
 
@@ -291,7 +292,11 @@ class MonitorService:
             if i < notify_count:
                 try:
                     detail_json = await self.client.fetch_detail(token)
-                    result, reason = self.classifier.classify(detail_json)
+                    if self.settings.enable_agency_filter:
+                        result, reason = self.classifier.classify(detail_json)
+                    else:
+                        result, reason = ClassifierResult.PERSONAL, "Agency filter disabled"
+
                     if result == ClassifierResult.PERSONAL:
                         extra_phones: list[str] = []
                         if self.client.has_auth_token:

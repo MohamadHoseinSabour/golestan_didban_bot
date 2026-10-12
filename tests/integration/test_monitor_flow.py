@@ -32,6 +32,7 @@ def mock_settings():
         max_ad_age_minutes=180,
         max_send_per_cycle=10,
         notify_on_first_run=0,
+        enable_agency_filter=True,
     )
 
 
@@ -131,6 +132,39 @@ async def test_monitor_skips_agency_ad(temp_storage, mock_settings):
     # Check reason in DB
     status = await temp_storage.get_status("agency_token_1")
     assert status.value == "skipped_agency"
+
+
+@pytest.mark.asyncio
+async def test_monitor_agency_filter_disabled(temp_storage, mock_settings):
+    """Verify that when enable_agency_filter is False, agency ads are NOT skipped."""
+    mock_settings.enable_agency_filter = False
+    mock_divar = MagicMock(spec=DivarClient)
+    mock_divar.fetch_listings = AsyncMock(return_value=[
+        {"widget_type": "POST_ROW", "data": {"token": "agency_token_2", "title": "دفتر املاک"}}
+    ])
+    mock_divar.fetch_detail = AsyncMock(return_value={
+        "webengage": {"business_type": "premium-panel", "business_ref": "agency_999"},
+        "seo": {"title": "فروش واحد توسط دفتر املاک"},
+        "sections": []
+    })
+
+    mock_bot = MagicMock(spec=TelegramBot)
+    mock_bot.is_paused = False
+    mock_bot.send_notification = AsyncMock(return_value=[1001])
+
+    monitor = MonitorService(
+        settings=mock_settings,
+        storage=temp_storage,
+        divar_client=mock_divar,
+        telegram_bot=mock_bot,
+    )
+    monitor._is_first_run = False
+
+    stats = await monitor.run_cycle()
+    assert stats.ads_new == 1
+    assert stats.ads_skipped_agency == 0
+    assert stats.ads_sent == 1
+    mock_bot.send_notification.assert_called_once()
 
 
 @pytest.mark.asyncio
